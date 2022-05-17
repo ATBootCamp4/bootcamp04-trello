@@ -58,5 +58,8 @@ class MembersManager(RESTBaseManager):
 
 
 if __name__ == '__main__':
+    # This section helps to test the module, make sure the env variable PYTHONPATH exists 
+    # to be able to execute only this module.
+    # PYTHONPATH=<Full path to bootcamp04-trello folder>
     member = MembersManager()
     print(member.get_member(fields="aaId,initials", tokens='all'))

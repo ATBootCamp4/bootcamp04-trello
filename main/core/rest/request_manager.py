@@ -86,6 +86,9 @@ class RequestManager(metaclass=Singleton):
 
 
 if __name__ == '__main__':
+    # This section helps to test the module, make sure the env variable PYTHONPATH exists 
+    # to be able to execute only this module.
+    # PYTHONPATH=<Full path to bootcamp04-trello folder>
     request = RequestManager()
     status_code, response = request.get_request('members/me/boards?fields=name')
     print(status_code)
