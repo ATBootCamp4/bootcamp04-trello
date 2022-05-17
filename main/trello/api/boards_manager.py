@@ -82,3 +82,8 @@ class BoardsManager(RESTBaseManager):
         """
         endpoint = f"{BOARDS}/{id_name}"
         return self.method.delete_request(endpoint)
+
+    def update_board(self, id, payload):
+        endpoint = f"{BOARDS}/{id}"
+        return self.method.put_request(endpoint, payload)
+        
