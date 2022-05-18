@@ -27,3 +27,12 @@ class TestAttachments():
         status_code, _ = self.attachments_manager.delete_attachment(card_id, attachment_id)
         assert status_code == 200, f"Expected status code 200, but received: {status_code}"
         
+    def test_create_attachment_from_file(self):
+
+        name = "File attachment from PyTest"
+        path = "C:\\Users\\mefe\\Documents\\API Testing\\repo\\requirements.txt"
+        card_id = "6281250ff6f1e04b7edd712c"
+        set_cover = False
+
+        response = self.attachments_manager.create_attachment_from_file(path=path, card_id=card_id, name=name, set_cover=set_cover)
+        assert response.status_code == 200, f"Expected status code 200, but received: {response.status_code}"

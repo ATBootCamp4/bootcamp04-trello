@@ -1,4 +1,5 @@
 from main.trello.api.rest_base_manager import RESTBaseManager
+from main.utils.common_globals import HEADERS, DEFAULT_API_URL, API_VERSION
 
 CARD_ID = "6281250ff6f1e04b7edd712c"
 ATTACHMENT_ID = "6282795810f9624276d93713"
@@ -50,7 +51,7 @@ class AttachmentsManager(RESTBaseManager):
 
         return status_code, response
 
-    def create_attachment_from_file(self, path="C:\\Users\\mefe\\Downloads\\240px-Stoned_Fox.jpg", 
+    def create_attachment_from_file(self, path="C:\\Users\\mefe\\Documents\\API Testing\\repo\\requirements.txt", 
                                     card_id='6281250ff6f1e04b7edd712c', 
                                     name='Attachment from API', 
                                     set_cover=False):
@@ -60,7 +61,24 @@ class AttachmentsManager(RESTBaseManager):
         :param set_cover:     bool   If True, the attachment will be set as the cover of the card
         :param path:          str    Path of the file
         :return:              Tuple  that contains the status code and the response."""
-        pass
+        
+        endpoint = f'{DEFAULT_API_URL}/{API_VERSION}/cards/{card_id}/attachments'
+
+        post_files = {
+        "file": open(path, "rb"),
+        }
+        payload = {
+            "name": name,
+            "setCover": set_cover
+        }
+
+        self.method.session.headers.pop('Content-Type')
+
+        response = self.method.session.post(endpoint, data=payload, files=post_files)
+
+        self.method.session.headers.update(HEADERS)
+
+        return response
 
     def delete_attachment(self, card_id=CARD_ID, attachment_id=ATTACHMENT_ID):
         """ Delete a specific attachment from a specific card,
