@@ -21,3 +21,5 @@ class RESTBaseManager:
             self.method = request_method
         else:
             self.method = RequestManager()
+
+    

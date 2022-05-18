@@ -13,12 +13,12 @@ MEMBERS_BOARDS = "members/{id}/boards"
 class MembersManager(RESTBaseManager):    
     """Class which can be used to manage Trello Members through the API"""
 
-    def __init__(self, method=None):
+    def __init__(self, request_manager=None):
         """ Construct the necessary attributes for the BoardsManager
 
         :param method: obj  RequestManager object which is used to handle the API requests
         """
-        super().__init__(method)
+        super().__init__(request_manager)
 
     def get_boards(self, id_name='me', fields='all', **kwargs):
         """ Get Boards that Member belongs to
@@ -34,7 +34,7 @@ class MembersManager(RESTBaseManager):
         if isinstance(fields, str):            
             kwargs = {**kwargs, 'fields': fields}
 
-        status_code, response = self.method.get_request(endpoint, **kwargs)
+        status_code, response = self.resquest_manager.get_request(endpoint, **kwargs)
 
         return status_code, response
 
