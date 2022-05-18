@@ -16,8 +16,8 @@ class TestLabels():
         status_code, label = self.labels_manager.get_label(created_label['id'])
         assert created_label['id'] == label['id']
 
-    # 3. Delete created board
+    # 3. Delete created label
         status_code, _ = self.labels_manager.delete_label_board(created_label['id'])
-        assert status_code == 200, f"Board {created_label['id']} couldn't be deleted" 
+        assert status_code == 200, f"Label {created_label['id']} couldn't be deleted" 
  
 
