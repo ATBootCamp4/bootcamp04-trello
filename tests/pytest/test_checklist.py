@@ -15,13 +15,20 @@ class TestChecklists():
         # 1. Verify the status code
         assert status_code == 200, f"Expected status code 200, but received: {status_code}"
         # 2. Verify the checklist exists
-        checklist_id = response.pop('id')
+        checklist_id = response.get('id')
         status_code, response = self.checklists_manager.get_checklist(checklist_id)
         assert status_code == 200, f"Expected status code 200, but received: {status_code}"
         # 3. Verify the checklist has the correct name
-        checklist_name = response.pop('name')
+        checklist_name = response.get('name')
         assert checklist_name == name, f"Expected name: {name}, but received: {checklist_name}"
-        # 4. Verify the checklist can be deleted
+        # 4. Create a check item for the checklist
+        status_code, response = self.checklists_manager.create_checkitem(checklist_id, name="Checkitem from PyTest")
+        assert status_code == 200, f"Expected status code 200, but received: {status_code}"
+        # 5. Verify the check item exists
+        checkitem_id = response.get('id')
+        status_code, response = self.checklists_manager.get_checkitem(checklist_id, checkitem_id)
+        assert status_code == 200, f"Expected status code 200, but received: {status_code}"
+        # 6. Verify the checklist can be deleted
         status_code, _ = self.checklists_manager.delete_checklist(checklist_id)
         assert status_code == 200, f"Expected status code 200, but received: {status_code}"
 

@@ -1,15 +1,11 @@
 from main.trello.api.rest_base_manager import RESTBaseManager
 
-CARD_ID = "6281250ff6f1e04b7edd712c"
-CHECKLIST_ID = "6283e4b5eb73304c21da91bb"
-CHECKITEM_ID = "628134ecb6de363a8c43fbb0"
-
 class ChecklistsManager(RESTBaseManager):
 
     def __init__(self, method=None):
         super().__init__(method)
 
-    def get_checklists(self, card_id=CARD_ID, check_items='all', checkitem_fields='all', fields='all'):
+    def get_checklists(self, card_id, check_items='all', checkitem_fields='all', fields='all'):
         """ Get all checklists of a card by its ID,
         :param card_id:          str   ID of the card
         :param check_items:      str   Whether to include checkitems or not: {all, none}
@@ -27,7 +23,7 @@ class ChecklistsManager(RESTBaseManager):
 
         return status_code, response
 
-    def get_checklist(self, checklist_id=CHECKLIST_ID, check_items='all', checkitem_fields='all', fields='all'):
+    def get_checklist(self, checklist_id, check_items='all', checkitem_fields='all', fields='all'):
         """ Get a specific checklist by its ID,
         :param checklist_id:     str   ID of the checklist
         :param check_items:      str   Whether to include checkitems or not: {all, none}
@@ -45,7 +41,7 @@ class ChecklistsManager(RESTBaseManager):
 
         return status_code, response
 
-    def create_checklist(self, card_id=CARD_ID, name="Checklist from API", pos="bottom", id_source=None):
+    def create_checklist(self, card_id, name, pos="bottom", id_source=None):
         """ Create a new checklist for a specific card,
         :param card_id: str   ID of the card
         :param name:    str   Name of the checklist
@@ -64,7 +60,7 @@ class ChecklistsManager(RESTBaseManager):
 
         return status_code, response
 
-    def update_checklist(self, checklist_id=CHECKLIST_ID, name=None, pos=None):
+    def update_checklist(self, checklist_id, name=None, pos=None):
         """ Update a specific checklist,
         :param checklist_id: str   ID of the checklist
         :param name:         str   Name of the checklist
@@ -82,7 +78,7 @@ class ChecklistsManager(RESTBaseManager):
 
         return status_code, response
 
-    def delete_checklist(self, checklist_id=CHECKLIST_ID):
+    def delete_checklist(self, checklist_id):
         """ Delete a specific checklist,
         :param checklist_id:  str   ID of the checklist
         :return:             Tuple that contains the status code and the response."""
@@ -92,7 +88,7 @@ class ChecklistsManager(RESTBaseManager):
 
         return status_code, response
 
-    def get_all_checkitems(self, checklist_id=CHECKLIST_ID):
+    def get_all_checkitems(self, checklist_id):
         """ Get all checkitems of a checklist by its ID,
         :param checklist_id: str   ID of the checklist
         :return:             Tuple that contains the status code and the response."""
@@ -102,7 +98,7 @@ class ChecklistsManager(RESTBaseManager):
 
         return status_code, response
 
-    def get_checkitem(self, checklist_id=CHECKLIST_ID, checkitem_id=CHECKITEM_ID):
+    def get_checkitem(self, checklist_id, checkitem_id):
         """ Get a specific checkitem by its ID,
         :param checklist_id: str   ID of the checklist
         :param checkitem_id: str   ID of the checkitem
@@ -113,7 +109,7 @@ class ChecklistsManager(RESTBaseManager):
 
         return status_code, response
 
-    def create_checkitem(self, checklist_id=CHECKLIST_ID, name="Checkitem from API", pos="bottom", checked=False):
+    def create_checkitem(self, checklist_id, name, pos="bottom", checked=False):
         """ Create a new checkitem for a specific checklist,
         :param checklist_id: str   ID of the checklist
         :param name:         str   Name of the checkitem
@@ -131,7 +127,7 @@ class ChecklistsManager(RESTBaseManager):
 
         return status_code, response
 
-    def update_checkitem(self, card_id=CARD_ID, checkitem_id=CHECKITEM_ID, name=None, pos=None, state=None):
+    def update_checkitem(self, card_id, checkitem_id, name=None, pos=None, state=None):
         """ Update a specific checkitem,
         :param card_id:      str   ID of the card
         :param checkitem_id: str   ID of the checkitem
@@ -153,7 +149,7 @@ class ChecklistsManager(RESTBaseManager):
 
         return status_code, response
 
-    def delete_checkitem_card(self, card_id=CARD_ID, checkitem_id=CHECKITEM_ID):
+    def delete_checkitem_card(self, card_id, checkitem_id):
         """ Delete a specific checkitem,
         :param card_id:      str   ID of the card
         :param checkitem_id: str   ID of the checkitem
@@ -164,7 +160,7 @@ class ChecklistsManager(RESTBaseManager):
 
         return status_code, response
 
-    def delete_checkitem_checklist(self, checklist_id=CHECKLIST_ID, checkitem_id=CHECKITEM_ID):
+    def delete_checkitem_checklist(self, checklist_id, checkitem_id):
         """ Delete a specific checkitem,
         :param checklist_id: str   ID of the checklist
         :param checkitem_id: str   ID of the checkitem

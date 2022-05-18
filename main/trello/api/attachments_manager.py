@@ -1,15 +1,13 @@
 from main.trello.api.rest_base_manager import RESTBaseManager
 from main.utils.common_globals import HEADERS, DEFAULT_API_URL, API_VERSION
 
-CARD_ID = "6281250ff6f1e04b7edd712c"
-ATTACHMENT_ID = "6282795810f9624276d93713"
 
 class AttachmentsManager(RESTBaseManager):
 
     def __init__(self, method=None):
         super().__init__(method)
 
-    def get_all_attachments(self, card_id=CARD_ID):
+    def get_all_attachments(self, card_id):
         """ Get all attachments of a card by its ID,
         :param card_id: str   ID of the card
         :return: Tuple that contains the status code and the response."""
@@ -19,7 +17,7 @@ class AttachmentsManager(RESTBaseManager):
 
         return status_code, response
 
-    def get_attachment(self, card_id=CARD_ID ,attachment_id=ATTACHMENT_ID):
+    def get_attachment(self, card_id ,attachment_id):
         """ Get a specific attachment from a specific card,
         :param card_id:       str    ID of the card
         :param attachment_id: str    ID of the attachment
@@ -30,10 +28,7 @@ class AttachmentsManager(RESTBaseManager):
 
         return status_code, response
 
-    def create_attachment_from_url(self, url='https://freeiconshop.com/wp-content/uploads/edd/jpg-solid.png', 
-                                    card_id='6281250ff6f1e04b7edd712c', 
-                                    name='Attachment from API', 
-                                    set_cover=False):
+    def create_attachment_from_url(self, url, card_id, name, set_cover=False):
         """ Create a new attachment from an URL,
         :param card_id:       str    ID of the card
         :param name:          str    Name of the attachment
@@ -51,10 +46,7 @@ class AttachmentsManager(RESTBaseManager):
 
         return status_code, response
 
-    def create_attachment_from_file(self, path="C:\\Users\\mefe\\Documents\\API Testing\\repo\\requirements.txt", 
-                                    card_id='6281250ff6f1e04b7edd712c', 
-                                    name='Attachment from API', 
-                                    set_cover=False):
+    def create_attachment_from_file(self, path, card_id, name, set_cover=False):
         """ Create a new attachment from a file,
         :param card_id:       str    ID of the card
         :param name:          str    Name of the attachment
@@ -72,15 +64,14 @@ class AttachmentsManager(RESTBaseManager):
             "setCover": set_cover
         }
 
+        # 'Content-Type' header is temporarily removed in order to upload a file, then it's restored.
         self.method.session.headers.pop('Content-Type')
-
         response = self.method.session.post(endpoint, data=payload, files=post_files)
-
         self.method.session.headers.update(HEADERS)
 
         return response
 
-    def delete_attachment(self, card_id=CARD_ID, attachment_id=ATTACHMENT_ID):
+    def delete_attachment(self, card_id, attachment_id):
         """ Delete a specific attachment from a specific card,
         :param card_id:       str    ID of the card
         :param attachment_id: str    ID of the attachment
