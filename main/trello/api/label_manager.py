@@ -62,21 +62,3 @@ class LabelsManager(RESTBaseManager):
     def delete_label_card(self, id_card,id_label):
         endpoint = f'cards/{id_card}/idLabels/{id_label}?'
         return self.method.delete_request(endpoint)
-        
-
-
-
-
-
-
-
-
-a=LabelsManager()
-status_code, response = a.delete_label_card('628264cf49d65c88ae11443d','62850da3acbdbe54297cf023')
-print(response)
-
-
-
-
-
-
