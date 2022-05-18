@@ -69,7 +69,7 @@ class TestBoards():
         assert status_code4 == 200, f"Board {board_to_be_cloned['id']}  couldn't be deleted"
         #delete the created boards and assert their status code response 
 
-    def test_update_board(self):
+    def test_update_boards_name(self):
         
         name1 = "boardToUpdated"
         informationToUpdate = { "name": "updatedName" }
@@ -84,6 +84,27 @@ class TestBoards():
         assert status_code2 == 200, f"Board {board_to_be_updated['id']}  couldn't be updated"
         assert board_to_be_updated['id'] == updated_board['id'], f"updated Board id is {updated_board['id']} but it was expected {board_to_be_updated['id']} "
         assert updated_board['name'] == informationToUpdate['name'], f"Board name is {updated_board['name']} but it was expected { informationToUpdate['name']} "
+        #updates the board and verifies that has the same id but the name was chanched 
+
+        status_code3, _ = self.boards_manager.delete_board(updated_board['id'])
+        assert status_code3 == 200, f"Board {updated_board['id']}  couldn't be deleted"
+        #delete the created boards and assert their status code response 
+
+    def test_update_boards_description(self):
+        
+        description1 = "this is the old description"
+        informationToUpdate = { "desc": "new description" }
+        
+        
+        status_code, board_to_be_updated = self.boards_manager.create_board("name1" , description1 )
+        assert status_code == 200, f"Couldn't create a board with name name1"
+        assert board_to_be_updated['desc'] == description1, f"Board description is {board_to_be_updated['desc']} but it was expected {description1}"
+        #create the board to be updated and assert its name and status code response
+
+        status_code2, updated_board = self.boards_manager.update_board(board_to_be_updated['id'], informationToUpdate )
+        assert status_code2 == 200, f"Board {board_to_be_updated['id']}  couldn't be updated"
+        assert board_to_be_updated['id'] == updated_board['id'], f"updated Board id is {updated_board['id']} but it was expected {board_to_be_updated['id']} "
+        assert updated_board['desc'] == informationToUpdate['desc'], f"Board description is {updated_board['desc']} but it was expected { informationToUpdate['desc']} "
         #updates the board and verifies that has the same id but the name was chanched 
 
         status_code3, _ = self.boards_manager.delete_board(updated_board['id'])
