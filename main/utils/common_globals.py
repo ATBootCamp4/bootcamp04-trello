@@ -15,3 +15,7 @@ HEADERS = {
 # Default API URL and Version
 DEFAULT_API_URL = "https://api.trello.com"
 API_VERSION = "1"
+ID_BOARD = "627c0cb01e98336259fa1ae2"
+NAME_BOARD = "API Testing Tasks"
+ID_LIST = "627c0cb01e98336259fa1ae4"
+NAME_LIST = "Doing"
