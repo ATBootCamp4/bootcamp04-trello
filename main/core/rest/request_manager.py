@@ -7,6 +7,7 @@ Classes:
 """
 import requests
 import json
+import logging
 
 from main.utils.api_exceptions import RestError
 from main.utils.common_globals import HEADERS, DEFAULT_API_URL, API_VERSION
@@ -36,12 +37,13 @@ class RequestManager(metaclass=Singleton):
         :return: Tuple that contains the status code and the response.
         """
         endpoint_url = f"{self.base_url}/{endpoint}"
-
-        if method in ['POST', 'PUT']:
+        logging.info(f"[REQ] {method} - {endpoint_url} - DATA: {payload}")
+        if method in ['POST', 'PUT']:            
             response = self.session.request(method, endpoint_url, data=json.dumps(payload), params=kwargs)
         else:
             response = self.session.request(method, endpoint_url, params=kwargs)
 
+        logging.info(f"[RESP] STATUS CODE: {response.status_code} - DATA: {response.json()}")
         if not response.ok:
             raise RestError(response.status_code, endpoint_url, response)
 
