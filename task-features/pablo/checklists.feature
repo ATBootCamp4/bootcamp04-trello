@@ -4,8 +4,8 @@ Feature: Trello API Checklists
     In order to manipulate checklists
 
     Scenario Outline: GET all checklists on a card
-        Given there is a card with checklists
-        When I send a GET request to /cards/<card_id>/checklists
+        Given I created a checklist on a card with id:"<card_id>"
+        When I send a GET request to /cards/"<card_id>"/checklists
         Then I receive a list with at least one checklist
         And the status code is 200
 
@@ -15,8 +15,8 @@ Feature: Trello API Checklists
     
     Scenario Outline: GET a checklist by id
         Given there is an already created checklist
-        When I send a GET request to /checklists/<checklist_id>
-        Then I receive a response with id:<checklist_id>
+        When I send a GET request to /checklists/"<checklist_id>"
+        Then I receive a response with id:"<checklist_id>"
         And the status code is 200
 
         Examples:
@@ -33,8 +33,8 @@ Feature: Trello API Checklists
 
     Scenario Outline: Update a checklist
         Given there is an already created checklist
-        When I send a PUT request to /checklists/<checklist_id>
-        And the payload contains <name> and <pos>
+        When I send a PUT request to /checklists/"<checklist_id>"
+        And the payload contains "<name>" and "<pos>"
         Then the checklist is updated
         And the status code is 200
 
@@ -44,7 +44,7 @@ Feature: Trello API Checklists
     
     Scenario Outline: DELETE a checklist
         Given there is an already created checklist
-        When I send a DELETE request to /checklists/<checklist_id>
+        When I send a DELETE request to /checklists/"<checklist_id>"
         Then the checklist is deleted
         And the status code is 200
 
@@ -54,7 +54,7 @@ Feature: Trello API Checklists
     
     Scenario Outline: GET all completed checklist items on a card
         Given there is a card with completed checklist items
-        When I send a GET request to /cards/<card_id>/checkItemStates
+        When I send a GET request to /cards/"<card_id>"/checkItemStates
         Then I receive a list with at least one completed checklist item
         And the status code is 200
 
@@ -64,7 +64,7 @@ Feature: Trello API Checklists
 
     Scenario Outline: GET all checklist items on a checklist
         Given there is an already created checklist containing items
-        When I send a GET request to /checklists/<checklist_id>/checkItems
+        When I send a GET request to /checklists/"<checklist_id>"/checkItems
         Then I receive a list with at least one checklist item
         And the status code is 200
 
@@ -74,7 +74,8 @@ Feature: Trello API Checklists
 
     Scenario Outline: POST a new checklist item to a checklist
         Given there is an already created checklist
-        When I send a POST request to /checklists/<checklist_id>/checkItems with the following payload:
+        When I send a POST request to /checklists/"<checklist_id>"/checkItems
+        And the payload contains "<name>","<pos>", and "<checked>"
         Then the checklist item is created on the checklist
         And the status code is 200
 
@@ -85,8 +86,8 @@ Feature: Trello API Checklists
 
     Scenario Outline: GET a checklist item by its id
         Given there is an already created checklist item
-        When I send a GET request to checklists/<checklist_id>/checkItems/<checkItem_id>
-        Then I receive a response with id:<checkItem_id>
+        When I send a GET request to checklists/"<checklist_id>"/checkItems/"<checkItem_id>"
+        Then I receive a response with id:"<checkItem_id>"
         And the status code is 200
 
         Examples:
@@ -95,8 +96,8 @@ Feature: Trello API Checklists
 
     Scenario Outline: Update a checklist item
         Given there is an already created checklist item
-        When I send a PUT request to /cards/<card_id>/checkItems/<checkItem_id>
-        And the payload contains <name>, <state> and <pos>
+        When I send a PUT request to /cards/"<card_id>"/checkItems/"<checkItem_id>"
+        And the payload contains "<name>", "<state>" and "<pos>"
         Then the checklist item is updated
         And the status code is 200
 
@@ -106,7 +107,7 @@ Feature: Trello API Checklists
 
     Scenario Outline: DELETE a checklist item
         Given there is an already created checklist item
-        When I send a DELETE request to /checklists/<checklist_id>/checkItems/<checkItem_id>
+        When I send a DELETE request to /checklists/"<checklist_id>"/checkItems/"<checkItem_id>"
         Then the checklist item is deleted
         And the status code is 200
 
