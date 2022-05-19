@@ -114,3 +114,16 @@ Feature: Trello API Checklists
         Examples:
             | checklist_id             | checkItem_id             |
             | 628134e46a25c3826ba7e345 | 628134ecb6de363a8c43fbb0 |
+
+    Scenario Outline: Create a checklist with two incomplete items, and then complete one of them
+        Given I created a new checklist
+        And I send two POST requests to /checklists/:checklist_id/checkItems
+        And the payloads contains "<name>", "<checked>" and "<pos>"
+        When I send a PUT request to /checklists/:checklist_id/checkItems/:checkItem_id
+        And the payload contains "<state>"
+        Then the checklist item is updated
+        And the status code is 200
+
+        Examples:
+            | name       | checked      | pos    | state    |
+            | item       | incomplete   | bottom | complete |
