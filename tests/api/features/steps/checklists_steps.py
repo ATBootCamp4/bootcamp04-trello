@@ -2,7 +2,6 @@ import re
 from behave import given, when, then, step
 from main.trello.api.checklists_manager import ChecklistsManager
 from main.core.rest.request_manager import RequestManager
-from main.utils.api_exceptions import RestError
 
 request_manager = RequestManager()
 checklist_manager = ChecklistsManager()
@@ -29,6 +28,7 @@ def step_impl(context, method, endpoint):
             if "{id}" in value:
                 value = getattr(context, value.split(':')[1])['id']
             payload[key] = value
+    context.payload = payload
     context.status_code, context.response = request_manager.do_request(method, endpoint, payload)
     
 @then('I receive a list with at least one checklist')
