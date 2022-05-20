@@ -3,6 +3,7 @@ from main.trello.api.rest_base_manager import RESTBaseManager
 
 LISTS = 'lists'
 CARDS = 'cards'
+ID_LIST = '62819bac13025107d7d01cf8'
 
 
 class CardsManager(RESTBaseManager):
@@ -52,14 +53,13 @@ class CardsManager(RESTBaseManager):
 
         return self.method.delete_request(endpoint)
 
-    def update_card_from_list(self, idList, name="TestWithPython", description="This is a test from python", **kwargs):
+    def update_card_from_list(self, idCard, name="TestWithPython", description="This is a test from python", **kwargs):
 
-        endpoint = f"{CARDS}/{idList}"
+        endpoint = f"{CARDS}/{idCard}"
 
         payload = {
             "name": name,
             "desc": description,
-            "idList": idList,
         }
 
         if kwargs:
