@@ -7,10 +7,13 @@ from main.utils.api_exceptions import RestError
 request_manager = RequestManager()
 checklist_manager = ChecklistsManager()
 
-@given('I created a checklist on a new card')
+@given('I created a new card')
 def step_impl(context):
     _, card = request_manager.post_request('cards', payload={'name': 'New card', 'idList': "627ee9268cea2a5a877b8b40"})
     context.card = card
+
+@step('the card has a checklist')
+def step_impl(context):
     _, checklist = checklist_manager.create_checklist(context.card['id'], 'New checklist')
     context.checklist = checklist
 
@@ -45,11 +48,6 @@ def step_impl(context):
 def step_impl(context, item):
     item_id = getattr(context, item)['id']
     assert context.response['id'] == item_id, f'{item} id does not match'
-
-@given('I created a new card')
-def step_impl(context):
-    _, card = request_manager.post_request('cards', payload={'name': 'New card', 'idList': "627ee9268cea2a5a877b8b40"})
-    context.card = card
 
 @then('the checklist is created on the card')
 def step_impl(context):
