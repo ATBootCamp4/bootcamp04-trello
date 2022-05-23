@@ -54,10 +54,6 @@ def step_impl(context):
 def step_impl(context, code):
     assert context.status_code == code, f"It was expected status code {code} but was {context.status_code}"
 
-@step('verify there is at least 1 member')
-def step_impl(context):    
-    assert len(context.api_response), f"cound't retrieve members from board {DEFAULT_BOARD}"
-
 
 @step('verify the new object contains the following info')
 def step_impl(context):    
@@ -98,21 +94,4 @@ def validate_endpoint(context, endpoint):
             _, response = request_manager.do_request('GET', _endpoint, fields='name')
             _object = [obj for obj in response if default_name == obj['name']]
             endpoint = endpoint.replace("{" + replacement + "}", _object[0]['id'])
-    return endpoint
-
-def validate_endpoint_name(context, endpoint, obj_name=None):
-    variables = ['{id}', '[id]']
-    
-    if not any(var in endpoint for var in variables):
-        return endpoint
-    
-    endpoint_parts = endpoint.split('/')
-    if obj_name:
-        obj = getattr(context, obj_name, None)
-    else:
-        obj = getattr(context, endpoint_parts[0], None)
-    
-    if obj:
-        endpoint_parts[1] = obj['id']
-        return "/{}".format("/".join(endpoint_parts))
     return endpoint
