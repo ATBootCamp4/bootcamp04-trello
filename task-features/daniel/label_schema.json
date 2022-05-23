@@ -1,0 +1,31 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome7",
+    "definitions": {
+        "Welcome7": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "idBoard": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "color",
+                "id",
+                "idBoard",
+                "name"
+            ],
+            "title": "Welcome7"
+        }
+    }
+}
