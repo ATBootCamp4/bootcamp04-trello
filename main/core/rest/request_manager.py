@@ -22,7 +22,7 @@ class RequestManager(metaclass=Singleton):
         :param base_url:  str  The URL of the API to which the requests are to be sent
         :param version:   str  The API version
         """
-        self.base_url = f"{base_url}/{version}/"
+        self.base_url = f"{base_url}/{version}"
         self.session = requests.Session()
         self.session.headers.update(HEADERS)
 
@@ -90,6 +90,7 @@ if __name__ == '__main__':
     # to be able to execute only this module.
     # PYTHONPATH=<Full path to bootcamp04-trello folder>
     request = RequestManager()
-    status_code, response = request.get_request('members/me/boards?fields=name')
+    payload3 = { "name": "testing2666666" }
+    status_code, response = request.post_request('/boards/', payload3)
     print(status_code)
     print(response)

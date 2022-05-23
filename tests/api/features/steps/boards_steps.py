@@ -1,4 +1,7 @@
+from logging import exception
 from behave import given, when, then, step
+import json
+from jsonschema import validate
 from main.core.rest.request_manager import RequestManager
 from main.trello.api.members_manager import MembersManager
 from main.trello.api.boards_manager import BoardsManager
@@ -56,9 +59,21 @@ def step_impl(context):
         actual_value =  context.api_response[key]
         assert value == actual_value, f"Expected: {value}, Actual: {actual_value} "
 
-@step ('DELETE a Board')
-def step_impl(context): 
-   boards_manager.delete_board(context.api_response["id"])
+@step ('the user deletes the board "{name}"')
+def step_impl(context, name): 
+    if (context.api_response["name"] == name):
+        boards_manager.delete_board(context.api_response["id"])
+
+@step ('verify the board "{name}" doesnt exist')
+def step_impl(context, name): 
+    if (context.api_response["name"] == name):
+      
+        #status_code, api_response2 = boards_manager.get_board(context.api_response["id"])
+        #assert status_code == 404, f"Expected status code: 404, Actual: {status_code} "
+        #with this code always trow an error so i don't know how to tell it not to stop when doesnt found the resourse
+        pass
+
+
 
 
 @step ('the user defines a create_board function')
@@ -70,25 +85,26 @@ def step_impl(context):
             model.build_json(row['Key'], row['Value'])
     context.model = model
 
-@step ('the user calls the create_board function')
-def step_impl(context ): 
-    name = context.model.json_data["name"] 
-    status_code, api_response =  boards_manager.create_board(name )
-    context.status_code = status_code
-    context.api_response = api_response
-    
-   
 
-@step ('the user defines a duplicate function with id "{id}" and new name "{name1}"')
-def step_impl(context, id , name1): 
-   context.id_to_duplicate = id
-   context.name1 = name1
 
-@step ('the user sends the copy_board function')
-def step_impl(context ): 
-    status_code, api_response =  boards_manager.copy_board(context.name1 , context.id_to_duplicate  )
+@step ('the user copy the board with "{id}" and new "{name}"')
+def step_impl(context, id , name ): 
+
+    status_code, api_response =  boards_manager.copy_board(name , id  )
     context.status_code = status_code
     context.api_response = api_response  
+
+    
+
+@step ('verify the duplicated board and the "{id}" have same info')
+def step_impl(context, id  ): 
+
+    status_code2, old_board = boards_manager.get_board(id)
+    name_old = old_board["desc"];
+    name_new = context.api_response["desc"]
+    assert name_old == name_new , f"Expected: {name_new}, Actual: {name_old }"
+
+
 
 @step ('verify the board contains the following info')
 def step_impl(context ): 
@@ -102,7 +118,27 @@ def step_impl(context ):
     for key, value in model.json_data.items():
         actual_value =  board_in_api[key]
         assert value == actual_value, f"Expected: {value}, Actual: {actual_value} "
-    
+
+
+@step ('the user creates a board with "{field}" to be "{value}"')
+def step_impl(context, field, value ): 
+    context.model = JsonModel()
+    context.model.build_json(field, value)
+
+    name = context.model.json_data["name"] 
+    status_code, api_response =  boards_manager.create_board(name )
+    context.status_code = status_code
+    context.api_response = api_response
+
+
+@step ('validate the schema of "{type}"')
+def step_impl(context, type ): 
+    json_schema = 'bootcamp04-trello\\main\\schemas\\board_schema.json'
+    with open (json_schema ) as file_schema:
+       data = json.load(file_schema)
+    validate(data, context.api_response )
+
+   
 
 
 

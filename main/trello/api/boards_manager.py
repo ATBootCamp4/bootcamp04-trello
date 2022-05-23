@@ -82,3 +82,5 @@ class BoardsManager(RESTBaseManager):
         """
         endpoint = f"{BOARDS}/{id_name}"
         return self.method.delete_request(endpoint)
+    
+    

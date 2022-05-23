@@ -5,7 +5,7 @@ Feature: Trello Members API
         Given the user defines a "GET" request to "members/me/boards"
         When the user sends the request
         Then verify the status code is "200"
-        And verify the user recives a "7" lengt item 
+        And verify the user recives a "13" lengt item 
    
    
     Scenario: Get all information of board 
@@ -16,13 +16,13 @@ Feature: Trello Members API
 
 
     Scenario: GET memebers of board
-        Given the user defines a "GET" request to "/boards/623cd8eef6a5ea0970e67c12/members"
+        Given the user defines a "GET" request to "/boards/628bac3b8c7a64298edf2b72/members"
         When the user sends the request
         Then verify the status code is "200"
         And verify there is at least 1 member
 
     Scenario: Updating information of a Board
-        Given the user defines a "PUT" request to "/boards/6287b012e56fca6695059571"
+        Given the user defines a "PUT" request to "/boards/628bac3b8c7a64298edf2b72"
             | Key         | Value                      |
             | name        | testingnicolasv            |
             | desc        | a valid data table         |
@@ -34,7 +34,7 @@ Feature: Trello Members API
             | desc        | a valid data table         | 
 
     Scenario: Updating information of a Board and verify the board
-        Given the user defines a "PUT" request to "/boards/6287b012e56fca6695059571"
+        Given the user defines a "PUT" request to "/boards/628bac3b8c7a64298edf2b72"
             | Key         | Value                      |
             | name        | testingnicolasv            |
             | desc        | a valid data table         |
@@ -45,40 +45,38 @@ Feature: Trello Members API
             | name        | testingnicolasv            |
             | desc        | a valid data table         |
 
-    Scenario: CREATE and DELETE a board
-        Given the user defines a "POST" request to "/boards"
-            | Key         | Value                      |
-            | name        | testingnicolasv            |
-            | desc        | a valid data table         |
-        When the user sends the request
-        Then verify the status code is "200"
-        And verify the new object contains the following info
-            | Key         | Value                      |
-            | name        | testingnicolasv            |
-            | desc        | a valid data table         | 
-        And DELETE a Board
+   
 
+    Scenario Outline: CREATE and DELETE a board 
+        Given the user creates a board with "<field>" to be "<value>"
+        Then verify the status code is "200"
+        And validate the schema of "board"
+        When the user deletes the board "<value>"
+        And verify the board "<value>" doesnt exist
+
+    Examples:
+        | field | value     |
+        | name  | kiara     |
+        | name  | jose      |
+        
+        
+        
       
 
-    Scenario: CREATE and DELETE a board2
-        Given the user defines a create_board function
-            | Key         | Value                      |
-            | name        |kiarajose12                 |
-           
-        When the user calls the create_board function
-        Then verify the status code is "200"
-        And verify the new object contains the following info
-            | Key         | Value                      |
-            | name        | kiarajose12            |
-        And DELETE a Board
-
     
     
-    Scenario: Duplicate a Board and DELETE it
-        Given the user defines a duplicate function with id "6287b86ed19bf5054179cb2f" and new name "NewName"
-        When the user sends the copy_board function
+    Scenario Outline: Duplicate a Board and DELETE it
+        
+        Given  the user copy the board with "<id>" and new "<name>"
         Then verify the status code is "200"
-        And DELETE a Board
+        Then verify the duplicated board and the "<id>" have same info
+        When the user deletes the board "<name>"
+        And verify the board "<name>" doesnt exist
+    Examples:
+        | id | name    |
+        | 628bac3b8c7a64298edf2b72 | kiara12     |
+       
+        
 
 
     Scenario: GET actions of board
