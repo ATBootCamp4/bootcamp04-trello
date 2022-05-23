@@ -15,3 +15,17 @@ HEADERS = {
 # Default API URL and Version
 DEFAULT_API_URL = "https://api.trello.com"
 API_VERSION = "1"
+
+DEFAULT_SCHEMAS = {
+   "organizations": "./main/schemas/organization_schema.json"
+}
+
+
+DEFAULT_BOARD = 'DefaultBoard'
+DEFAULT_MEMBER = 'me'
+DEFAULT_WORKSPACE = 'DoNotDeleteWorkspace'
+
+DEFAULT_GET_REQUESTS = {
+   "organizations": ("/members/me/organizations", DEFAULT_WORKSPACE),
+   "boards": ("/members/me/boards", DEFAULT_BOARD),
+}

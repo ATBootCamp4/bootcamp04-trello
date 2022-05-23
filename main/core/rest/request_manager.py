@@ -7,6 +7,7 @@ Classes:
 """
 import requests
 import json
+import logging
 
 from main.utils.api_exceptions import RestError
 from main.utils.common_globals import HEADERS, DEFAULT_API_URL, API_VERSION
@@ -22,7 +23,7 @@ class RequestManager(metaclass=Singleton):
         :param base_url:  str  The URL of the API to which the requests are to be sent
         :param version:   str  The API version
         """
-        self.base_url = f"{base_url}/{version}/"
+        self.base_url = f"{base_url}/{version}"
         self.session = requests.Session()
         self.session.headers.update(HEADERS)
 
@@ -35,16 +36,20 @@ class RequestManager(metaclass=Singleton):
         :param kwargs:    dict  Data that will be considered as query parameters
         :return: Tuple that contains the status code and the response.
         """
-        endpoint_url = f"{self.base_url}/{endpoint}"
+        endpoint_url = f"{self.base_url}{endpoint}"
 
+        logging.info(f"[REQ] {method} - {endpoint_url} - DATA: {payload}")
         if method in ['POST', 'PUT']:
             response = self.session.request(method, endpoint_url, data=json.dumps(payload), params=kwargs)
         else:
             response = self.session.request(method, endpoint_url, params=kwargs)
-
+                
         if not response.ok:
-            raise RestError(response.status_code, endpoint_url, response)
-
+            #raise RestError(response.status_code, endpoint_url, response)
+            logging.info(f"[RESP] STATUS CODE: {response.status_code} - DATA: {response.text}")
+            return response.status_code, response.text
+        
+        logging.info(f"[RESP] STATUS CODE: {response.status_code} - DATA: {response.json()}")
         return response.status_code, response.json()
 
     def get_request(self, endpoint, **kwargs):

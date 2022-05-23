@@ -1,0 +1,95 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome7",
+    "definitions": {
+        "Welcome7": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "displayName": {
+                    "type": "string"
+                },
+                "desc": {
+                    "type": "string"
+                },
+                "descData": {
+                    "$ref": "#/definitions/DescData"
+                },
+                "url": {
+                    "type": "string",
+                    "format": "uri",
+                    "qt-uri-protocols": [
+                        "https"
+                    ]
+                },
+                "website": {
+                    "type": ["string", "null"]
+                },
+                "teamType": {
+                    "type": ["string", "null"]
+                },
+                "logoHash": {
+                    "type": ["string", "null"]
+                },
+                "logoUrl": {
+                    "type": ["string", "null"]
+                },
+                "products": {
+                    "type": "array",
+                    "items": {}
+                },
+                "powerUps": {
+                    "type": "array",
+                    "items": {}
+                },
+                "idMemberCreator": {
+                    "type": "string"
+                },
+                "limits": {
+                    "$ref": "#/definitions/Limits"
+                }
+            },
+            "required": [
+                "desc",
+                "descData",
+                "displayName",
+                "id",
+                "idMemberCreator",
+                "limits",
+                "logoHash",
+                "logoUrl",
+                "name",
+                "powerUps",
+                "products",
+                "teamType",
+                "url",
+                "website"
+            ],
+            "title": "Welcome7"
+        },
+        "DescData": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "emoji": {
+                    "$ref": "#/definitions/Limits"
+                }
+            },
+            "required": [
+                "emoji"
+            ],
+            "title": "DescData"
+        },
+        "Limits": {
+            "type": "object",
+            "additionalProperties": false,
+            "title": "Limits"
+        }
+    }
+} 
