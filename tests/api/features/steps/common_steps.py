@@ -21,21 +21,6 @@ def step_impl(context, http_method, endpoint):
             model.build_json(row['Key'], row['Value'])
     context.model = model
 
-# def _step_impl(context, hhtp_method, endpoint):
-#     replacements = re.findall(r'\{(.*?)\}', endpoint) 
-#     for replacement in replacements:
-#         endpoint = endpoint.replace("{" + replacement + "}", getattr(context, replacement)['id'])
-#     payload = {}
-#     if context.table:
-#         for row in context.table:
-#             key, value = row['Key'], row['Value']
-#             if "{id}" in value:
-#                 value = getattr(context, value.split(':')[1])['id']
-#             payload[key] = value
-#     context.payload = payload
-#     context.status_code, context.response = request_manager.do_request(method, endpoint, payload)
-
-
 @step('the user sends the request')
 def step_impl(context):
     if context.model:
