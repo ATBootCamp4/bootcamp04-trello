@@ -11,8 +11,11 @@ import logging
 
 from main.utils.api_exceptions import RestError
 from main.utils.common_globals import HEADERS, DEFAULT_API_URL, API_VERSION
+from main.utils.logger import Logger
 from main.utils.meta_classes import Singleton
+from main.utils.string_utils import build_api_log_message
 
+LOGGER = Logger(__name__)
 
 class RequestManager(metaclass=Singleton):
     """Module in charge of the execution of REST requests"""
@@ -40,13 +43,15 @@ class RequestManager(metaclass=Singleton):
 
         logging.info(f"[REQ] {method} - {endpoint_url} - DATA: {payload}")
         if method in ['POST', 'PUT']:
+            LOGGER.info(build_api_log_message(method, endpoint_url, payload))
             response = self.session.request(method, endpoint_url, data=json.dumps(payload), params=kwargs)
         else:
+            LOGGER.info(build_api_log_message(method, endpoint_url))
             response = self.session.request(method, endpoint_url, params=kwargs)
                 
+        LOGGER.info(build_api_log_message(method, endpoint_url, response=response))
         if not response.ok:
             #raise RestError(response.status_code, endpoint_url, response)
-            logging.info(f"[RESP] STATUS CODE: {response.status_code} - DATA: {response.text}")
             return response.status_code, response.text
         
         logging.info(f"[RESP] STATUS CODE: {response.status_code} - DATA: {response.json()}")
