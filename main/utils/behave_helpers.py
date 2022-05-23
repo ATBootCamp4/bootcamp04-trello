@@ -1,6 +1,7 @@
 import re
 import json
 from jsonschema import validate
+from main.utils.common_globals import DEFAULT_SCHEMA_PATH
 
 def replace_ids(context, endpoint: str)-> str:
     """Finds all ids in the endpoint and replaces them with the corresponding id from the context
@@ -25,6 +26,6 @@ def fill_payload(context, payload: dict)-> dict:
     return payload
 
 def validate_schema(context, schema_name: str):
-    with open(f'./main/schemas/{schema_name}.json', 'r') as f:
+    with open(DEFAULT_SCHEMA_PATH.format(schema_name), 'r') as f:
         schema = json.load(f)
     return validate(context.response, schema)

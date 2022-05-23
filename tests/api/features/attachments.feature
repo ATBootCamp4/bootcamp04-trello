@@ -15,7 +15,7 @@ Feature: Trello API Attachments
         Given I created a new card
         And I created an attachment on the card
         When I send a "GET" request to "/cards/{card}/attachments/{attachment}"
-        Then I receive a response with the "attachment" shcema
+        Then I receive a response with the "attachment" schema
         And the status code is "200"
 
     Scenario Outline: POST an attachment to a card from an url
