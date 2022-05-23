@@ -1,5 +1,9 @@
+import json
+from jsonschema import validate
 from behave import given, when, then, step
 from main.core.rest.request_manager import RequestManager
+from main.utils.common_globals import DEFAULT_SCHEMAS
+from tests.api.features.steps.json_model import JsonModel
 
 
 request_manager = RequestManager()
@@ -47,9 +51,19 @@ def step_impl(context):
         assert value == actual_value, f"Expected: {value}, Actual: {actual_value} "
 
 
-class JsonModel():
-    def __init__(self):
-        self.json_data = {}
+@step('the user sets "{field}" to be "{value}"')
+def step_impl(context, field, value):
+    if not context.model:
+        context.model = JsonModel()
 
-    def build_json(self, key, value):
-        self.json_data[key] = value
+    context.model.build_json(field, value)
+
+@step('validate the schema of "{endpoint}"')
+def step_impl(context, endpoint):
+
+    json_schema = DEFAULT_SCHEMAS.get(endpoint)
+
+    with open(json_schema) as file_schema:
+        data = json.load(file_schema)
+    
+    validate(context.api_response, data)

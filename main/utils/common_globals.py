@@ -15,3 +15,7 @@ HEADERS = {
 # Default API URL and Version
 DEFAULT_API_URL = "https://api.trello.com"
 API_VERSION = "1"
+
+DEFAULT_SCHEMAS = {
+   "organizations": "./main/schemas/organization_schema.json"
+}
