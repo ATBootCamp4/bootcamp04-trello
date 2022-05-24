@@ -1,0 +1,23 @@
+Feature: Trello API Lists # lists.feature:1
+  As a user
+  I want "Lists" API endpoints
+  In order to manipulate lists
+  Scenario Outline: GET all lists in a board -- @1.1                       # lists.feature:13
+    Given I send a GET request to /boards/"627c0cb01e98336259fa1ae4"/lists # steps/lists_steps.py:6
+    When I receive a response with at least one list                       # steps/lists_steps.py:12
+    Then the status code is "200"                                          # steps/lists_steps.py:16
+
+  Scenario Outline: GET a list by id -- @1.1                       # lists.feature:22
+    Given I send a GET request to lists/"627c0cb01e98336259fa1ae4" # steps/lists_steps.py:22
+    When I receive a response with id: "627c0cb01e98336259fa1ae4"  # steps/lists_steps.py:28
+    Then status code is "200"                                      # steps/lists_steps.py:32
+
+  Scenario Outline: GET a list by id -- @1.2                       # lists.feature:23
+    Given I send a GET request to lists/"627c0cb01e98336259fa1ae5" # steps/lists_steps.py:22
+    When I receive a response with id: "627c0cb01e98336259fa1ae5"  # steps/lists_steps.py:28
+    Then status code is "200"                                      # steps/lists_steps.py:32
+
+1 feature passed, 0 failed, 0 skipped
+3 scenarios passed, 0 failed, 0 skipped
+9 steps passed, 0 failed, 0 skipped, 0 undefined
+Took 0m1.162s
