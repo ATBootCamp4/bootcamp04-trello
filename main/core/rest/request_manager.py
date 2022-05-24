@@ -22,7 +22,7 @@ class RequestManager(metaclass=Singleton):
         :param base_url:  str  The URL of the API to which the requests are to be sent
         :param version:   str  The API version
         """
-        self.base_url = f"{base_url}/{version}/"
+        self.base_url = f"{base_url}/{version}"
         self.session = requests.Session()
         self.session.headers.update(HEADERS)
 
@@ -42,8 +42,9 @@ class RequestManager(metaclass=Singleton):
         else:
             response = self.session.request(method, endpoint_url, params=kwargs)
 
-        if not response.ok:
-            raise RestError(response.status_code, endpoint_url, response)
+        # This doesn't allow to check for status codes that are not in the 2xx range
+        #if not response.ok:
+        #    raise RestError(response.status_code, endpoint_url, response)
 
         return response.status_code, response.json()
 
