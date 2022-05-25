@@ -16,6 +16,9 @@ def replace_ids(context, endpoint: str)-> str:
 def fill_payload(context, payload: dict)-> dict:
     """Fills a paylod from a Data table with the following (case-sensitive) headers:
     | Key | Value |
+    if the value needs to be replaced with the value from the context,
+    the syntax is as follows: '{attribute_name}:item_name'
+    example: '{id}:card'
     """
     if context.table:
         for row in context.table:
