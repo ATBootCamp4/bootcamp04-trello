@@ -20,8 +20,9 @@ def fill_payload(context, payload: dict)-> dict:
     if context.table:
         for row in context.table:
             key, value = row['Key'], row['Value']
-            if "{id}" in value:
-                value = getattr(context, value.split(':')[1])['id']
+            to_replace = re.search(r'\{(.*?)\}', value)
+            if to_replace:
+                value = getattr(context, value.split(':')[1])[to_replace.group(1)]
             payload[key] = value
     return payload
 
