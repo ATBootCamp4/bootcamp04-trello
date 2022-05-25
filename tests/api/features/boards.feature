@@ -1,4 +1,4 @@
-Feature: Trello Members API
+Feature: Trello Boards API
     As a user I want to use Boards API and perform Get,Post And Delete operations
    
    Scenario: Get all information of board 
