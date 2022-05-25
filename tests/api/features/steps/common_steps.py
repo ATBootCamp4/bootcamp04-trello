@@ -3,7 +3,7 @@ from main.utils.behave_helpers import replace_ids, fill_payload, validate_schema
 
 @given('I created a new card')
 def step_impl(context):
-    _, context.card = context.request_manager.post_request('cards', payload={'name': 'Behave card', 'idList': context.list['id']})
+    context.status_code, context.card = context.request_manager.post_request('cards', payload={'name': 'Behave card', 'idList': context.list['id']})
 
 @when('I send a "{method}" request to "{endpoint}"')
 def step_impl(context, method, endpoint):
