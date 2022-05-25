@@ -23,8 +23,8 @@ Scenario Outline: Create labels in specific card with different names
       Given I created a new card
       When I send a "POST" request to "/cards/{card}/labels"
             | Key    | Value        | 
-            | name   | Checklist 1  |
-            | color  | green        |
+            | name   | <Name>       |
+            | color  | <Color>      |
       And the status code is "<http_response>"
     Examples: Values
     |names  |colors    |http_response   |
