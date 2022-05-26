@@ -2,7 +2,7 @@ Feature: Trello Boards API
     As a user I want to use Boards API and perform Get,Post And Delete operations
    
    Scenario: Get all information of board 
-        Given I am a trello user
+        Given A board is created
         When I send a "GET" request to "/boards/{board}"
         Then the status code is "200"
         And I receive a response with the "board" schema

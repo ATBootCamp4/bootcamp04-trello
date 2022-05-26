@@ -47,6 +47,13 @@ def step_impl(context, name):
     if (context.response["name"] == name):
         context.status_code, context.response = boards_manager.delete_board(context.response["id"])
 
+@given('A board is created')
+def step_impl(context):
+    """ 
+    this function doens't do anything because in the before all is already created a board 
+    """
+    pass
+
 
 
 
