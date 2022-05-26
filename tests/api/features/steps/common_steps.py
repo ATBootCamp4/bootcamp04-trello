@@ -27,3 +27,7 @@ def step_impl(context, status_code):
 @then('I receive a response with the "{schema_name}" schema')
 def step_impl(context, schema_name):
     validate_schema(context, schema_name)
+
+@given('I am a trello user')
+def step_impl(context):
+    pass
