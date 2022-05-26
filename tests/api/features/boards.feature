@@ -11,7 +11,7 @@ Feature: Trello Boards API
         Given I am a trello user
         When I send a "GET" request to "/boards/{board}/members"
         Then the status code is "200"
-        And I receive a list with at least "1" "{member}"
+        And I receive a list with at least "1" "member"
     
     Scenario: Updating information of a Board
         Given I am a trello user
