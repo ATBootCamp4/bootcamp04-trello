@@ -33,7 +33,8 @@ Scenario Outline: Create labels in specific card with different names and colors
             | Key    | Value        | 
             | name   | <Name>       |
             | color  | <Color>      |
-      And the status code is "<http_response>"
+      Then the status code is "<http_response>"
+
         Examples: Values
         |Name   |Color     |http_response   |
         |  aaa  |  green   |  200           |
