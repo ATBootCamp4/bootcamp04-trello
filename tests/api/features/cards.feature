@@ -16,6 +16,7 @@ Feature: Trello Card API
 			| Key    | Value           |
 			| name   | TestCardUpdate  |
 			| desc   | Testdescupdated |
+		And I receive a response with the "cards" schema
 
 	Scenario: Create a comment on a Card
 		Given I created a new card
@@ -26,8 +27,10 @@ Feature: Trello Card API
 		And verify the comment has been added
 			| Key    | Value             |
 			| text   | Commenttext       |
+		And I receive a response with the "comment_on_card" schema
 
 	Scenario: Delete a Card
 		Given I created a new card
 		When I send a "DELETE" request to "cards/{card}" 
 		Then the status code is "200"
+		And I verify the card is deleted

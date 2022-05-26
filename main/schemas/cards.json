@@ -126,7 +126,6 @@
                 }
             },
             "required": [
-                "attachments",
                 "badges",
                 "cardRole",
                 "checkItemStates",
@@ -150,14 +149,12 @@
                 "idShort",
                 "isTemplate",
                 "labels",
-                "limits",
                 "manualCoverAttachment",
                 "name",
                 "pos",
                 "shortLink",
                 "shortUrl",
                 "start",
-                "stickers",
                 "subscribed",
                 "url"
             ],
@@ -165,7 +162,7 @@
         },
         "Badges": {
             "type": "object",
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
                 "attachmentsByType": {
                     "$ref": "#/definitions/AttachmentsByType"

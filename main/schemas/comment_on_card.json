@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/draft-06/schema#",
-    "$ref": "#/definitions/Welcome5",
+    "$ref": "#/definitions/Welcome10",
     "definitions": {
-        "Welcome5": {
+        "Welcome10": {
             "type": "object",
             "additionalProperties": true,
             "properties": {
@@ -38,7 +38,7 @@
                     }
                 },
                 "memberCreator": {
-                    "$ref": "#/definitions/Welcome5MemberCreator"
+                    "$ref": "#/definitions/Welcome10MemberCreator"
                 }
             },
             "required": [
@@ -53,7 +53,7 @@
                 "memberCreator",
                 "type"
             ],
-            "title": "Welcome5"
+            "title": "Welcome10"
         },
         "AppCreator": {
             "type": "object",
@@ -377,7 +377,7 @@
             ],
             "title": "PerAction"
         },
-        "Welcome5MemberCreator": {
+        "Welcome10MemberCreator": {
             "type": "object",
             "additionalProperties": false,
             "properties": {
@@ -428,7 +428,7 @@
                 "nonPublicAvailable",
                 "username"
             ],
-            "title": "Welcome5MemberCreator"
+            "title": "Welcome10MemberCreator"
         }
     }
 }
