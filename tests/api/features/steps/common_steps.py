@@ -5,7 +5,7 @@ from main.utils.behave_helpers import replace_ids, fill_payload, validate_schema
 def step_impl(context):
     _, context.card = context.request_manager.post_request('cards', payload={'name': 'Behave card', 'idList': context.list['id']})
 
-@when('I send a "{method}" request to "{endpoint}"')
+@step('I send a "{method}" request to "{endpoint}"')
 def step_impl(context, method, endpoint):
     endpoint = replace_ids(context, endpoint)
     context.payload = fill_payload(context, payload={})
@@ -27,3 +27,9 @@ def step_impl(context, status_code):
 @then('I receive a response with the "{schema_name}" schema')
 def step_impl(context, schema_name):
     validate_schema(context, schema_name)
+    
+@step('I check the data is')
+def step_impl(context):
+    expected_json = fill_payload(context, payload={})
+    for key, value in expected_json.items():
+        assert value==context.response[key],'expected value for {key} is {value},but actual is {context.response[key]}'
