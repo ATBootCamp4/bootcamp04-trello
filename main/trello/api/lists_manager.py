@@ -11,11 +11,10 @@ class ListsManager(RESTBaseManager):
     """Class which can be used to manage Trello Lists through the API"""
 
     def __init__(self, request_method=None):
-        super().__init__(request_method)
         """ Construct the necessary attributes for the ListsManager
-
         :param method: obj  RequestManager object which is used to handle the API requests
         """
+        super().__init__(request_method)
     
     def create_list(self, name, idBoard):
         """ Create a List in a Board
