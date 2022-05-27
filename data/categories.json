@@ -1,5 +1,30 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ ]
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "\nYou can implement step definitions for undefined steps with these snippets:\n\n@then(u'I receive a response with the \"list\" id')\ndef step_impl(context):\n    raise NotImplementedError(u'STEP: Then I receive a response with the \"list\" id')\n\n",
+      "children" : [ {
+        "name" : "GET a list by id",
+        "uid" : "d22ad4908a6f9fd6",
+        "parentUid" : "26eef8189e7882d8240db53783ab9c1e",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653694520186,
+          "stop" : 1653694520241,
+          "duration" : 55
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "26eef8189e7882d8240db53783ab9c1e"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
 }

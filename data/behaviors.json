@@ -5,13 +5,13 @@
     "name" : "Trello API Attachments",
     "children" : [ {
       "name" : "GET all attachments from a card",
-      "uid" : "a119203f183b5568",
+      "uid" : "df2471a63460e052",
       "parentUid" : "cee1596e8c99eb83dee3c9856b61ff6c",
       "status" : "passed",
       "time" : {
-        "start" : 1653692385031,
-        "stop" : 1653692386601,
-        "duration" : 1570
+        "start" : 1653694500197,
+        "stop" : 1653694501449,
+        "duration" : 1252
       },
       "flaky" : false,
       "newFailed" : false,
@@ -22,13 +22,13 @@
       "parameters" : [ ]
     }, {
       "name" : "GET an attachment from a card",
-      "uid" : "91bf69d2985a3c21",
+      "uid" : "8f21fff84dc16533",
       "parentUid" : "cee1596e8c99eb83dee3c9856b61ff6c",
       "status" : "passed",
       "time" : {
-        "start" : 1653692386602,
-        "stop" : 1653692387804,
-        "duration" : 1202
+        "start" : 1653694501450,
+        "stop" : 1653694502717,
+        "duration" : 1267
       },
       "flaky" : false,
       "newFailed" : false,
@@ -39,13 +39,13 @@
       "parameters" : [ ]
     }, {
       "name" : "GET an non existing attachment from a card",
-      "uid" : "6baaaad85091d2fb",
+      "uid" : "9f0ca605501f52aa",
       "parentUid" : "cee1596e8c99eb83dee3c9856b61ff6c",
       "status" : "passed",
       "time" : {
-        "start" : 1653692387804,
-        "stop" : 1653692388933,
-        "duration" : 1129
+        "start" : 1653694502718,
+        "stop" : 1653694503998,
+        "duration" : 1280
       },
       "flaky" : false,
       "newFailed" : false,
@@ -56,13 +56,13 @@
       "parameters" : [ ]
     }, {
       "name" : "POST an attachment to a card from an url -- @1.1 ",
-      "uid" : "ec6960eaeb497b51",
+      "uid" : "c25e7cd4f326b0ec",
       "parentUid" : "cee1596e8c99eb83dee3c9856b61ff6c",
       "status" : "passed",
       "time" : {
-        "start" : 1653692388934,
-        "stop" : 1653692389687,
-        "duration" : 753
+        "start" : 1653694504000,
+        "stop" : 1653694504570,
+        "duration" : 570
       },
       "flaky" : false,
       "newFailed" : false,
@@ -73,13 +73,13 @@
       "parameters" : [ "false", "Trello logo", "https://www.svgrepo.com/show/354463/trello.svg", "normal image attachment" ]
     }, {
       "name" : "POST an attachment to a card from an url -- @1.2 ",
-      "uid" : "7982acbdd3b0351c",
+      "uid" : "326b3418c66223bb",
       "parentUid" : "cee1596e8c99eb83dee3c9856b61ff6c",
       "status" : "passed",
       "time" : {
-        "start" : 1653692389687,
-        "stop" : 1653692390102,
-        "duration" : 415
+        "start" : 1653694504571,
+        "stop" : 1653694504945,
+        "duration" : 374
       },
       "flaky" : false,
       "newFailed" : false,
@@ -90,13 +90,13 @@
       "parameters" : [ "false", "invalid", "fpt.aaa.bbb.ccc", "API adds \"http://\" and returns 200" ]
     }, {
       "name" : "POST an attachment to a card from an url -- @1.3 ",
-      "uid" : "cdb1b38a3944daf5",
+      "uid" : "bcb47153b3fb39f5",
       "parentUid" : "cee1596e8c99eb83dee3c9856b61ff6c",
       "status" : "passed",
       "time" : {
-        "start" : 1653692390102,
-        "stop" : 1653692391218,
-        "duration" : 1116
+        "start" : 1653694504946,
+        "stop" : 1653694506288,
+        "duration" : 1342
       },
       "flaky" : false,
       "newFailed" : false,
@@ -107,13 +107,13 @@
       "parameters" : [ "true", "cover", "https://source.unsplash.com/user/c_v_r", "cover image attachment" ]
     }, {
       "name" : "POST a non-image attachment as cover to a card",
-      "uid" : "4af225df67e0b855",
+      "uid" : "65569faba1f08f79",
       "parentUid" : "cee1596e8c99eb83dee3c9856b61ff6c",
       "status" : "passed",
       "time" : {
-        "start" : 1653692391219,
-        "stop" : 1653692391625,
-        "duration" : 406
+        "start" : 1653694506289,
+        "stop" : 1653694506620,
+        "duration" : 331
       },
       "flaky" : false,
       "newFailed" : false,
@@ -124,13 +124,13 @@
       "parameters" : [ ]
     }, {
       "name" : "DELETE an attachment from a card",
-      "uid" : "7af7b18027367f87",
+      "uid" : "b1b8068860c972e9",
       "parentUid" : "cee1596e8c99eb83dee3c9856b61ff6c",
       "status" : "passed",
       "time" : {
-        "start" : 1653692391626,
-        "stop" : 1653692392966,
-        "duration" : 1340
+        "start" : 1653694506621,
+        "stop" : 1653694507977,
+        "duration" : 1356
       },
       "flaky" : false,
       "newFailed" : false,
@@ -145,13 +145,13 @@
     "name" : "Trello Boards API",
     "children" : [ {
       "name" : "Get all information of board",
-      "uid" : "ffb1700e6bb633a2",
+      "uid" : "47a5b41672b89e36",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692392973,
-        "stop" : 1653692393033,
-        "duration" : 60
+        "start" : 1653694507983,
+        "stop" : 1653694508053,
+        "duration" : 70
       },
       "flaky" : false,
       "newFailed" : false,
@@ -162,13 +162,13 @@
       "parameters" : [ ]
     }, {
       "name" : "Get members of board",
-      "uid" : "4c64cbf6286fcfaa",
+      "uid" : "7e8452c4be23bb3c",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692393033,
-        "stop" : 1653692393084,
-        "duration" : 51
+        "start" : 1653694508053,
+        "stop" : 1653694508106,
+        "duration" : 53
       },
       "flaky" : false,
       "newFailed" : false,
@@ -179,13 +179,13 @@
       "parameters" : [ ]
     }, {
       "name" : "Updating information of a Board",
-      "uid" : "3db657d24e8483fd",
+      "uid" : "8c1d811b8fc5783c",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692393085,
-        "stop" : 1653692393204,
-        "duration" : 119
+        "start" : 1653694508107,
+        "stop" : 1653694508260,
+        "duration" : 153
       },
       "flaky" : false,
       "newFailed" : false,
@@ -196,13 +196,13 @@
       "parameters" : [ ]
     }, {
       "name" : "CREATE and DELETE a board -- @1.1 ",
-      "uid" : "f904613e5773d565",
+      "uid" : "9c4b835328ef473b",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692393205,
-        "stop" : 1653692393685,
-        "duration" : 480
+        "start" : 1653694508260,
+        "stop" : 1653694508767,
+        "duration" : 507
       },
       "flaky" : false,
       "newFailed" : false,
@@ -213,13 +213,13 @@
       "parameters" : [ "name", "kiara" ]
     }, {
       "name" : "CREATE and DELETE a board -- @1.2 ",
-      "uid" : "918d706f44871d1a",
+      "uid" : "38c3c74c9eff12f8",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692393686,
-        "stop" : 1653692394217,
-        "duration" : 531
+        "start" : 1653694508768,
+        "stop" : 1653694509273,
+        "duration" : 505
       },
       "flaky" : false,
       "newFailed" : false,
@@ -230,13 +230,13 @@
       "parameters" : [ "name", "jose" ]
     }, {
       "name" : "CREATE and DELETE a board -- @1.3 ",
-      "uid" : "4935bb8bd8a9a96c",
+      "uid" : "d453635da405b470",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692394218,
-        "stop" : 1653692394717,
-        "duration" : 499
+        "start" : 1653694509274,
+        "stop" : 1653694509769,
+        "duration" : 495
       },
       "flaky" : false,
       "newFailed" : false,
@@ -247,13 +247,13 @@
       "parameters" : [ "name", "Nicolas" ]
     }, {
       "name" : "CREATE and DELETE a board -- @1.4 ",
-      "uid" : "45db832bb9d28dfa",
+      "uid" : "b4b115cb9e1ed240",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692394718,
-        "stop" : 1653692395251,
-        "duration" : 533
+        "start" : 1653694509770,
+        "stop" : 1653694510357,
+        "duration" : 587
       },
       "flaky" : false,
       "newFailed" : false,
@@ -264,13 +264,13 @@
       "parameters" : [ "name", "keila" ]
     }, {
       "name" : "CREATE and DELETE a board -- @1.5 ",
-      "uid" : "afdbc468d6fddd58",
+      "uid" : "bac8391e7275f36e",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692395252,
-        "stop" : 1653692395751,
-        "duration" : 499
+        "start" : 1653694510358,
+        "stop" : 1653694510887,
+        "duration" : 529
       },
       "flaky" : false,
       "newFailed" : false,
@@ -281,13 +281,13 @@
       "parameters" : [ "name", "Vallejo" ]
     }, {
       "name" : "CREATE and DELETE a board -- @1.6 ",
-      "uid" : "e4176f4ef59e1809",
+      "uid" : "f928e34fea5e12d3",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692395752,
-        "stop" : 1653692396240,
-        "duration" : 488
+        "start" : 1653694510887,
+        "stop" : 1653694511436,
+        "duration" : 549
       },
       "flaky" : false,
       "newFailed" : false,
@@ -298,13 +298,13 @@
       "parameters" : [ "name", "pabon" ]
     }, {
       "name" : "Updating information of a Board negative",
-      "uid" : "fbf6ec95680cbc13",
+      "uid" : "36dd8d2e83473827",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692396240,
-        "stop" : 1653692396295,
-        "duration" : 55
+        "start" : 1653694511437,
+        "stop" : 1653694511493,
+        "duration" : 56
       },
       "flaky" : false,
       "newFailed" : false,
@@ -315,12 +315,12 @@
       "parameters" : [ ]
     }, {
       "name" : "Get members of board negative",
-      "uid" : "85ccef643526641f",
+      "uid" : "7cf70b1a1ed9a110",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692396296,
-        "stop" : 1653692396338,
+        "start" : 1653694511494,
+        "stop" : 1653694511536,
         "duration" : 42
       },
       "flaky" : false,
@@ -332,13 +332,13 @@
       "parameters" : [ ]
     }, {
       "name" : "Get a board negative -- @1.1 ",
-      "uid" : "bf629babbe58a447",
+      "uid" : "d9eeb74dee7affa6",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692396338,
-        "stop" : 1653692396385,
-        "duration" : 47
+        "start" : 1653694511537,
+        "stop" : 1653694511581,
+        "duration" : 44
       },
       "flaky" : false,
       "newFailed" : false,
@@ -349,13 +349,13 @@
       "parameters" : [ "/boards/6290f7ea8abc4849607f0a52", "404" ]
     }, {
       "name" : "Get a board negative -- @1.2 ",
-      "uid" : "68313ae01ef57f87",
+      "uid" : "5bdd6196acf0bf55",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692396386,
-        "stop" : 1653692396426,
-        "duration" : 40
+        "start" : 1653694511581,
+        "stop" : 1653694511624,
+        "duration" : 43
       },
       "flaky" : false,
       "newFailed" : false,
@@ -366,13 +366,13 @@
       "parameters" : [ "/boards/6290f7ea8abc484", "400" ]
     }, {
       "name" : "Get a board negative -- @1.3 ",
-      "uid" : "4aece9f8cd66c121",
+      "uid" : "9d30d1c7741cca11",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692396427,
-        "stop" : 1653692396469,
-        "duration" : 42
+        "start" : 1653694511626,
+        "stop" : 1653694511673,
+        "duration" : 47
       },
       "flaky" : false,
       "newFailed" : false,
@@ -383,13 +383,13 @@
       "parameters" : [ "/boards/628bb6a0f8621c367f942e6b", "404" ]
     }, {
       "name" : "Get a board negative -- @1.4 ",
-      "uid" : "3f3658ee9455306c",
+      "uid" : "39773e957bb1225c",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692396470,
-        "stop" : 1653692396510,
-        "duration" : 40
+        "start" : 1653694511675,
+        "stop" : 1653694511724,
+        "duration" : 49
       },
       "flaky" : false,
       "newFailed" : false,
@@ -400,13 +400,13 @@
       "parameters" : [ "/boards/6290f7ea8abc4H4", "400" ]
     }, {
       "name" : "Get a board negative -- @1.5 ",
-      "uid" : "a36aca5869310f2e",
+      "uid" : "a814081b37e7ebd7",
       "parentUid" : "e15765618b593b04a6daa28e1350ce02",
       "status" : "passed",
       "time" : {
-        "start" : 1653692396511,
-        "stop" : 1653692396549,
-        "duration" : 38
+        "start" : 1653694511726,
+        "stop" : 1653694511767,
+        "duration" : 41
       },
       "flaky" : false,
       "newFailed" : false,
@@ -418,16 +418,16 @@
     } ],
     "uid" : "e15765618b593b04a6daa28e1350ce02"
   }, {
-    "name" : "Trello API Checklists",
+    "name" : "Trello Card API",
     "children" : [ {
-      "name" : "GET all checklists on a card",
-      "uid" : "8816525df7bfbc9d",
-      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "name" : "Create a Card on a List",
+      "uid" : "a68d85d2132d2517",
+      "parentUid" : "3150af5e05dd750c9ddae122c5a45b54",
       "status" : "passed",
       "time" : {
-        "start" : 1653692396551,
-        "stop" : 1653692396910,
-        "duration" : 359
+        "start" : 1653694511768,
+        "stop" : 1653694511985,
+        "duration" : 217
       },
       "flaky" : false,
       "newFailed" : false,
@@ -437,14 +437,14 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "GET a checklist by id",
-      "uid" : "edcf1b7f072f5ee6",
-      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "name" : "Modify information of a Card",
+      "uid" : "22592e8429907590",
+      "parentUid" : "3150af5e05dd750c9ddae122c5a45b54",
       "status" : "passed",
       "time" : {
-        "start" : 1653692396911,
-        "stop" : 1653692397251,
-        "duration" : 340
+        "start" : 1653694511985,
+        "stop" : 1653694512309,
+        "duration" : 324
       },
       "flaky" : false,
       "newFailed" : false,
@@ -454,14 +454,14 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "GET a checklist by unexisting id",
-      "uid" : "aeb5b1e73309642e",
-      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "name" : "Create a comment on a Card",
+      "uid" : "76d51f31c21343ec",
+      "parentUid" : "3150af5e05dd750c9ddae122c5a45b54",
       "status" : "passed",
       "time" : {
-        "start" : 1653692397252,
-        "stop" : 1653692397582,
-        "duration" : 330
+        "start" : 1653694512310,
+        "stop" : 1653694512684,
+        "duration" : 374
       },
       "flaky" : false,
       "newFailed" : false,
@@ -471,14 +471,14 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "POST a new checklist to a card",
-      "uid" : "1a840ba5514afa1c",
-      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "name" : "Delete a Card",
+      "uid" : "cd1c39b84fc938",
+      "parentUid" : "3150af5e05dd750c9ddae122c5a45b54",
       "status" : "passed",
       "time" : {
-        "start" : 1653692397582,
-        "stop" : 1653692397891,
-        "duration" : 309
+        "start" : 1653694512685,
+        "stop" : 1653694513043,
+        "duration" : 358
       },
       "flaky" : false,
       "newFailed" : false,
@@ -488,98 +488,13 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "POST a new checklist with an invalid pos to a card",
-      "uid" : "3b65f406a9cee8d",
-      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "name" : "Modify a Comment in a Card",
+      "uid" : "fccc6e833a7b77cb",
+      "parentUid" : "3150af5e05dd750c9ddae122c5a45b54",
       "status" : "passed",
       "time" : {
-        "start" : 1653692397891,
-        "stop" : 1653692398094,
-        "duration" : 203
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "Update a checklist",
-      "uid" : "4867b06b89fdab6",
-      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
-      "status" : "passed",
-      "time" : {
-        "start" : 1653692398095,
-        "stop" : 1653692398552,
-        "duration" : 457
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "Update a checklist with invalid position",
-      "uid" : "dd8c23405dbf73f5",
-      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
-      "status" : "passed",
-      "time" : {
-        "start" : 1653692398552,
-        "stop" : 1653692398847,
-        "duration" : 295
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "DELETE a checklist",
-      "uid" : "2a1850e396f52fa2",
-      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
-      "status" : "passed",
-      "time" : {
-        "start" : 1653692398848,
-        "stop" : 1653692399287,
-        "duration" : 439
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "GET all completed checklist items on a card",
-      "uid" : "e9532c7ca6d3352a",
-      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
-      "status" : "passed",
-      "time" : {
-        "start" : 1653692399288,
-        "stop" : 1653692399700,
-        "duration" : 412
-      },
-      "flaky" : false,
-      "newFailed" : false,
-      "newPassed" : false,
-      "newBroken" : false,
-      "retriesCount" : 0,
-      "retriesStatusChange" : false,
-      "parameters" : [ ]
-    }, {
-      "name" : "GET all checklist items on a checklist",
-      "uid" : "4416ed64a19d0612",
-      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
-      "status" : "passed",
-      "time" : {
-        "start" : 1653692399701,
-        "stop" : 1653692400138,
+        "start" : 1653694513045,
+        "stop" : 1653694513482,
         "duration" : 437
       },
       "flaky" : false,
@@ -590,14 +505,205 @@
       "retriesStatusChange" : false,
       "parameters" : [ ]
     }, {
-      "name" : "POST a new checklist item to a checklist",
-      "uid" : "bdaaa3d7a1257494",
+      "name" : "Delete a Comment in a card",
+      "uid" : "9ce32981a8a248b9",
+      "parentUid" : "3150af5e05dd750c9ddae122c5a45b54",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694513483,
+        "stop" : 1653694513928,
+        "duration" : 445
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "3150af5e05dd750c9ddae122c5a45b54"
+  }, {
+    "name" : "Trello API Checklists",
+    "children" : [ {
+      "name" : "GET all checklists on a card",
+      "uid" : "775935f48b9f138",
       "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
       "status" : "passed",
       "time" : {
-        "start" : 1653692400139,
-        "stop" : 1653692400575,
-        "duration" : 436
+        "start" : 1653694513929,
+        "stop" : 1653694514275,
+        "duration" : 346
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "GET a checklist by id",
+      "uid" : "ef8c77a4d029367e",
+      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694514275,
+        "stop" : 1653694514621,
+        "duration" : 346
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "GET a checklist by unexisting id",
+      "uid" : "25ee69ec81f29282",
+      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694514622,
+        "stop" : 1653694514953,
+        "duration" : 331
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "POST a new checklist to a card",
+      "uid" : "3accfceaf83b7c37",
+      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694514953,
+        "stop" : 1653694515283,
+        "duration" : 330
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "POST a new checklist with an invalid pos to a card",
+      "uid" : "78ece4bf103f08e5",
+      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694515284,
+        "stop" : 1653694515494,
+        "duration" : 210
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Update a checklist",
+      "uid" : "946db1711506a821",
+      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694515495,
+        "stop" : 1653694515905,
+        "duration" : 410
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Update a checklist with invalid position",
+      "uid" : "db7d372a3ae2a9cb",
+      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694515905,
+        "stop" : 1653694516208,
+        "duration" : 303
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "DELETE a checklist",
+      "uid" : "c1d53407e848191d",
+      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694516209,
+        "stop" : 1653694516667,
+        "duration" : 458
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "GET all completed checklist items on a card",
+      "uid" : "ebcd6ccc884832a8",
+      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694516668,
+        "stop" : 1653694517107,
+        "duration" : 439
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "GET all checklist items on a checklist",
+      "uid" : "466c6130e4351011",
+      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694517108,
+        "stop" : 1653694517543,
+        "duration" : 435
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "POST a new checklist item to a checklist",
+      "uid" : "6f059afb0029748f",
+      "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694517545,
+        "stop" : 1653694518002,
+        "duration" : 457
       },
       "flaky" : false,
       "newFailed" : false,
@@ -608,13 +714,13 @@
       "parameters" : [ ]
     }, {
       "name" : "GET a checklist item by its id",
-      "uid" : "7a6e0b264a9d352b",
+      "uid" : "97d6aa16020eb39b",
       "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
       "status" : "passed",
       "time" : {
-        "start" : 1653692400576,
-        "stop" : 1653692401018,
-        "duration" : 442
+        "start" : 1653694518003,
+        "stop" : 1653694518449,
+        "duration" : 446
       },
       "flaky" : false,
       "newFailed" : false,
@@ -625,13 +731,13 @@
       "parameters" : [ ]
     }, {
       "name" : "Update a checklist item",
-      "uid" : "7baea5ca58c02acb",
+      "uid" : "820fa46b520cbe8e",
       "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
       "status" : "passed",
       "time" : {
-        "start" : 1653692401019,
-        "stop" : 1653692401700,
-        "duration" : 681
+        "start" : 1653694518450,
+        "stop" : 1653694519055,
+        "duration" : 605
       },
       "flaky" : false,
       "newFailed" : false,
@@ -642,13 +748,13 @@
       "parameters" : [ ]
     }, {
       "name" : "Update a checklist item with invalid state",
-      "uid" : "4de5692ba9736e68",
+      "uid" : "27f9f9e0d6eaec30",
       "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
       "status" : "passed",
       "time" : {
-        "start" : 1653692401701,
-        "stop" : 1653692402174,
-        "duration" : 473
+        "start" : 1653694519055,
+        "stop" : 1653694519555,
+        "duration" : 500
       },
       "flaky" : false,
       "newFailed" : false,
@@ -659,13 +765,13 @@
       "parameters" : [ ]
     }, {
       "name" : "DELETE a checklist item",
-      "uid" : "8612e713e80f0aad",
+      "uid" : "ac93b264b9ddae2e",
       "parentUid" : "b295bcdf441559b47e812a6a9dfd3cad",
       "status" : "passed",
       "time" : {
-        "start" : 1653692402175,
-        "stop" : 1653692402720,
-        "duration" : 545
+        "start" : 1653694519556,
+        "stop" : 1653694520122,
+        "duration" : 566
       },
       "flaky" : false,
       "newFailed" : false,
@@ -676,5 +782,94 @@
       "parameters" : [ ]
     } ],
     "uid" : "b295bcdf441559b47e812a6a9dfd3cad"
+  }, {
+    "name" : "Trello API Lists",
+    "children" : [ {
+      "name" : "GET all lists in a board",
+      "uid" : "382cc5d11fcd9a5e",
+      "parentUid" : "2bebea96bca3b253702a06b1ba75a7ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694520124,
+        "stop" : 1653694520186,
+        "duration" : 62
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "GET a list by id",
+      "uid" : "d22ad4908a6f9fd6",
+      "parentUid" : "2bebea96bca3b253702a06b1ba75a7ce",
+      "status" : "broken",
+      "time" : {
+        "start" : 1653694520186,
+        "stop" : 1653694520241,
+        "duration" : 55
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "POST a new list to a board",
+      "uid" : "c780ff745a4cad45",
+      "parentUid" : "2bebea96bca3b253702a06b1ba75a7ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694520242,
+        "stop" : 1653694520386,
+        "duration" : 144
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Update a list name",
+      "uid" : "ebb2afe215ec1f7a",
+      "parentUid" : "2bebea96bca3b253702a06b1ba75a7ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694520387,
+        "stop" : 1653694520473,
+        "duration" : 86
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "Archive a list",
+      "uid" : "373ccb3dce2569e",
+      "parentUid" : "2bebea96bca3b253702a06b1ba75a7ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1653694520474,
+        "stop" : 1653694520576,
+        "duration" : 102
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "newPassed" : false,
+      "newBroken" : false,
+      "retriesCount" : 0,
+      "retriesStatusChange" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "2bebea96bca3b253702a06b1ba75a7ce"
   } ]
 }
