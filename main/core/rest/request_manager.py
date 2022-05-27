@@ -43,7 +43,8 @@ class RequestManager(metaclass=Singleton):
             response = self.session.request(method, endpoint_url, params=kwargs)
 
         # This doesn't allow to check for status codes that are not in the 2xx range
-        #if not response.ok:
+        if not response.ok:
+            return response.status_code, response.text
         #    raise RestError(response.status_code, endpoint_url, response)
 
         return response.status_code, response.json()
