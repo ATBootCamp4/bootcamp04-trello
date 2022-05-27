@@ -1,0 +1,157 @@
+{
+  "uid" : "76b3de2806b8e9a3",
+  "name" : "CREATE and DELETE a board -- @1.2 ",
+  "fullName" : "Trello Boards API: CREATE and DELETE a board",
+  "historyId" : "bc9ea5c3639e1d092e5cff011bce44a3",
+  "time" : {
+    "start" : 1653688456930,
+    "stop" : 1653688457741,
+    "duration" : 811
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given the user creates a board with \"name\" to be \"jose\"",
+      "time" : {
+        "start" : 1653688456931,
+        "stop" : 1653688457225,
+        "duration" : 294
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the status code is \"200\"",
+      "time" : {
+        "start" : 1653688457225,
+        "stop" : 1653688457225,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I receive a response with the \"board\" schema",
+      "time" : {
+        "start" : 1653688457225,
+        "stop" : 1653688457230,
+        "duration" : 5
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the user deletes the board \"jose\"",
+      "time" : {
+        "start" : 1653688457230,
+        "stop" : 1653688457634,
+        "duration" : 404
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And verify the board does not exist",
+      "time" : {
+        "start" : 1653688457634,
+        "stop" : 1653688457740,
+        "duration" : 106
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the status code is \"404\"",
+      "time" : {
+        "start" : 1653688457741,
+        "stop" : 1653688457741,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
+    "name" : "feature",
+    "value" : "Trello Boards API"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "field",
+    "value" : "name"
+  }, {
+    "name" : "value",
+    "value" : "jose"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "smoke" ]
+  },
+  "source" : "76b3de2806b8e9a3.json",
+  "parameterValues" : [ "name", "jose" ]
+}
