@@ -28,6 +28,3 @@ def step_impl(context, status_code):
 def step_impl(context, schema_name):
     validate_schema(context, schema_name)
 
-@given('I am a trello user')
-def step_impl(context):
-    pass

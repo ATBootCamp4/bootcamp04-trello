@@ -8,13 +8,13 @@ Feature: Trello Boards API
         And I receive a response with the "board" schema
 
     Scenario: Get members of board 
-        Given I am a trello user
+        Given A board is created
         When I send a "GET" request to "/boards/{board}/members"
         Then the status code is "200"
         And I receive a list with at least "1" "member"
     
     Scenario: Updating information of a Board
-        Given I am a trello user
+        Given A board is created
         When I send a "PUT" request to "/boards/{board}"
             | Key         | Value                      |
             | name        | testingnicolasv            |
