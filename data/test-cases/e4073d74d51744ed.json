@@ -1,0 +1,136 @@
+{
+  "uid" : "e4073d74d51744ed",
+  "name" : "Create labels in  card with invalid names and colors -- @1.1 Values\"",
+  "fullName" : "Trello labels API: Create labels in  card with invalid names and colors",
+  "historyId" : "7cc36f51c0517375dd2c5925417c627c",
+  "time" : {
+    "start" : 1653684846880,
+    "stop" : 1653684847183,
+    "duration" : 303
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I created a new card",
+      "time" : {
+        "start" : 1653684846881,
+        "stop" : 1653684847081,
+        "duration" : 200
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"POST\" request to \"/cards/{card}/labels\"",
+      "time" : {
+        "start" : 1653684847081,
+        "stop" : 1653684847181,
+        "duration" : 100
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "febff236915f1932",
+        "name" : ".table",
+        "source" : "febff236915f1932.csv",
+        "type" : "text/csv",
+        "size" : 28
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And the status code is \"400\"",
+      "time" : {
+        "start" : 1653684847182,
+        "stop" : 1653684847182,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the label error message is \"{\"message\":\"invalid value for color\",\"error\":\"ERROR\"}\"",
+      "time" : {
+        "start" : 1653684847182,
+        "stop" : 1653684847183,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Trello labels API"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "Color",
+    "value" : "ble"
+  }, {
+    "name" : "Message",
+    "value" : "{\"message\":\"invalid value for color\",\"error\":\"ERROR\"}"
+  }, {
+    "name" : "Name",
+    "value" : "aaa"
+  }, {
+    "name" : "http_response",
+    "value" : "400"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "e4073d74d51744ed.json",
+  "parameterValues" : [ "ble", "{\"message\":\"invalid value for color\",\"error\":\"ERROR\"}", "aaa", "400" ]
+}

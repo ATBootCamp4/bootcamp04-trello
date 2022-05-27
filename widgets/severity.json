@@ -1,260 +1,320 @@
 [ {
-  "uid" : "b505db68e7d820de",
-  "name" : "POST a new checklist to a card",
+  "uid" : "58c4ca281e55cff4",
+  "name" : "Get all labels in a board",
   "time" : {
-    "start" : 1653684681375,
-    "stop" : 1653684681672,
-    "duration" : 297
+    "start" : 1653684844523,
+    "stop" : 1653684844806,
+    "duration" : 283
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "cde968d5a48373ec",
-  "name" : "GET all completed checklist items on a card",
-  "time" : {
-    "start" : 1653684682500,
-    "stop" : 1653684682899,
-    "duration" : 399
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5a46b3a931a466f6",
-  "name" : "Update a checklist item",
-  "time" : {
-    "start" : 1653684684094,
-    "stop" : 1653684684696,
-    "duration" : 602
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "5db675fbadf0d521",
-  "name" : "GET all checklist items on a checklist",
-  "time" : {
-    "start" : 1653684682901,
-    "stop" : 1653684683274,
-    "duration" : 373
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "fe031ded1e695f53",
-  "name" : "Get all information of board",
-  "time" : {
-    "start" : 1653684679550,
-    "stop" : 1653684679597,
-    "duration" : 47
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "4f26d7ceb1554c7b",
-  "name" : "POST a new list to a board",
-  "time" : {
-    "start" : 1653684685558,
-    "stop" : 1653684685685,
-    "duration" : 127
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "805989d136311c30",
-  "name" : "GET a checklist by id",
-  "time" : {
-    "start" : 1653684681084,
-    "stop" : 1653684681374,
-    "duration" : 290
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b6c9c7f481f41fd2",
-  "name" : "POST an attachment to a card from an url -- @1.4 ",
-  "time" : {
-    "start" : 1653684677000,
-    "stop" : 1653684678144,
-    "duration" : 1144
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "696eee488243dfcf",
-  "name" : "POST a new checklist item to a checklist",
-  "time" : {
-    "start" : 1653684683275,
-    "stop" : 1653684683688,
-    "duration" : 413
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "b3c11b5df2436724",
-  "name" : "CREATE and DELETE a board -- @1.1 ",
-  "time" : {
-    "start" : 1653684679778,
-    "stop" : 1653684680275,
-    "duration" : 497
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "8fc2b331bf76b4ce",
-  "name" : "DELETE a checklist item",
-  "time" : {
-    "start" : 1653684684697,
-    "stop" : 1653684685473,
-    "duration" : 776
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "878a39c340d2845e",
-  "name" : "POST an attachment to a card from an url -- @1.3 ",
-  "time" : {
-    "start" : 1653684676692,
-    "stop" : 1653684676999,
-    "duration" : 307
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "a8781568033d7b12",
-  "name" : "Get members of board",
-  "time" : {
-    "start" : 1653684679598,
-    "stop" : 1653684679640,
-    "duration" : 42
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "452f8b58abd416cb",
-  "name" : "GET all attachments from a card",
-  "time" : {
-    "start" : 1653684673835,
-    "stop" : 1653684674853,
-    "duration" : 1018
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "41c7591c88c2d966",
+  "uid" : "7e36f354efac76d3",
   "name" : "DELETE a checklist",
   "time" : {
-    "start" : 1653684682083,
-    "stop" : 1653684682498,
-    "duration" : 415
+    "start" : 1653684838459,
+    "stop" : 1653684839189,
+    "duration" : 730
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "d99cb57b5c29629e",
-  "name" : "GET a list by id",
+  "uid" : "2487f96251c3434b",
+  "name" : "POST a new checklist to a card",
   "time" : {
-    "start" : 1653684685513,
-    "stop" : 1653684685558,
-    "duration" : 45
+    "start" : 1653684837209,
+    "stop" : 1653684837790,
+    "duration" : 581
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "e27b6e38dddbac7b",
-  "name" : "GET all lists in a board",
+  "uid" : "d93e17347057b494",
+  "name" : "GET a checklist by id",
   "time" : {
-    "start" : 1653684685474,
-    "stop" : 1653684685512,
-    "duration" : 38
+    "start" : 1653684836686,
+    "stop" : 1653684837208,
+    "duration" : 522
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "20617514e23aa33",
-  "name" : "CREATE and DELETE a board -- @1.2 ",
+  "uid" : "b22938aba6d46bea",
+  "name" : "POST a new checklist item to a checklist",
   "time" : {
-    "start" : 1653684680276,
-    "stop" : 1653684680770,
-    "duration" : 494
+    "start" : 1653684840575,
+    "stop" : 1653684841277,
+    "duration" : 702
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "850514b8f388b140",
+  "uid" : "e19f4a164331d932",
   "name" : "POST an attachment to a card from an url -- @1.1 ",
   "time" : {
-    "start" : 1653684675795,
-    "stop" : 1653684676147,
-    "duration" : 352
+    "start" : 1653684829584,
+    "stop" : 1653684830145,
+    "duration" : 561
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "9a597cb6e92f2c81",
+  "uid" : "b0872d5654599879",
+  "name" : "Create labels in specific card with different names and colors -- @1.1 Values",
+  "time" : {
+    "start" : 1653684844807,
+    "stop" : 1653684845243,
+    "duration" : 436
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ad1b2355f05846da",
   "name" : "Updating information of a Board",
   "time" : {
-    "start" : 1653684679641,
-    "stop" : 1653684679777,
-    "duration" : 136
+    "start" : 1653684834706,
+    "stop" : 1653684834896,
+    "duration" : 190
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "49c9d5e55825bccf",
-  "name" : "Update a checklist",
+  "uid" : "673f97422a3bcbcd",
+  "name" : "DELETE label from board",
   "time" : {
-    "start" : 1653684681673,
-    "stop" : 1653684682083,
-    "duration" : 410
+    "start" : 1653684846537,
+    "stop" : 1653684846879,
+    "duration" : 342
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "ab88f7fea8aba963",
-  "name" : "DELETE an attachment from a card",
-  "time" : {
-    "start" : 1653684678145,
-    "stop" : 1653684679547,
-    "duration" : 1402
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "c401620392e91fe1",
-  "name" : "GET a checklist item by its id",
-  "time" : {
-    "start" : 1653684683690,
-    "stop" : 1653684684093,
-    "duration" : 403
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "32032ee305f16f15",
-  "name" : "GET all checklists on a card",
-  "time" : {
-    "start" : 1653684680772,
-    "stop" : 1653684681083,
-    "duration" : 311
-  },
-  "status" : "passed",
-  "severity" : "normal"
-}, {
-  "uid" : "854421fcfb66f418",
+  "uid" : "33d673c6b9c157dd",
   "name" : "POST an attachment to a card from an url -- @1.2 ",
   "time" : {
-    "start" : 1653684676148,
-    "stop" : 1653684676691,
-    "duration" : 543
+    "start" : 1653684830145,
+    "stop" : 1653684830975,
+    "duration" : 830
   },
   "status" : "passed",
   "severity" : "normal"
 }, {
-  "uid" : "cc7a1b7120d9b6f3",
+  "uid" : "feac1b01ad7bc110",
+  "name" : "Create labels in specific card with different names and colors -- @1.3 Values",
+  "time" : {
+    "start" : 1653684845633,
+    "stop" : 1653684846088,
+    "duration" : 455
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "70c112b94be32995",
+  "name" : "GET all checklists on a card",
+  "time" : {
+    "start" : 1653684836145,
+    "stop" : 1653684836686,
+    "duration" : 541
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6166db8c7daf5bc0",
+  "name" : "DELETE an attachment from a card",
+  "time" : {
+    "start" : 1653684832921,
+    "stop" : 1653684834459,
+    "duration" : 1538
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a46d5f1530dd5459",
+  "name" : "DELETE a checklist item",
+  "time" : {
+    "start" : 1653684843285,
+    "stop" : 1653684844184,
+    "duration" : 899
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "dfadd070f3bceabd",
+  "name" : "Modify data from specific label",
+  "time" : {
+    "start" : 1653684846088,
+    "stop" : 1653684846536,
+    "duration" : 448
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ad4900b85ec08cea",
+  "name" : "GET a checklist item by its id",
+  "time" : {
+    "start" : 1653684841278,
+    "stop" : 1653684842298,
+    "duration" : 1020
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "83f0219b44a9e465",
+  "name" : "POST an attachment to a card from an url -- @1.3 ",
+  "time" : {
+    "start" : 1653684830976,
+    "stop" : 1653684831531,
+    "duration" : 555
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c501072cc8c739c",
+  "name" : "CREATE and DELETE a board -- @1.1 ",
+  "time" : {
+    "start" : 1653684834896,
+    "stop" : 1653684835490,
+    "duration" : 594
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6ee4654456e53c63",
+  "name" : "Get members of board",
+  "time" : {
+    "start" : 1653684834592,
+    "stop" : 1653684834705,
+    "duration" : 113
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c19f9c00cdd3b108",
+  "name" : "Create labels in  card with invalid names and colors -- @1.2 Values\"",
+  "time" : {
+    "start" : 1653684847184,
+    "stop" : 1653684847492,
+    "duration" : 308
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "50454178fe7a8233",
+  "name" : "Update a checklist item",
+  "time" : {
+    "start" : 1653684842300,
+    "stop" : 1653684843284,
+    "duration" : 984
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "374f5e5392a0ba3c",
+  "name" : "Get all information of board",
+  "time" : {
+    "start" : 1653684834461,
+    "stop" : 1653684834591,
+    "duration" : 130
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "145db490fe2a4c7",
+  "name" : "GET all completed checklist items on a card",
+  "time" : {
+    "start" : 1653684839190,
+    "stop" : 1653684839871,
+    "duration" : 681
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3f7ddb85774608bc",
+  "name" : "POST an attachment to a card from an url -- @1.4 ",
+  "time" : {
+    "start" : 1653684831532,
+    "stop" : 1653684832920,
+    "duration" : 1388
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "a0433e43d54236ae",
+  "name" : "GET all attachments from a card",
+  "time" : {
+    "start" : 1653684826917,
+    "stop" : 1653684828302,
+    "duration" : 1385
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "ece44c6906141340",
+  "name" : "Update a checklist",
+  "time" : {
+    "start" : 1653684837792,
+    "stop" : 1653684838458,
+    "duration" : 666
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e4d62a374aadbecd",
+  "name" : "CREATE and DELETE a board -- @1.2 ",
+  "time" : {
+    "start" : 1653684835491,
+    "stop" : 1653684836144,
+    "duration" : 653
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8d6206078880bfd3",
+  "name" : "Create labels in specific card with different names and colors -- @1.2 Values",
+  "time" : {
+    "start" : 1653684845244,
+    "stop" : 1653684845632,
+    "duration" : 388
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "313044d9ef5d0a4b",
+  "name" : "GET all checklist items on a checklist",
+  "time" : {
+    "start" : 1653684839872,
+    "stop" : 1653684840574,
+    "duration" : 702
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "42307fa430c3669",
+  "name" : "Create and verify label in board",
+  "time" : {
+    "start" : 1653684844187,
+    "stop" : 1653684844522,
+    "duration" : 335
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "e4073d74d51744ed",
+  "name" : "Create labels in  card with invalid names and colors -- @1.1 Values\"",
+  "time" : {
+    "start" : 1653684846880,
+    "stop" : 1653684847183,
+    "duration" : 303
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f5b4c3d6b58752ae",
   "name" : "GET an attachment from a card",
   "time" : {
-    "start" : 1653684674854,
-    "stop" : 1653684675794,
-    "duration" : 940
+    "start" : 1653684828303,
+    "stop" : 1653684829583,
+    "duration" : 1280
   },
   "status" : "passed",
   "severity" : "normal"
