@@ -23,5 +23,3 @@ def step_impl(context, message, http_response, method):
         status_code, response = context.request_manager.do_request(method, f'/labels/{context.to_be_deleted_id}')
         assert response == message, f'it was expected {message} but was received {response}'
         assert status_code == http_response, f'it was expected {http_response} but was received {status_code}'
-
-        
