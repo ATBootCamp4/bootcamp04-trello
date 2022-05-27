@@ -33,7 +33,7 @@ Feature: Trello Boards API
         Then the status code is "200"
         And I receive a response with the "board" schema
         Then the user deletes the board "<value>"
-        And verify the board does not exist
+        When I send a "GET" request to "/boards/{response}"
         Then the status code is "404"
 
     Examples:
