@@ -10,7 +10,8 @@ from main.trello.api.rest_base_manager import RESTBaseManager
 MEMBERS = 'members'
 MEMBERS_BOARDS = "members/{id}/boards"
 
-class MembersManager(RESTBaseManager):    
+
+class MembersManager(RESTBaseManager):
     """Class which can be used to manage Trello Members through the API"""
 
     def __init__(self, method=None):
@@ -31,7 +32,7 @@ class MembersManager(RESTBaseManager):
         endpoint = MEMBERS_BOARDS.format(id=id_name)
 
         # join dicts, add/replace the 'fields' query param if it was passed
-        if isinstance(fields, str):            
+        if isinstance(fields, str):
             kwargs = {**kwargs, 'fields': fields}
 
         status_code, response = self.method.get_request(endpoint, **kwargs)
@@ -47,18 +48,18 @@ class MembersManager(RESTBaseManager):
         :return: Tuple that contains the status code and the response.
         """
         endpoint = f"{MEMBERS}/{id_name}"
-                
+
         # join dicts, add/replace the 'fields' query param if it was passed
         if isinstance(fields, str):
             kwargs = {**kwargs, 'fields': fields}
-        
+
         status_code, response = self.method.get_request(endpoint, **kwargs)
-    
+
         return status_code, response
 
 
 if __name__ == '__main__':
-    # This section helps to test the module, make sure the env variable PYTHONPATH exists 
+    # This section helps to test the module, make sure the env variable PYTHONPATH exists
     # to be able to execute only this module.
     # PYTHONPATH=<Full path to bootcamp04-trello folder>
     member = MembersManager()

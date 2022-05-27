@@ -1,6 +1,4 @@
-from logging import exception
-from behave import given, when, then, step
-from jsonschema import validate
+from behave import step
 from main.core.rest.request_manager import RequestManager
 from main.trello.api.boards_manager import BoardsManager
 from main.utils.json_model import JsonModel
@@ -17,7 +15,7 @@ def step_impl(context):
         model.build_json(row['Key'], row['Value'])
     context.model = model
     for key, value in model.json_data.items():
-        actual_value =  context.response[key]
+        actual_value = context.response[key]
         assert value == actual_value, f"Expected: {value}, Actual: {actual_value} "
         
 @step ('the user creates a board with "{field}" to be "{value}"')
@@ -49,7 +47,7 @@ def step_impl(context, name):
 
     assert context.status_code == 200, f'could not delete board with id {context.response["id"]}'
 
-@given('A board is created')
+@step('A board is created')
 def step_impl(context):
     """ 
     this function verifies if a board exists, if it doesn't exist, it creates one

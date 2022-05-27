@@ -1,4 +1,4 @@
-name: Push-to-master workflow
+name: Pull request to master workflow
 
 on: 
   pull_request:
@@ -48,6 +48,7 @@ jobs:
         behave -f allure_behave.formatter:AllureFormatter -o output ./tests/api/features
         pytest
     - name: 📊 Step 4 - Collect Allure files and generate allure-report folder
+      if: always()
       run: |
         allure generate output/
     - name: 💻 Step 5 - Deploy report to Github Pages
