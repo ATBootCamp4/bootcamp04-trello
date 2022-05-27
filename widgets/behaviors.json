@@ -1,5 +1,5 @@
 {
-  "total" : 3,
+  "total" : 4,
   "items" : [ {
     "uid" : "e15765618b593b04a6daa28e1350ce02",
     "name" : "Trello Boards API",
@@ -18,9 +18,9 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 15,
+      "passed" : 11,
       "unknown" : 0,
-      "total" : 15
+      "total" : 11
     }
   }, {
     "uid" : "cee1596e8c99eb83dee3c9856b61ff6c",
@@ -29,9 +29,20 @@
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 8,
+      "passed" : 7,
       "unknown" : 0,
-      "total" : 8
+      "total" : 7
+    }
+  }, {
+    "uid" : "3150af5e05dd750c9ddae122c5a45b54",
+    "name" : "Trello Card API",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 0,
+      "skipped" : 0,
+      "passed" : 6,
+      "unknown" : 0,
+      "total" : 6
     }
   } ]
 }
