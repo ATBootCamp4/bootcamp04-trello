@@ -43,18 +43,30 @@ def step_impl(context, name):
 
     :param name:   String  string with the name of the board that will be deleted 
     """
-
+    
     if (context.response["name"] == name):
-        context.status_code, context.response = boards_manager.delete_board(context.response["id"])
+        context.status_code, _ = boards_manager.delete_board(context.response["id"])
+
+    assert context.status_code == 200, f'could not delete board with id {context.response["id"]}'
 
 @given('A board is created')
 def step_impl(context):
     """ 
-    this function doens't do anything because in the before all is already created a board 
+    this function verifies if a board exists, if it doesn't exist, it creates one
     """
-    pass
+    if not context.board:
+        _, context.board = context.request_manager.post_request('boards/', payload={'name': 'Behave board'})
+    
+@step ('verify the board does not exist')
+def step_impl(context): 
+    """ 
+    recives a name of a board and compares it with the board in the context, if they are the same, it uses the board manager 
+    to delete the board
 
+    :param name:   String  string with the name of the board that will be deleted 
+    """
 
+    context.status_code, _ = context.request_manager.do_request("GET", f'/boards/{context.response["id"]}')
 
 
 
