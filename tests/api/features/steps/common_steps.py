@@ -1,4 +1,4 @@
-from behave import given, when, then, step
+from behave import given, then, step
 from main.utils.behave_helpers import replace_ids, fill_payload, validate_schema
 
 
