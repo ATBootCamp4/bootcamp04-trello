@@ -23,8 +23,8 @@ class ListsManager(RESTBaseManager):
         :param idBoard:  str   ID of the Board to which the List belongs
         :return: Tuple that contains the status code and the response.
         """
-        endpoint = f"lists/?name={name}&idBoard={idBoard}"
-        payload = { "name": name}
+        endpoint = "lists/"
+        payload = {"name": name, "idBoard": idBoard}
         status_code, response = self.method.post_request(endpoint, payload)
         return status_code, response
 
