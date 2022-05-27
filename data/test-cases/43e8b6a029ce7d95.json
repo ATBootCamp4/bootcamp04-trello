@@ -1,12 +1,12 @@
 {
-  "uid" : "b8ed87dfb988458d",
-  "name" : "Get all information of board",
-  "fullName" : "Trello Boards API: Get all information of board",
-  "historyId" : "c9d93eda9f68edcfae4916146104df52",
+  "uid" : "43e8b6a029ce7d95",
+  "name" : "Get members of board",
+  "fullName" : "Trello Boards API: Get members of board",
+  "historyId" : "7be7f2afdaa3e2992665923834c3249b",
   "time" : {
-    "start" : 1653682287329,
-    "stop" : 1653682287381,
-    "duration" : 52
+    "start" : 1653682418549,
+    "stop" : 1653682418595,
+    "duration" : 46
   },
   "status" : "passed",
   "flaky" : false,
@@ -19,11 +19,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "When I send a \"GET\" request to \"/boards/{board}\"",
+      "name" : "When I send a \"GET\" request to \"/boards/{board}/members\"",
       "time" : {
-        "start" : 1653682287330,
-        "stop" : 1653682287374,
-        "duration" : 44
+        "start" : 1653682418550,
+        "stop" : 1653682418593,
+        "duration" : 43
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,8 +36,8 @@
     }, {
       "name" : "Then the status code is \"200\"",
       "time" : {
-        "start" : 1653682287374,
-        "stop" : 1653682287375,
+        "start" : 1653682418593,
+        "stop" : 1653682418594,
         "duration" : 1
       },
       "status" : "passed",
@@ -49,11 +49,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And I receive a response with the \"board\" schema",
+      "name" : "And verify there is at least 1 member",
       "time" : {
-        "start" : 1653682287375,
-        "stop" : 1653682287381,
-        "duration" : 6
+        "start" : 1653682418594,
+        "stop" : 1653682418595,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -98,6 +98,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "b8ed87dfb988458d.json",
+  "source" : "43e8b6a029ce7d95.json",
   "parameterValues" : [ ]
 }

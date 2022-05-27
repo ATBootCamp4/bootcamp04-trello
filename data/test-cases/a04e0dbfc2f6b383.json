@@ -1,12 +1,12 @@
 {
-  "uid" : "8da84d75da0ae4fc",
-  "name" : "POST a new checklist with an invalid pos to a card",
-  "fullName" : "Trello API Checklists: POST a new checklist with an invalid pos to a card",
-  "historyId" : "ed8db0be347ffaa9a6d85926e1440baa",
+  "uid" : "a04e0dbfc2f6b383",
+  "name" : "DELETE an attachment from a card",
+  "fullName" : "Trello API Attachments: DELETE an attachment from a card",
+  "historyId" : "89216f9becc81f2d1fd00f39139e398e",
   "time" : {
-    "start" : 1653682289959,
-    "stop" : 1653682290131,
-    "duration" : 172
+    "start" : 1653682417141,
+    "stop" : 1653682418501,
+    "duration" : 1360
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682289960,
-        "stop" : 1653682290106,
-        "duration" : 146
+        "start" : 1653682417141,
+        "stop" : 1653682417289,
+        "duration" : 148
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,32 +34,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"POST\" request to \"/checklists\"",
+      "name" : "And I created an attachment on the card",
       "time" : {
-        "start" : 1653682290106,
-        "stop" : 1653682290130,
-        "duration" : 24
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "df932cbf01d0a904",
-        "name" : ".table",
-        "source" : "df932cbf01d0a904.csv",
-        "type" : "text/csv",
-        "size" : 46
-      } ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 1,
-      "shouldDisplayMessage" : false,
-      "hasContent" : true
-    }, {
-      "name" : "Then the response contains an error message",
-      "time" : {
-        "start" : 1653682290131,
-        "stop" : 1653682290131,
-        "duration" : 0
+        "start" : 1653682417289,
+        "stop" : 1653682418269,
+        "duration" : 980
       },
       "status" : "passed",
       "steps" : [ ],
@@ -70,10 +49,40 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And the status code is \"400\"",
+      "name" : "When I send a \"DELETE\" request to \"/cards/{card}/attachments/{attachment}\"",
       "time" : {
-        "start" : 1653682290131,
-        "stop" : 1653682290131,
+        "start" : 1653682418269,
+        "stop" : 1653682418499,
+        "duration" : 230
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I receive a response with the \"delete\" schema",
+      "time" : {
+        "start" : 1653682418499,
+        "stop" : 1653682418500,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the status code is \"200\"",
+      "time" : {
+        "start" : 1653682418501,
+        "stop" : 1653682418501,
         "duration" : 0
       },
       "status" : "passed",
@@ -87,8 +96,8 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 4,
-    "attachmentsCount" : 1,
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -98,10 +107,10 @@
     "value" : "normal"
   }, {
     "name" : "tag",
-    "value" : "negative"
+    "value" : "smoke"
   }, {
     "name" : "feature",
-    "value" : "Trello API Checklists"
+    "value" : "Trello API Attachments"
   }, {
     "name" : "framework",
     "value" : "behave"
@@ -120,8 +129,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "negative" ]
+    "tags" : [ "smoke" ]
   },
-  "source" : "8da84d75da0ae4fc.json",
+  "source" : "a04e0dbfc2f6b383.json",
   "parameterValues" : [ ]
 }

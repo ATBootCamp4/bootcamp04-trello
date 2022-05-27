@@ -1,12 +1,12 @@
 {
-  "uid" : "30158a66dea164f0",
-  "name" : "POST a new checklist to a card",
-  "fullName" : "Trello API Checklists: POST a new checklist to a card",
-  "historyId" : "11c3bc398529bcadd5cfcf6d8d26c9f6",
+  "uid" : "5864a8923db2956f",
+  "name" : "Update a checklist item with invalid state",
+  "fullName" : "Trello API Checklists: Update a checklist item with invalid state",
+  "historyId" : "848ab349dd3f86f32a182639ad536cb0",
   "time" : {
-    "start" : 1653682289408,
-    "stop" : 1653682289958,
-    "duration" : 550
+    "start" : 1653682424140,
+    "stop" : 1653682424553,
+    "duration" : 413
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682289409,
-        "stop" : 1653682289717,
-        "duration" : 308
+        "start" : 1653682424141,
+        "stop" : 1653682424305,
+        "duration" : 164
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,20 +34,50 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"POST\" request to \"/checklists\"",
+      "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682289718,
-        "stop" : 1653682289824,
-        "duration" : 106
+        "start" : 1653682424305,
+        "stop" : 1653682424410,
+        "duration" : 105
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I created a completed item on the checklist",
+      "time" : {
+        "start" : 1653682424411,
+        "stop" : 1653682424507,
+        "duration" : 96
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"PUT\" request to \"/cards/{card}/checkItem/{checkitem}\"",
+      "time" : {
+        "start" : 1653682424507,
+        "stop" : 1653682424551,
+        "duration" : 44
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "5ffd876e88bc03da",
+        "uid" : "ce470cee298f0c44",
         "name" : ".table",
-        "source" : "5ffd876e88bc03da.csv",
+        "source" : "ce470cee298f0c44.csv",
         "type" : "text/csv",
-        "size" : 54
+        "size" : 46
       } ],
       "parameters" : [ ],
       "stepsCount" : 0,
@@ -55,11 +85,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : true
     }, {
-      "name" : "Then the checklist is created on the card",
+      "name" : "Then the response contains an error message",
       "time" : {
-        "start" : 1653682289824,
-        "stop" : 1653682289958,
-        "duration" : 134
+        "start" : 1653682424551,
+        "stop" : 1653682424552,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -70,11 +100,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And the status code is \"200\"",
+      "name" : "And the status code is \"400\"",
       "time" : {
-        "start" : 1653682289958,
-        "stop" : 1653682289958,
-        "duration" : 0
+        "start" : 1653682424552,
+        "stop" : 1653682424553,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -87,7 +117,7 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 4,
+    "stepsCount" : 6,
     "attachmentsCount" : 1,
     "shouldDisplayMessage" : false,
     "hasContent" : true
@@ -98,7 +128,7 @@
     "value" : "normal"
   }, {
     "name" : "tag",
-    "value" : "smoke"
+    "value" : "negative"
   }, {
     "name" : "feature",
     "value" : "Trello API Checklists"
@@ -120,8 +150,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "smoke" ]
+    "tags" : [ "negative" ]
   },
-  "source" : "30158a66dea164f0.json",
+  "source" : "5864a8923db2956f.json",
   "parameterValues" : [ ]
 }

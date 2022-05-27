@@ -1,12 +1,12 @@
 {
-  "uid" : "a3e1ee49e4b1b119",
-  "name" : "POST an attachment to a card from an url -- @1.2 ",
-  "fullName" : "Trello API Attachments: POST an attachment to a card from an url",
-  "historyId" : "d87a84d305924e53084e44462a3181a2",
+  "uid" : "f39317befa214b8f",
+  "name" : "Update a checklist",
+  "fullName" : "Trello API Checklists: Update a checklist",
+  "historyId" : "991a86e7f7a3047221c92beb4d7084c3",
   "time" : {
-    "start" : 1653682284144,
-    "stop" : 1653682284511,
-    "duration" : 367
+    "start" : 1653682420911,
+    "stop" : 1653682421293,
+    "duration" : 382
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682284144,
-        "stop" : 1653682284298,
-        "duration" : 154
+        "start" : 1653682420912,
+        "stop" : 1653682421034,
+        "duration" : 122
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,20 +34,35 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"POST\" request to \"/cards/{card}/attachments\"",
+      "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682284299,
-        "stop" : 1653682284462,
-        "duration" : 163
+        "start" : 1653682421034,
+        "stop" : 1653682421160,
+        "duration" : 126
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"PUT\" request to \"/checklists/{checklist}\"",
+      "time" : {
+        "start" : 1653682421161,
+        "stop" : 1653682421247,
+        "duration" : 86
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "df04d5be97bceae",
+        "uid" : "a9f0a67a8ead22a",
         "name" : ".table",
-        "source" : "df04d5be97bceae.csv",
+        "source" : "a9f0a67a8ead22a.csv",
         "type" : "text/csv",
-        "size" : 57
+        "size" : 37
       } ],
       "parameters" : [ ],
       "stepsCount" : 0,
@@ -55,26 +70,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : true
     }, {
-      "name" : "Then the attachment is created on the card",
+      "name" : "Then the checklist is updated",
       "time" : {
-        "start" : 1653682284463,
-        "stop" : 1653682284507,
+        "start" : 1653682421247,
+        "stop" : 1653682421291,
         "duration" : 44
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "And I receive a response with the \"attachment\" schema",
-      "time" : {
-        "start" : 1653682284508,
-        "stop" : 1653682284510,
-        "duration" : 2
       },
       "status" : "passed",
       "steps" : [ ],
@@ -87,8 +87,8 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653682284510,
-        "stop" : 1653682284510,
+        "start" : 1653682421292,
+        "stop" : 1653682421292,
         "duration" : 0
       },
       "status" : "passed",
@@ -113,7 +113,7 @@
     "value" : "normal"
   }, {
     "name" : "feature",
-    "value" : "Trello API Attachments"
+    "value" : "Trello API Checklists"
   }, {
     "name" : "framework",
     "value" : "behave"
@@ -124,19 +124,7 @@
     "name" : "resultFormat",
     "value" : "allure2"
   } ],
-  "parameters" : [ {
-    "name" : "Cover",
-    "value" : "false"
-  }, {
-    "name" : "Name",
-    "value" : "invalid"
-  }, {
-    "name" : "URL",
-    "value" : "fpt.aaa.bbb.ccc"
-  }, {
-    "name" : "comment",
-    "value" : "API adds \"http://\" and returns 200"
-  } ],
+  "parameters" : [ ],
   "links" : [ ],
   "hidden" : false,
   "retry" : false,
@@ -146,6 +134,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "a3e1ee49e4b1b119.json",
-  "parameterValues" : [ "false", "invalid", "fpt.aaa.bbb.ccc", "API adds \"http://\" and returns 200" ]
+  "source" : "f39317befa214b8f.json",
+  "parameterValues" : [ ]
 }

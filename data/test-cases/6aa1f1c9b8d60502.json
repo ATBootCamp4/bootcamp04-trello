@@ -1,12 +1,12 @@
 {
-  "uid" : "9348c77d7fc23a78",
+  "uid" : "6aa1f1c9b8d60502",
   "name" : "Updating information of a Board",
   "fullName" : "Trello Boards API: Updating information of a Board",
   "historyId" : "bd22119c429e9460c24bddbf547a0eea",
   "time" : {
-    "start" : 1653682287422,
-    "stop" : 1653682287524,
-    "duration" : 102
+    "start" : 1653682418596,
+    "stop" : 1653682418711,
+    "duration" : 115
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,16 +21,16 @@
     "steps" : [ {
       "name" : "When I send a \"PUT\" request to \"/boards/{board}\"",
       "time" : {
-        "start" : 1653682287422,
-        "stop" : 1653682287523,
-        "duration" : 101
+        "start" : 1653682418597,
+        "stop" : 1653682418709,
+        "duration" : 112
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "2f4035581e357e20",
+        "uid" : "80cc3339701322f4",
         "name" : ".table",
-        "source" : "2f4035581e357e20.csv",
+        "source" : "80cc3339701322f4.csv",
         "type" : "text/csv",
         "size" : 54
       } ],
@@ -42,8 +42,8 @@
     }, {
       "name" : "Then the status code is \"200\"",
       "time" : {
-        "start" : 1653682287523,
-        "stop" : 1653682287523,
+        "start" : 1653682418710,
+        "stop" : 1653682418710,
         "duration" : 0
       },
       "status" : "passed",
@@ -57,16 +57,16 @@
     }, {
       "name" : "And verify the new object contains the following info",
       "time" : {
-        "start" : 1653682287524,
-        "stop" : 1653682287524,
-        "duration" : 0
+        "start" : 1653682418710,
+        "stop" : 1653682418711,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "a62d6ba8b8645130",
+        "uid" : "3a2155e8a628f2a3",
         "name" : ".table",
-        "source" : "a62d6ba8b8645130.csv",
+        "source" : "3a2155e8a628f2a3.csv",
         "type" : "text/csv",
         "size" : 54
       } ],
@@ -110,6 +110,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "9348c77d7fc23a78.json",
+  "source" : "6aa1f1c9b8d60502.json",
   "parameterValues" : [ ]
 }

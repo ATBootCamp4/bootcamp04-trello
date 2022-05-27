@@ -1,12 +1,12 @@
 {
-  "uid" : "8f58397ef78c1c6f",
+  "uid" : "1cee28821bb09ad2",
   "name" : "GET a checklist by unexisting id",
   "fullName" : "Trello API Checklists: GET a checklist by unexisting id",
   "historyId" : "15b245ba80af1ca9e3eb3c8a178a440a",
   "time" : {
-    "start" : 1653682289140,
-    "stop" : 1653682289408,
-    "duration" : 268
+    "start" : 1653682420179,
+    "stop" : 1653682420445,
+    "duration" : 266
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682289141,
-        "stop" : 1653682289285,
-        "duration" : 144
+        "start" : 1653682420180,
+        "stop" : 1653682420317,
+        "duration" : 137
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,9 +36,9 @@
     }, {
       "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682289285,
-        "stop" : 1653682289382,
-        "duration" : 97
+        "start" : 1653682420317,
+        "stop" : 1653682420413,
+        "duration" : 96
       },
       "status" : "passed",
       "steps" : [ ],
@@ -51,9 +51,9 @@
     }, {
       "name" : "When I send a \"GET\" request to \"/checklists/X\"",
       "time" : {
-        "start" : 1653682289382,
-        "stop" : 1653682289407,
-        "duration" : 25
+        "start" : 1653682420414,
+        "stop" : 1653682420443,
+        "duration" : 29
       },
       "status" : "passed",
       "steps" : [ ],
@@ -66,8 +66,8 @@
     }, {
       "name" : "Then the status code is \"400\"",
       "time" : {
-        "start" : 1653682289407,
-        "stop" : 1653682289408,
+        "start" : 1653682420444,
+        "stop" : 1653682420445,
         "duration" : 1
       },
       "status" : "passed",
@@ -116,6 +116,6 @@
     "categories" : [ ],
     "tags" : [ "negative" ]
   },
-  "source" : "8f58397ef78c1c6f.json",
+  "source" : "1cee28821bb09ad2.json",
   "parameterValues" : [ ]
 }

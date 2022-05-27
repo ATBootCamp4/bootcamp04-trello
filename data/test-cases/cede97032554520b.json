@@ -1,12 +1,12 @@
 {
-  "uid" : "6ee66991de0feb61",
-  "name" : "GET all attachments from a card",
-  "fullName" : "Trello API Attachments: GET all attachments from a card",
-  "historyId" : "00ab6cb21b6d9e35c2561066d6de3a92",
+  "uid" : "cede97032554520b",
+  "name" : "Update a checklist with invalid position",
+  "fullName" : "Trello API Checklists: Update a checklist with invalid position",
+  "historyId" : "495d3449f2cbeef11eb83518139cd281",
   "time" : {
-    "start" : 1653682280366,
-    "stop" : 1653682281418,
-    "duration" : 1052
+    "start" : 1653682421295,
+    "stop" : 1653682421559,
+    "duration" : 264
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682280367,
-        "stop" : 1653682280519,
-        "duration" : 152
+        "start" : 1653682421296,
+        "stop" : 1653682421428,
+        "duration" : 132
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,11 +34,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And I created an attachment on the card",
+      "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682280519,
-        "stop" : 1653682281369,
-        "duration" : 850
+        "start" : 1653682421428,
+        "stop" : 1653682421532,
+        "duration" : 104
       },
       "status" : "passed",
       "steps" : [ ],
@@ -49,25 +49,31 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"GET\" request to \"/cards/{card}/attachments\"",
+      "name" : "When I send a \"PUT\" request to \"/checklists/{checklist}\"",
       "time" : {
-        "start" : 1653682281370,
-        "stop" : 1653682281413,
-        "duration" : 43
+        "start" : 1653682421532,
+        "stop" : 1653682421558,
+        "duration" : 26
       },
       "status" : "passed",
       "steps" : [ ],
-      "attachments" : [ ],
+      "attachments" : [ {
+        "uid" : "9b9fd4bb619ab142",
+        "name" : ".table",
+        "source" : "9b9fd4bb619ab142.csv",
+        "type" : "text/csv",
+        "size" : 36
+      } ],
       "parameters" : [ ],
       "stepsCount" : 0,
-      "attachmentsCount" : 0,
+      "attachmentsCount" : 1,
       "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "hasContent" : true
     }, {
-      "name" : "Then I receive a list with at least \"1\" \"attachment\"",
+      "name" : "Then the response contains an error message",
       "time" : {
-        "start" : 1653682281414,
-        "stop" : 1653682281414,
+        "start" : 1653682421558,
+        "stop" : 1653682421558,
         "duration" : 0
       },
       "status" : "passed",
@@ -79,25 +85,10 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And I receive a response with the \"get_attachments\" schema",
+      "name" : "And the status code is \"400\"",
       "time" : {
-        "start" : 1653682281414,
-        "stop" : 1653682281417,
-        "duration" : 3
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "And the status code is \"200\"",
-      "time" : {
-        "start" : 1653682281418,
-        "stop" : 1653682281418,
+        "start" : 1653682421558,
+        "stop" : 1653682421558,
         "duration" : 0
       },
       "status" : "passed",
@@ -111,8 +102,8 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 6,
-    "attachmentsCount" : 0,
+    "stepsCount" : 5,
+    "attachmentsCount" : 1,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -122,10 +113,10 @@
     "value" : "normal"
   }, {
     "name" : "tag",
-    "value" : "smoke"
+    "value" : "negative"
   }, {
     "name" : "feature",
-    "value" : "Trello API Attachments"
+    "value" : "Trello API Checklists"
   }, {
     "name" : "framework",
     "value" : "behave"
@@ -144,8 +135,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "smoke" ]
+    "tags" : [ "negative" ]
   },
-  "source" : "6ee66991de0feb61.json",
+  "source" : "cede97032554520b.json",
   "parameterValues" : [ ]
 }

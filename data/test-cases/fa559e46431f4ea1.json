@@ -1,12 +1,12 @@
 {
-  "uid" : "389ac281730ab087",
+  "uid" : "fa559e46431f4ea1",
   "name" : "DELETE a checklist",
   "fullName" : "Trello API Checklists: DELETE a checklist",
   "historyId" : "5884e141989378bf524cd7f7a9d554c3",
   "time" : {
-    "start" : 1653682290795,
-    "stop" : 1653682291225,
-    "duration" : 430
+    "start" : 1653682421559,
+    "stop" : 1653682421925,
+    "duration" : 366
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682290796,
-        "stop" : 1653682290965,
-        "duration" : 169
+        "start" : 1653682421560,
+        "stop" : 1653682421698,
+        "duration" : 138
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,9 +36,9 @@
     }, {
       "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682290965,
-        "stop" : 1653682291088,
-        "duration" : 123
+        "start" : 1653682421698,
+        "stop" : 1653682421798,
+        "duration" : 100
       },
       "status" : "passed",
       "steps" : [ ],
@@ -51,9 +51,9 @@
     }, {
       "name" : "When I send a \"DELETE\" request to \"/checklists/{checklist}\"",
       "time" : {
-        "start" : 1653682291089,
-        "stop" : 1653682291188,
-        "duration" : 99
+        "start" : 1653682421798,
+        "stop" : 1653682421898,
+        "duration" : 100
       },
       "status" : "passed",
       "steps" : [ ],
@@ -66,9 +66,9 @@
     }, {
       "name" : "Then the checklist is deleted",
       "time" : {
-        "start" : 1653682291188,
-        "stop" : 1653682291224,
-        "duration" : 36
+        "start" : 1653682421898,
+        "stop" : 1653682421924,
+        "duration" : 26
       },
       "status" : "passed",
       "steps" : [ ],
@@ -81,9 +81,9 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653682291224,
-        "stop" : 1653682291224,
-        "duration" : 0
+        "start" : 1653682421924,
+        "stop" : 1653682421925,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -131,6 +131,6 @@
     "categories" : [ ],
     "tags" : [ "smoke" ]
   },
-  "source" : "389ac281730ab087.json",
+  "source" : "fa559e46431f4ea1.json",
   "parameterValues" : [ ]
 }
