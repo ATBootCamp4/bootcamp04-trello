@@ -1,12 +1,12 @@
 {
-  "uid" : "19517a7014e8dae1",
+  "uid" : "b3c11b5df2436724",
   "name" : "CREATE and DELETE a board -- @1.1 ",
   "fullName" : "Trello Boards API: CREATE and DELETE a board",
   "historyId" : "28cd4ba9caa76645c870287b8ab16edc",
   "time" : {
-    "start" : 1653682418711,
-    "stop" : 1653682419146,
-    "duration" : 435
+    "start" : 1653684679778,
+    "stop" : 1653684680275,
+    "duration" : 497
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given the user creates a board with \"name\" to be \"kiara\"",
       "time" : {
-        "start" : 1653682418712,
-        "stop" : 1653682418855,
-        "duration" : 143
+        "start" : 1653684679779,
+        "stop" : 1653684679945,
+        "duration" : 166
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,8 +36,8 @@
     }, {
       "name" : "Then the status code is \"200\"",
       "time" : {
-        "start" : 1653682418856,
-        "stop" : 1653682418856,
+        "start" : 1653684679945,
+        "stop" : 1653684679945,
         "duration" : 0
       },
       "status" : "passed",
@@ -51,9 +51,9 @@
     }, {
       "name" : "And I receive a response with the \"board\" schema",
       "time" : {
-        "start" : 1653682418857,
-        "stop" : 1653682418866,
-        "duration" : 9
+        "start" : 1653684679945,
+        "stop" : 1653684679950,
+        "duration" : 5
       },
       "status" : "passed",
       "steps" : [ ],
@@ -66,9 +66,9 @@
     }, {
       "name" : "Then the user deletes the board \"kiara\"",
       "time" : {
-        "start" : 1653682418867,
-        "stop" : 1653682419146,
-        "duration" : 279
+        "start" : 1653684679950,
+        "stop" : 1653684680275,
+        "duration" : 325
       },
       "status" : "passed",
       "steps" : [ ],
@@ -81,8 +81,8 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653682419146,
-        "stop" : 1653682419146,
+        "start" : 1653684680275,
+        "stop" : 1653684680275,
         "duration" : 0
       },
       "status" : "passed",
@@ -134,6 +134,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "19517a7014e8dae1.json",
+  "source" : "b3c11b5df2436724.json",
   "parameterValues" : [ "name", "kiara" ]
 }

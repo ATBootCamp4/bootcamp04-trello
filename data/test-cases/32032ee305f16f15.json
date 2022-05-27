@@ -1,12 +1,12 @@
 {
-  "uid" : "f5b409757afe56ed",
-  "name" : "POST a non-image attachment as cover to a card",
-  "fullName" : "Trello API Attachments: POST a non-image attachment as cover to a card",
-  "historyId" : "ec75de4c0a4cd70d2f08f01b493e96b0",
+  "uid" : "32032ee305f16f15",
+  "name" : "GET all checklists on a card",
+  "fullName" : "Trello API Checklists: GET all checklists on a card",
+  "historyId" : "42e62922856871f02fd22768cf4b3d8e",
   "time" : {
-    "start" : 1653682416806,
-    "stop" : 1653682417140,
-    "duration" : 334
+    "start" : 1653684680772,
+    "stop" : 1653684681083,
+    "duration" : 311
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682416806,
-        "stop" : 1653682416948,
-        "duration" : 142
+        "start" : 1653684680773,
+        "stop" : 1653684680922,
+        "duration" : 149
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,32 +34,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"POST\" request to \"/cards/{card}/attachments\"",
+      "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682416948,
-        "stop" : 1653682417139,
-        "duration" : 191
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "844056a172698746",
-        "name" : ".table",
-        "source" : "844056a172698746.csv",
-        "type" : "text/csv",
-        "size" : 77
-      } ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 1,
-      "shouldDisplayMessage" : false,
-      "hasContent" : true
-    }, {
-      "name" : "Then the response contains an error message",
-      "time" : {
-        "start" : 1653682417139,
-        "stop" : 1653682417139,
-        "duration" : 0
+        "start" : 1653684680922,
+        "stop" : 1653684681030,
+        "duration" : 108
       },
       "status" : "passed",
       "steps" : [ ],
@@ -70,10 +49,40 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And the status code is \"400\"",
+      "name" : "When I send a \"GET\" request to \"/cards/{card}/checklists\"",
       "time" : {
-        "start" : 1653682417140,
-        "stop" : 1653682417140,
+        "start" : 1653684681030,
+        "stop" : 1653684681082,
+        "duration" : 52
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I receive a list with at least \"1\" \"checklist\"",
+      "time" : {
+        "start" : 1653684681082,
+        "stop" : 1653684681083,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the status code is \"200\"",
+      "time" : {
+        "start" : 1653684681083,
+        "stop" : 1653684681083,
         "duration" : 0
       },
       "status" : "passed",
@@ -87,8 +96,8 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 4,
-    "attachmentsCount" : 1,
+    "stepsCount" : 5,
+    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -97,11 +106,8 @@
     "name" : "severity",
     "value" : "normal"
   }, {
-    "name" : "tag",
-    "value" : "negative"
-  }, {
     "name" : "feature",
-    "value" : "Trello API Attachments"
+    "value" : "Trello API Checklists"
   }, {
     "name" : "framework",
     "value" : "behave"
@@ -120,8 +126,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "negative" ]
+    "tags" : [ ]
   },
-  "source" : "f5b409757afe56ed.json",
+  "source" : "32032ee305f16f15.json",
   "parameterValues" : [ ]
 }

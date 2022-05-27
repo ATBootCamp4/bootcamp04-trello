@@ -1,12 +1,12 @@
 {
-  "uid" : "a04e0dbfc2f6b383",
-  "name" : "DELETE an attachment from a card",
-  "fullName" : "Trello API Attachments: DELETE an attachment from a card",
-  "historyId" : "89216f9becc81f2d1fd00f39139e398e",
+  "uid" : "cc7a1b7120d9b6f3",
+  "name" : "GET an attachment from a card",
+  "fullName" : "Trello API Attachments: GET an attachment from a card",
+  "historyId" : "111d0d88e99318359e92503e4545cadd",
   "time" : {
-    "start" : 1653682417141,
-    "stop" : 1653682418501,
-    "duration" : 1360
+    "start" : 1653684674854,
+    "stop" : 1653684675794,
+    "duration" : 940
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682417141,
-        "stop" : 1653682417289,
-        "duration" : 148
+        "start" : 1653684674855,
+        "stop" : 1653684674987,
+        "duration" : 132
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,9 +36,9 @@
     }, {
       "name" : "And I created an attachment on the card",
       "time" : {
-        "start" : 1653682417289,
-        "stop" : 1653682418269,
-        "duration" : 980
+        "start" : 1653684674988,
+        "stop" : 1653684675745,
+        "duration" : 757
       },
       "status" : "passed",
       "steps" : [ ],
@@ -49,11 +49,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"DELETE\" request to \"/cards/{card}/attachments/{attachment}\"",
+      "name" : "When I send a \"GET\" request to \"/cards/{card}/attachments/{attachment}\"",
       "time" : {
-        "start" : 1653682418269,
-        "stop" : 1653682418499,
-        "duration" : 230
+        "start" : 1653684675745,
+        "stop" : 1653684675791,
+        "duration" : 46
       },
       "status" : "passed",
       "steps" : [ ],
@@ -64,11 +64,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "Then I receive a response with the \"delete\" schema",
+      "name" : "Then I receive a response with the \"attachment\" schema",
       "time" : {
-        "start" : 1653682418499,
-        "stop" : 1653682418500,
-        "duration" : 1
+        "start" : 1653684675791,
+        "stop" : 1653684675793,
+        "duration" : 2
       },
       "status" : "passed",
       "steps" : [ ],
@@ -81,8 +81,8 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653682418501,
-        "stop" : 1653682418501,
+        "start" : 1653684675794,
+        "stop" : 1653684675794,
         "duration" : 0
       },
       "status" : "passed",
@@ -106,9 +106,6 @@
     "name" : "severity",
     "value" : "normal"
   }, {
-    "name" : "tag",
-    "value" : "smoke"
-  }, {
     "name" : "feature",
     "value" : "Trello API Attachments"
   }, {
@@ -129,8 +126,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "smoke" ]
+    "tags" : [ ]
   },
-  "source" : "a04e0dbfc2f6b383.json",
+  "source" : "cc7a1b7120d9b6f3.json",
   "parameterValues" : [ ]
 }

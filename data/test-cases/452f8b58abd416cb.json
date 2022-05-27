@@ -1,12 +1,12 @@
 {
-  "uid" : "5b605ea93940d80e",
-  "name" : "POST a new checklist to a card",
-  "fullName" : "Trello API Checklists: POST a new checklist to a card",
-  "historyId" : "11c3bc398529bcadd5cfcf6d8d26c9f6",
+  "uid" : "452f8b58abd416cb",
+  "name" : "GET all attachments from a card",
+  "fullName" : "Trello API Attachments: GET all attachments from a card",
+  "historyId" : "00ab6cb21b6d9e35c2561066d6de3a92",
   "time" : {
-    "start" : 1653682420447,
-    "stop" : 1653682420752,
-    "duration" : 305
+    "start" : 1653684673835,
+    "stop" : 1653684674853,
+    "duration" : 1018
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682420448,
-        "stop" : 1653682420594,
-        "duration" : 146
+        "start" : 1653684673836,
+        "stop" : 1653684673993,
+        "duration" : 157
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,32 +34,56 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"POST\" request to \"/checklists\"",
+      "name" : "And I created an attachment on the card",
       "time" : {
-        "start" : 1653682420595,
-        "stop" : 1653682420698,
-        "duration" : 103
+        "start" : 1653684673993,
+        "stop" : 1653684674798,
+        "duration" : 805
       },
       "status" : "passed",
       "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "ad5aa21733ff9a74",
-        "name" : ".table",
-        "source" : "ad5aa21733ff9a74.csv",
-        "type" : "text/csv",
-        "size" : 54
-      } ],
+      "attachments" : [ ],
       "parameters" : [ ],
       "stepsCount" : 0,
-      "attachmentsCount" : 1,
+      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : true
+      "hasContent" : false
     }, {
-      "name" : "Then the checklist is created on the card",
+      "name" : "When I send a \"GET\" request to \"/cards/{card}/attachments\"",
       "time" : {
-        "start" : 1653682420698,
-        "stop" : 1653682420751,
-        "duration" : 53
+        "start" : 1653684674799,
+        "stop" : 1653684674849,
+        "duration" : 50
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I receive a list with at least \"1\" \"attachment\"",
+      "time" : {
+        "start" : 1653684674849,
+        "stop" : 1653684674849,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I receive a response with the \"get_attachments\" schema",
+      "time" : {
+        "start" : 1653684674850,
+        "stop" : 1653684674852,
+        "duration" : 2
       },
       "status" : "passed",
       "steps" : [ ],
@@ -72,8 +96,8 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653682420752,
-        "stop" : 1653682420752,
+        "start" : 1653684674853,
+        "stop" : 1653684674853,
         "duration" : 0
       },
       "status" : "passed",
@@ -87,8 +111,8 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 4,
-    "attachmentsCount" : 1,
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -97,11 +121,8 @@
     "name" : "severity",
     "value" : "normal"
   }, {
-    "name" : "tag",
-    "value" : "smoke"
-  }, {
     "name" : "feature",
-    "value" : "Trello API Checklists"
+    "value" : "Trello API Attachments"
   }, {
     "name" : "framework",
     "value" : "behave"
@@ -120,8 +141,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "smoke" ]
+    "tags" : [ ]
   },
-  "source" : "5b605ea93940d80e.json",
+  "source" : "452f8b58abd416cb.json",
   "parameterValues" : [ ]
 }

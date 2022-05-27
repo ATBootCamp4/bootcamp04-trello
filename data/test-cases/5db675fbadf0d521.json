@@ -1,12 +1,12 @@
 {
-  "uid" : "1cee28821bb09ad2",
-  "name" : "GET a checklist by unexisting id",
-  "fullName" : "Trello API Checklists: GET a checklist by unexisting id",
-  "historyId" : "15b245ba80af1ca9e3eb3c8a178a440a",
+  "uid" : "5db675fbadf0d521",
+  "name" : "GET all checklist items on a checklist",
+  "fullName" : "Trello API Checklists: GET all checklist items on a checklist",
+  "historyId" : "71e3de20ab42c8b7e61390669779ddfe",
   "time" : {
-    "start" : 1653682420179,
-    "stop" : 1653682420445,
-    "duration" : 266
+    "start" : 1653684682901,
+    "stop" : 1653684683274,
+    "duration" : 373
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682420180,
-        "stop" : 1653682420317,
-        "duration" : 137
+        "start" : 1653684682902,
+        "stop" : 1653684683040,
+        "duration" : 138
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,9 +36,9 @@
     }, {
       "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682420317,
-        "stop" : 1653682420413,
-        "duration" : 96
+        "start" : 1653684683040,
+        "stop" : 1653684683139,
+        "duration" : 99
       },
       "status" : "passed",
       "steps" : [ ],
@@ -49,11 +49,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"GET\" request to \"/checklists/X\"",
+      "name" : "And I created a completed item on the checklist",
       "time" : {
-        "start" : 1653682420414,
-        "stop" : 1653682420443,
-        "duration" : 29
+        "start" : 1653684683140,
+        "stop" : 1653684683232,
+        "duration" : 92
       },
       "status" : "passed",
       "steps" : [ ],
@@ -64,10 +64,40 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "Then the status code is \"400\"",
+      "name" : "When I send a \"GET\" request to \"/checklists/{checklist}/checkItems\"",
       "time" : {
-        "start" : 1653682420444,
-        "stop" : 1653682420445,
+        "start" : 1653684683232,
+        "stop" : 1653684683273,
+        "duration" : 41
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I receive a list with at least \"1\" \"checklist item\"",
+      "time" : {
+        "start" : 1653684683273,
+        "stop" : 1653684683273,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the status code is \"200\"",
+      "time" : {
+        "start" : 1653684683273,
+        "stop" : 1653684683274,
         "duration" : 1
       },
       "status" : "passed",
@@ -81,7 +111,7 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 4,
+    "stepsCount" : 6,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
@@ -90,9 +120,6 @@
   "labels" : [ {
     "name" : "severity",
     "value" : "normal"
-  }, {
-    "name" : "tag",
-    "value" : "negative"
   }, {
     "name" : "feature",
     "value" : "Trello API Checklists"
@@ -114,8 +141,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "negative" ]
+    "tags" : [ ]
   },
-  "source" : "1cee28821bb09ad2.json",
+  "source" : "5db675fbadf0d521.json",
   "parameterValues" : [ ]
 }

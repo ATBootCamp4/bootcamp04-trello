@@ -1,12 +1,12 @@
 {
-  "uid" : "1491db62f8140f1e",
-  "name" : "GET all checklist items on a checklist",
-  "fullName" : "Trello API Checklists: GET all checklist items on a checklist",
-  "historyId" : "71e3de20ab42c8b7e61390669779ddfe",
+  "uid" : "850514b8f388b140",
+  "name" : "POST an attachment to a card from an url -- @1.1 ",
+  "fullName" : "Trello API Attachments: POST an attachment to a card from an url",
+  "historyId" : "04264a0d30769c725de2dd380f57673d",
   "time" : {
-    "start" : 1653682422342,
-    "stop" : 1653682422753,
-    "duration" : 411
+    "start" : 1653684675795,
+    "stop" : 1653684676147,
+    "duration" : 352
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682422343,
-        "stop" : 1653682422490,
-        "duration" : 147
+        "start" : 1653684675795,
+        "stop" : 1653684675957,
+        "duration" : 162
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,11 +34,32 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And I created a checklist on the card",
+      "name" : "When I send a \"POST\" request to \"/cards/{card}/attachments\"",
       "time" : {
-        "start" : 1653682422491,
-        "stop" : 1653682422591,
-        "duration" : 100
+        "start" : 1653684675958,
+        "stop" : 1653684676099,
+        "duration" : 141
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "89deb475ee8a964a",
+        "name" : ".table",
+        "source" : "89deb475ee8a964a.csv",
+        "type" : "text/csv",
+        "size" : 48
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Then the attachment is created on the card",
+      "time" : {
+        "start" : 1653684676099,
+        "stop" : 1653684676144,
+        "duration" : 45
       },
       "status" : "passed",
       "steps" : [ ],
@@ -49,41 +70,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And I created a completed item on the checklist",
+      "name" : "And I receive a response with the \"attachment\" schema",
       "time" : {
-        "start" : 1653682422591,
-        "stop" : 1653682422706,
-        "duration" : 115
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "When I send a \"GET\" request to \"/checklists/{checklist}/checkItems\"",
-      "time" : {
-        "start" : 1653682422706,
-        "stop" : 1653682422752,
-        "duration" : 46
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "Then I receive a list with at least \"1\" \"checklist item\"",
-      "time" : {
-        "start" : 1653682422753,
-        "stop" : 1653682422753,
-        "duration" : 0
+        "start" : 1653684676144,
+        "stop" : 1653684676146,
+        "duration" : 2
       },
       "status" : "passed",
       "steps" : [ ],
@@ -96,8 +87,8 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653682422753,
-        "stop" : 1653682422753,
+        "start" : 1653684676147,
+        "stop" : 1653684676147,
         "duration" : 0
       },
       "status" : "passed",
@@ -111,8 +102,8 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 6,
-    "attachmentsCount" : 0,
+    "stepsCount" : 5,
+    "attachmentsCount" : 1,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -121,11 +112,8 @@
     "name" : "severity",
     "value" : "normal"
   }, {
-    "name" : "tag",
-    "value" : "smoke"
-  }, {
     "name" : "feature",
-    "value" : "Trello API Checklists"
+    "value" : "Trello API Attachments"
   }, {
     "name" : "framework",
     "value" : "behave"
@@ -136,7 +124,22 @@
     "name" : "resultFormat",
     "value" : "allure2"
   } ],
-  "parameters" : [ ],
+  "parameters" : [ {
+    "name" : "Code",
+    "value" : "200"
+  }, {
+    "name" : "Cover",
+    "value" : "false"
+  }, {
+    "name" : "Name",
+    "value" : "not_a_url"
+  }, {
+    "name" : "URL",
+    "value" : "word"
+  }, {
+    "name" : "comment",
+    "value" : "API completes it as \"http://word\""
+  } ],
   "links" : [ ],
   "hidden" : false,
   "retry" : false,
@@ -144,8 +147,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "smoke" ]
+    "tags" : [ ]
   },
-  "source" : "1491db62f8140f1e.json",
-  "parameterValues" : [ ]
+  "source" : "850514b8f388b140.json",
+  "parameterValues" : [ "200", "false", "not_a_url", "word", "API completes it as \"http://word\"" ]
 }

@@ -1,12 +1,12 @@
 {
-  "uid" : "f490c10a0142f465",
-  "name" : "GET an non existing attachment from a card",
-  "fullName" : "Trello API Attachments: GET an non existing attachment from a card",
-  "historyId" : "294dacfe8eba8a5b6a2c620b1ee29294",
+  "uid" : "d99cb57b5c29629e",
+  "name" : "GET a list by id",
+  "fullName" : "Trello API Lists: GET a list by id",
+  "historyId" : "561092410cd1f7e165b7b8783a07ce9c",
   "time" : {
-    "start" : 1653682413277,
-    "stop" : 1653682414376,
-    "duration" : 1099
+    "start" : 1653684685513,
+    "stop" : 1653684685558,
+    "duration" : 45
   },
   "status" : "passed",
   "flaky" : false,
@@ -19,55 +19,10 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Given I created a new card",
+      "name" : "Given I created a board",
       "time" : {
-        "start" : 1653682413278,
-        "stop" : 1653682413417,
-        "duration" : 139
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "And I created an attachment on the card",
-      "time" : {
-        "start" : 1653682413417,
-        "stop" : 1653682414350,
-        "duration" : 933
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "When I send a \"GET\" request to \"/cards/{card}/attachments/X\"",
-      "time" : {
-        "start" : 1653682414350,
-        "stop" : 1653682414375,
-        "duration" : 25
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "Then the response contains an error message",
-      "time" : {
-        "start" : 1653682414376,
-        "stop" : 1653682414376,
+        "start" : 1653684685514,
+        "stop" : 1653684685514,
         "duration" : 0
       },
       "status" : "passed",
@@ -79,10 +34,55 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And the status code is \"400\"",
+      "name" : "And I created a list on the board with name \"list 22\"",
       "time" : {
-        "start" : 1653682414376,
-        "stop" : 1653682414376,
+        "start" : 1653684685514,
+        "stop" : 1653684685514,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"GET\" request to \"/lists/{list}\"",
+      "time" : {
+        "start" : 1653684685514,
+        "stop" : 1653684685557,
+        "duration" : 43
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I receive a response with the \"list\" id",
+      "time" : {
+        "start" : 1653684685557,
+        "stop" : 1653684685557,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the status code is \"200\"",
+      "time" : {
+        "start" : 1653684685557,
+        "stop" : 1653684685557,
         "duration" : 0
       },
       "status" : "passed",
@@ -106,11 +106,8 @@
     "name" : "severity",
     "value" : "normal"
   }, {
-    "name" : "tag",
-    "value" : "negative"
-  }, {
     "name" : "feature",
-    "value" : "Trello API Attachments"
+    "value" : "Trello API Lists"
   }, {
     "name" : "framework",
     "value" : "behave"
@@ -129,8 +126,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ "negative" ]
+    "tags" : [ ]
   },
-  "source" : "f490c10a0142f465.json",
+  "source" : "d99cb57b5c29629e.json",
   "parameterValues" : [ ]
 }

@@ -1,12 +1,12 @@
 {
-  "uid" : "b9e67287349896ca",
-  "name" : "CREATE and DELETE a board -- @1.2 ",
-  "fullName" : "Trello Boards API: CREATE and DELETE a board",
-  "historyId" : "bc9ea5c3639e1d092e5cff011bce44a3",
+  "uid" : "c401620392e91fe1",
+  "name" : "GET a checklist item by its id",
+  "fullName" : "Trello API Checklists: GET a checklist item by its id",
+  "historyId" : "58de0003e3e4e0d88f91f500b9a1857c",
   "time" : {
-    "start" : 1653682419147,
-    "stop" : 1653682419600,
-    "duration" : 453
+    "start" : 1653684683690,
+    "stop" : 1653684684093,
+    "duration" : 403
   },
   "status" : "passed",
   "flaky" : false,
@@ -19,11 +19,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Given the user creates a board with \"name\" to be \"jose\"",
+      "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682419148,
-        "stop" : 1653682419291,
-        "duration" : 143
+        "start" : 1653684683691,
+        "stop" : 1653684683847,
+        "duration" : 156
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,41 +34,56 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "Then the status code is \"200\"",
+      "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682419291,
-        "stop" : 1653682419291,
+        "start" : 1653684683847,
+        "stop" : 1653684683953,
+        "duration" : 106
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I created a completed item on the checklist",
+      "time" : {
+        "start" : 1653684683953,
+        "stop" : 1653684684048,
+        "duration" : 95
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"GET\" request to \"checklists/{checklist}/checkItems/{checkitem}\"",
+      "time" : {
+        "start" : 1653684684049,
+        "stop" : 1653684684093,
+        "duration" : 44
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I receive a response with the \"checkitem\" id",
+      "time" : {
+        "start" : 1653684684093,
+        "stop" : 1653684684093,
         "duration" : 0
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "And I receive a response with the \"board\" schema",
-      "time" : {
-        "start" : 1653682419291,
-        "stop" : 1653682419296,
-        "duration" : 5
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "Then the user deletes the board \"jose\"",
-      "time" : {
-        "start" : 1653682419296,
-        "stop" : 1653682419599,
-        "duration" : 303
       },
       "status" : "passed",
       "steps" : [ ],
@@ -81,8 +96,8 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653682419600,
-        "stop" : 1653682419600,
+        "start" : 1653684684093,
+        "stop" : 1653684684093,
         "duration" : 0
       },
       "status" : "passed",
@@ -96,7 +111,7 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 5,
+    "stepsCount" : 6,
     "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
@@ -107,7 +122,7 @@
     "value" : "normal"
   }, {
     "name" : "feature",
-    "value" : "Trello Boards API"
+    "value" : "Trello API Checklists"
   }, {
     "name" : "framework",
     "value" : "behave"
@@ -118,13 +133,7 @@
     "name" : "resultFormat",
     "value" : "allure2"
   } ],
-  "parameters" : [ {
-    "name" : "field",
-    "value" : "name"
-  }, {
-    "name" : "value",
-    "value" : "jose"
-  } ],
+  "parameters" : [ ],
   "links" : [ ],
   "hidden" : false,
   "retry" : false,
@@ -134,6 +143,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "b9e67287349896ca.json",
-  "parameterValues" : [ "name", "jose" ]
+  "source" : "c401620392e91fe1.json",
+  "parameterValues" : [ ]
 }

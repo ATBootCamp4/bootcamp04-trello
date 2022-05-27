@@ -1,12 +1,12 @@
 {
-  "uid" : "43e8b6a029ce7d95",
+  "uid" : "a8781568033d7b12",
   "name" : "Get members of board",
   "fullName" : "Trello Boards API: Get members of board",
   "historyId" : "7be7f2afdaa3e2992665923834c3249b",
   "time" : {
-    "start" : 1653682418549,
-    "stop" : 1653682418595,
-    "duration" : 46
+    "start" : 1653684679598,
+    "stop" : 1653684679640,
+    "duration" : 42
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "When I send a \"GET\" request to \"/boards/{board}/members\"",
       "time" : {
-        "start" : 1653682418550,
-        "stop" : 1653682418593,
-        "duration" : 43
+        "start" : 1653684679598,
+        "stop" : 1653684679639,
+        "duration" : 41
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,8 +36,8 @@
     }, {
       "name" : "Then the status code is \"200\"",
       "time" : {
-        "start" : 1653682418593,
-        "stop" : 1653682418594,
+        "start" : 1653684679639,
+        "stop" : 1653684679640,
         "duration" : 1
       },
       "status" : "passed",
@@ -51,9 +51,9 @@
     }, {
       "name" : "And verify there is at least 1 member",
       "time" : {
-        "start" : 1653682418594,
-        "stop" : 1653682418595,
-        "duration" : 1
+        "start" : 1653684679640,
+        "stop" : 1653684679640,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -98,6 +98,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "43e8b6a029ce7d95.json",
+  "source" : "a8781568033d7b12.json",
   "parameterValues" : [ ]
 }

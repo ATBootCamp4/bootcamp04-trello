@@ -1,12 +1,12 @@
 {
-  "uid" : "6aa1f1c9b8d60502",
-  "name" : "Updating information of a Board",
-  "fullName" : "Trello Boards API: Updating information of a Board",
-  "historyId" : "bd22119c429e9460c24bddbf547a0eea",
+  "uid" : "fe031ded1e695f53",
+  "name" : "Get all information of board",
+  "fullName" : "Trello Boards API: Get all information of board",
+  "historyId" : "c9d93eda9f68edcfae4916146104df52",
   "time" : {
-    "start" : 1653682418596,
-    "stop" : 1653682418711,
-    "duration" : 115
+    "start" : 1653684679550,
+    "stop" : 1653684679597,
+    "duration" : 47
   },
   "status" : "passed",
   "flaky" : false,
@@ -19,31 +19,25 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "When I send a \"PUT\" request to \"/boards/{board}\"",
+      "name" : "When I send a \"GET\" request to \"/boards/{board}\"",
       "time" : {
-        "start" : 1653682418597,
-        "stop" : 1653682418709,
-        "duration" : 112
+        "start" : 1653684679550,
+        "stop" : 1653684679592,
+        "duration" : 42
       },
       "status" : "passed",
       "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "80cc3339701322f4",
-        "name" : ".table",
-        "source" : "80cc3339701322f4.csv",
-        "type" : "text/csv",
-        "size" : 54
-      } ],
+      "attachments" : [ ],
       "parameters" : [ ],
       "stepsCount" : 0,
-      "attachmentsCount" : 1,
+      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : true
+      "hasContent" : false
     }, {
       "name" : "Then the status code is \"200\"",
       "time" : {
-        "start" : 1653682418710,
-        "stop" : 1653682418710,
+        "start" : 1653684679592,
+        "stop" : 1653684679592,
         "duration" : 0
       },
       "status" : "passed",
@@ -55,31 +49,25 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And verify the new object contains the following info",
+      "name" : "And I receive a response with the \"board\" schema",
       "time" : {
-        "start" : 1653682418710,
-        "stop" : 1653682418711,
-        "duration" : 1
+        "start" : 1653684679592,
+        "stop" : 1653684679597,
+        "duration" : 5
       },
       "status" : "passed",
       "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "3a2155e8a628f2a3",
-        "name" : ".table",
-        "source" : "3a2155e8a628f2a3.csv",
-        "type" : "text/csv",
-        "size" : 54
-      } ],
+      "attachments" : [ ],
       "parameters" : [ ],
       "stepsCount" : 0,
-      "attachmentsCount" : 1,
+      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : true
+      "hasContent" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "stepsCount" : 3,
-    "attachmentsCount" : 2,
+    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -110,6 +98,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "6aa1f1c9b8d60502.json",
+  "source" : "fe031ded1e695f53.json",
   "parameterValues" : [ ]
 }
