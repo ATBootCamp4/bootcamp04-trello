@@ -1,4 +1,4 @@
-name: Push-to-master workflow
+name: Pull request to master workflow
 
 on: 
   pull_request:
