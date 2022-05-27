@@ -14,7 +14,7 @@ Feature: Trello API Lists
         Given I created a board
         And I created a list on the board with name "list 22"
         When I send a "GET" request to "/lists/{list}"
-        Then I receive a response with the "list" id
+        Then I receive a response with the "list" "id"
         And the status code is "200"
 
     Scenario: POST a new list to a board
