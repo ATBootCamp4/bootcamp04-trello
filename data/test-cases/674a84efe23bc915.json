@@ -1,0 +1,136 @@
+{
+  "uid" : "674a84efe23bc915",
+  "name" : "Modify data from specific label",
+  "fullName" : "Trello labels API: Modify data from specific label",
+  "historyId" : "23d04bbf4495b774e434317e5d791c91",
+  "time" : {
+    "start" : 1653688643018,
+    "stop" : 1653688643458,
+    "duration" : 440
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I send a \"POST\" request to \"boards/{board}/labels\"",
+      "time" : {
+        "start" : 1653688643018,
+        "stop" : 1653688643174,
+        "duration" : 156
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "125293f272b43748",
+        "name" : ".table",
+        "source" : "125293f272b43748.csv",
+        "type" : "text/csv",
+        "size" : 36
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "When I send a \"PUT\" request to \"labels/{response}\"",
+      "time" : {
+        "start" : 1653688643174,
+        "stop" : 1653688643334,
+        "duration" : 160
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "6d0329a3051445ee",
+        "name" : ".table",
+        "source" : "6d0329a3051445ee.csv",
+        "type" : "text/csv",
+        "size" : 33
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And I send a \"GET\" request to \"labels/{response}\"",
+      "time" : {
+        "start" : 1653688643335,
+        "stop" : 1653688643457,
+        "duration" : 122
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I check the data is",
+      "time" : {
+        "start" : 1653688643457,
+        "stop" : 1653688643458,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "6d0a93a8597e990b",
+        "name" : ".table",
+        "source" : "6d0a93a8597e990b.csv",
+        "type" : "text/csv",
+        "size" : 33
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Trello labels API"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "674a84efe23bc915.json",
+  "parameterValues" : [ ]
+}

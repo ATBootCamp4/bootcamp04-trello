@@ -7,13 +7,13 @@
       "name" : "TypeError: string indices must be integers\n",
       "children" : [ {
         "name" : "Create labels in  card with invalid names and colors -- @1.1 Values",
-        "uid" : "809b3b6f78e001d0",
+        "uid" : "3f901b338a8ce778",
         "parentUid" : "8c470da2f070c706f3749492538e3382",
         "status" : "broken",
         "time" : {
-          "start" : 1653688626307,
-          "stop" : 1653688626510,
-          "duration" : 203
+          "start" : 1653688643808,
+          "stop" : 1653688644145,
+          "duration" : 337
         },
         "flaky" : false,
         "newFailed" : false,
@@ -24,13 +24,13 @@
         "parameters" : [ "ble", "ERROR", "invalid value for color", "aaa", "400" ]
       }, {
         "name" : "Create labels in  card with invalid names and colors -- @1.2 Values",
-        "uid" : "a33f8507a335bbe4",
+        "uid" : "f942184dab036e8b",
         "parentUid" : "8c470da2f070c706f3749492538e3382",
         "status" : "broken",
         "time" : {
-          "start" : 1653688626511,
-          "stop" : 1653688626690,
-          "duration" : 179
+          "start" : 1653688644146,
+          "stop" : 1653688644449,
+          "duration" : 303
         },
         "flaky" : false,
         "newFailed" : false,

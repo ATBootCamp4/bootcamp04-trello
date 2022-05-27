@@ -1,0 +1,154 @@
+{
+  "uid" : "4961c0b586363ecf",
+  "name" : "POST an attachment to a card from an url -- @1.2 ",
+  "fullName" : "Trello API Attachments: POST an attachment to a card from an url",
+  "historyId" : "62e2af6becb648b76d18b96733e192a0",
+  "time" : {
+    "start" : 1653688627712,
+    "stop" : 1653688628470,
+    "duration" : 758
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I created a new card",
+      "time" : {
+        "start" : 1653688627713,
+        "stop" : 1653688627931,
+        "duration" : 218
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"POST\" request to \"/cards/{card}/attachments\"",
+      "time" : {
+        "start" : 1653688627931,
+        "stop" : 1653688628335,
+        "duration" : 404
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "5ae9a89ae1bceecd",
+        "name" : ".table",
+        "source" : "5ae9a89ae1bceecd.csv",
+        "type" : "text/csv",
+        "size" : 92
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Then the attachment is created on the card",
+      "time" : {
+        "start" : 1653688628335,
+        "stop" : 1653688628467,
+        "duration" : 132
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I receive a response with the \"attachment\" schema",
+      "time" : {
+        "start" : 1653688628467,
+        "stop" : 1653688628469,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the status code is \"200\"",
+      "time" : {
+        "start" : 1653688628469,
+        "stop" : 1653688628470,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Trello API Attachments"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "Code",
+    "value" : "200"
+  }, {
+    "name" : "Cover",
+    "value" : "false"
+  }, {
+    "name" : "Name",
+    "value" : "Trello logo"
+  }, {
+    "name" : "URL",
+    "value" : "https://www.svgrepo.com/show/354463/trello.svg"
+  }, {
+    "name" : "comment",
+    "value" : "normal image attachment"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "4961c0b586363ecf.json",
+  "parameterValues" : [ "200", "false", "Trello logo", "https://www.svgrepo.com/show/354463/trello.svg", "normal image attachment" ]
+}
