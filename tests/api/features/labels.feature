@@ -62,7 +62,7 @@ Scenario Outline: Create labels in specific card with different names and colors
             | name   | changed      |
             | color  | blue         |
 
-# # SCENARIO V 
+# SCENARIO V 
     Scenario: DELETE label from board
         Given I send a "POST" request to "boards/{board}/labels"
             | Key    | Value        | 
