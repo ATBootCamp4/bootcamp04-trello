@@ -15,8 +15,7 @@
                 "desc": {
                     "type": "string"
                 },
-                "descData": {
-                    "type": "null"
+                "descData": { 
                 },
                 "closed": {
                     "type": "boolean"
@@ -25,7 +24,6 @@
                     "type": "string"
                 },
                 "idEnterprise": {
-                    "type": "null"
                 },
                 "pinned": {
                     "type": "boolean"

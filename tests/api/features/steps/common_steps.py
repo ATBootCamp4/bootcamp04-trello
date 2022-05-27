@@ -3,7 +3,7 @@ from main.utils.behave_helpers import replace_ids, fill_payload, validate_schema
 from main.utils.json_model import JsonModel
 
 
-@when('I send a "{method}" request to "{endpoint}"')
+@step('I send a "{method}" request to "{endpoint}"')
 def step_impl(context, method, endpoint):
     endpoint = replace_ids(context, endpoint)
     context.payload = fill_payload(context, payload={})
@@ -24,23 +24,22 @@ def step_impl(context, item):
 
 @step('the status code is "{status_code:d}"')
 def step_impl(context, status_code):
-    assert context.status_code == status_code, 'Status code does not match'
+    assert context.status_code == status_code, f'it was expected {status_code} but it was received {context.status_code} '
+
 
 
 @ then('I receive a response with the "{schema_name}" schema')
 def step_impl(context, schema_name):
     validate_schema(context, schema_name)
 
-
-'''
+    
+@ step('The item is updated')
+def step_impl(context):
+  '''
     This method checks if a response item has been updated
     by comparing its objetc properties from the response
     to the input values in the request
-'''
-
-
-@ step('The item is updated')
-def step_impl(context):
+  '''
     model = JsonModel()
     for row in context.table:
         model.build_json(row['Key'], row['Value'])
@@ -50,27 +49,23 @@ def step_impl(context):
         assert value == actual_value, f"Response Object Error: Expected: {value}, Actual: {actual_value}"
 
 
-'''
-    This method checks if item has been deleted by
-    making a GET request to its URL
-'''
-
-
 @ step('The item "{item_url}" is deleted')
 def step_impl(context, item_url):
+  '''
+    This method checks if item has been deleted by
+    making a GET request to its URL
+  '''
     endpoint = replace_ids(context, item_url)
     status_code, _ = context.request_manager.do_request("GET", endpoint)
     assert status_code == 404, f"Status code 404 was expected but {status_code} was found"
 
 
-'''
-    This method checks if item has been created by
-    making a GET request to its URL
-'''
-
-
 @ step('The item "{item_url}" is created')
 def step_impl(context, item_url):
+  '''
+    This method checks if item has been created by
+    making a GET request to its URL
+  '''
     endpoint = replace_ids(context, item_url)
     status_code, _ = context.request_manager.do_request("GET", endpoint)
     assert status_code == 200, f"Status code 200 was expected but {status_code} was found"

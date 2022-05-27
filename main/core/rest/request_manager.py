@@ -8,17 +8,15 @@ Classes:
 import requests
 import json
 
-from main.utils.api_exceptions import RestError
 from main.utils.common_globals import HEADERS, DEFAULT_API_URL, API_VERSION
 from main.utils.meta_classes import Singleton
 
 
 class RequestManager(metaclass=Singleton):
     """Module in charge of the execution of REST requests"""
-    
+
     def __init__(self, base_url=DEFAULT_API_URL, version=API_VERSION):
-        """ Construct the necessary attributes for the Request Manager. 
-        
+        """ Construct the necessary attributes for the Request Manager.
         :param base_url:  str  The URL of the API to which the requests are to be sent
         :param version:   str  The API version
         """
@@ -28,7 +26,6 @@ class RequestManager(metaclass=Singleton):
 
     def do_request(self, method, endpoint, payload=None, **kwargs):
         """Send REST request to the specified endpoint.
-        
         :param method:    str   Request method name such as GET, POST, PUT, DELETE, PATCH
         :param endpoint:  str   Endpoint of service to which the request will be sent
         :param payload:   dict  Data or payload send along with the REST request
@@ -49,7 +46,6 @@ class RequestManager(metaclass=Singleton):
 
     def get_request(self, endpoint, **kwargs):
         """Method to send GET requests to the specified endpoint
-        
         :param endpoint:  str   Endpoint of service to which the request will be sent
         :param kwargs:    dict  Data that will be considered as query parameters
         :return: Tuple that contains the status code and the response.
@@ -58,7 +54,6 @@ class RequestManager(metaclass=Singleton):
 
     def post_request(self, endpoint, payload=None, **kwargs):
         """Method to send POST requests to the specified endpoint
-        
         :param endpoint:  str   Endpoint of service to which the request will be sent
         :param payload:   dict  Data or payload send along with the REST request
         :param kwargs:    dict  Data that will be considered as query parameters
@@ -68,7 +63,6 @@ class RequestManager(metaclass=Singleton):
 
     def put_request(self, endpoint, payload=None, **kwargs):
         """Method to send PUT requests to the specified endpoint
-        
         :param endpoint:  str   Endpoint of service to which the request will be sent
         :param payload:   dict  Data or payload send along with the REST request
         :param kwargs:    dict  Data that will be considered as query parameters
@@ -78,7 +72,6 @@ class RequestManager(metaclass=Singleton):
 
     def delete_request(self, endpoint):
         """Method to send DELETE requests to the specified endpoint
-        
         :param endpoint:  str   Endpoint of service to which the request will be sent
         :return: Tuple that contains the status code and the response.
         """
@@ -86,7 +79,7 @@ class RequestManager(metaclass=Singleton):
 
 
 if __name__ == '__main__':
-    # This section helps to test the module, make sure the env variable PYTHONPATH exists 
+    # This section helps to test the module, make sure the env variable PYTHONPATH exists
     # to be able to execute only this module.
     # PYTHONPATH=<Full path to bootcamp04-trello folder>
     request = RequestManager()
