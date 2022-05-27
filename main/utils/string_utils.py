@@ -5,7 +5,7 @@ def build_api_log_message(method, endpoint_url, payload=None, response=None):
     :param payload:       str  Data or payload send along with the REST request.
     :param response:      str  Response that comes from the API service.
     :return: Formatted string message that can be used as log message.
-    """        
+    """
     message_type = "[Request]" if response is None else f"[Rsp:{response.status_code}]"
     if response is not None:
         message = {"content": response.json() if response.ok else response.text}

@@ -11,23 +11,28 @@ def before_all(context):
     LOGGER.info("Executed 'before_all' hook, created context.board and context.lists")
     LOGGER.info("Starting Test Suite", is_title=True)
 
+
 def before_feature(context, feature):
     LOGGER.info(f"Starting Feature: {feature.name}", is_title=True)
     if feature.background:
         LOGGER.info(f"Executing Background: {feature.background.name}")
 
+
 def before_scenario(context, scenario):
     context.list = context.lists[0]
-    LOGGER.info(f"Executed 'before_scenario' hook, created context.list")
+    LOGGER.info("Executed 'before_scenario' hook, created context.list")
     LOGGER.info(f"Starting Scenario: {scenario.name}")
     if scenario.tags:
         LOGGER.info(f"Tags: {scenario.tags}")
 
+
 def after_scenario(context, scenario):
     LOGGER.info(f"Status: {scenario.status}")
 
+
 def after_feature(context, feature):
     LOGGER.info(f"Status for Feature: {feature.name}: {feature.status}", is_title=True)
+
 
 def after_all(context):
     context.request_manager.delete_request('boards/' + context.board['id'])
