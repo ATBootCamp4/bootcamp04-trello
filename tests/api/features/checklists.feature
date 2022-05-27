@@ -14,7 +14,7 @@ Feature: Trello API Checklists
         Given I created a new card
         And I created a checklist on the card
         When I send a "GET" request to "/checklists/{checklist}"
-        Then I receive a response with the "checklist" id
+        Then I receive a response with the "checklist" "id"
         And the status code is "200"
 
     Scenario: POST a new checklist to a card
@@ -76,7 +76,7 @@ Feature: Trello API Checklists
         And I created a checklist on the card
         And I created a completed item on the checklist
         When I send a "GET" request to "checklists/{checklist}/checkItems/{checkitem}"
-        Then I receive a response with the "checkitem" id
+        Then I receive a response with the "checkitem" "id"
         And the status code is "200"
 
     Scenario: Update a checklist item
