@@ -1,7 +1,7 @@
 Feature: Trello labels API
     As a user I want to work with labels in the API
 
-# # #SCENARIO I
+#SCENARIO I
  Scenario: Create and verify label in board
     Given I send a "POST" request to "boards/{board}/labels"
             | Key    | Value        | 
@@ -74,7 +74,7 @@ Scenario Outline: Create labels in specific card with different names and colors
         And the status code is "200"
         Then after deleted if I "GET" the label the message is "The requested resource was not found." and "404" status code
 
-# # #SCENARIO VI
+# #SCENARIO VI
 Scenario Outline: Create labels in  card with invalid names and colors
       Given I created a new card
       When I send a "POST" request to "/cards/{card}/labels"
@@ -82,8 +82,11 @@ Scenario Outline: Create labels in  card with invalid names and colors
             | name   | <Name>       |
             | color  | <Color>      |
       And the status code is "<http_response>"
-      And the label error message is "<Message>" 
-        Examples: Values"
-        |Name   |Color     |http_response   | Message                                                |
-        |  aaa  |  ble     |  400           | {"message":"invalid value for color","error":"ERROR"}|
-        |  ~    |  magenta |  400           | {"message":"invalid value for color","error":"ERROR"}|
+          Then I check the data is
+            | Key    | Value        | 
+            | message| <Message>    |
+            | error  | <Error>      |
+        Examples: Values
+        |Name   |Color     |http_response   |Error      |Message                |
+        |  aaa  |  ble     |  400           |  ERROR    |invalid value for color|
+        |  ~    |  magenta |  400           |  ERROR    |invalid value for color|
