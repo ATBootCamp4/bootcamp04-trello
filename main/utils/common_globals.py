@@ -7,11 +7,9 @@ import os
 APIKEY = os.getenv("TRELLO_APIKEY", None)
 TOKEN = os.getenv("TRELLO_TOKEN", None)
 # Default Headers information
-HEADERS = {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-            'Authorization': f'OAuth oauth_consumer_key="{APIKEY}", oauth_token="{TOKEN}"'
-         }
+HEADERS = {'Accept': 'application/json',
+           'Content-Type': 'application/json',
+           'Authorization': f'OAuth oauth_consumer_key="{APIKEY}", oauth_token="{TOKEN}"'}
 # Default API URL and Version
 DEFAULT_API_URL = "https://api.trello.com"
 API_VERSION = "1"

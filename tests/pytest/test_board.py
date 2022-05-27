@@ -10,7 +10,7 @@ from main.trello.api.boards_manager import BoardsManager
 
 
 class TestBoards():
-    
+
     @classmethod
     def setup_class(cls):
         """ Initialze the managers used to interact with the API """
@@ -19,7 +19,7 @@ class TestBoards():
 
     def test_create_board(self):
         """Test to verify boards can be created, listed and deleted
-        
+
         STEPS:
         1. Create a new Board
         2. Verify the API response comes with the status code 200 an Board's data
@@ -42,8 +42,8 @@ class TestBoards():
             if member_board['id'] == created_board['id']:
                 break
         else:
-            raise AssertionError("Member cannot see listed the board {} " \
-                                 "with name '{}'".format(created_board['id'], created_board['name']))
+            raise AssertionError(f"""Member cannot see listed the board {created_board['id']}
+                                with name '{created_board['name']}'""")
         # 4. Delete created board
         status_code, _ = self.boards_manager.delete_board(created_board['id'])
         assert status_code == 200, f"Board {created_board['id']} with '{name}' couldn't be deleted"
