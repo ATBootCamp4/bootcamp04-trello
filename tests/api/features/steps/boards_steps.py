@@ -62,11 +62,4 @@ def step_impl(context):
     """ 
     it gets the board id that sholud had been deleted and store the status code in the context 
     """
-
     context.status_code, _ = context.request_manager.do_request("GET", f'/boards/{context.response["id"]}')
-
-
-
-
-
-
