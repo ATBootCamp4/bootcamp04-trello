@@ -5,10 +5,11 @@ from main.utils.json_model import JsonModel
 request_manager = RequestManager()
 boards_manager = BoardsManager()
 
+
 @step('verify the new object contains the following info')
 def step_impl(context): 
     """ 
-    Construct a Json with the table of the .features and compare it with the response frome the API 
+    Construct a Json with the table of the .features and compare it with the response from the API 
     """   
     model = JsonModel()
     for row in context.table:
@@ -17,9 +18,9 @@ def step_impl(context):
     for key, value in model.json_data.items():
         actual_value = context.response[key]
         assert value == actual_value, f"Expected: {value}, Actual: {actual_value} "
-        
-@step ('the user creates a board with "{field}" to be "{value}"')
-def step_impl(context, field, value ): 
+
+@step('the user creates a board with "{field}" to be "{value}"')
+def step_impl(context, field, value ):
     """ 
     Construct a Json with the table of the .features in order to send that as the payload and then creates a board using the payload
 
@@ -33,7 +34,7 @@ def step_impl(context, field, value ):
     context.status_code = status_code
     context.response = response
 
-@step ('the user deletes the board "{name}"')
+@step('the user deletes the board "{name}"')
 def step_impl(context, name): 
     """ 
     recives a name of a board and compares it with the board in the context, if they are the same, it uses the board manager 
@@ -55,7 +56,7 @@ def step_impl(context):
     if not context.board:
         _, context.board = context.request_manager.post_request('boards/', payload={'name': 'Behave board'})
     
-@step ('verify the board does not exist')
+@step('verify the board does not exist')
 def step_impl(context): 
     """ 
     it gets the board id that sholud had been deleted and store the status code in the context 
