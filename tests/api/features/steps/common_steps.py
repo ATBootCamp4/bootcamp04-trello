@@ -32,4 +32,4 @@ def step_impl(context, schema_name):
 def step_impl(context):
     expected_json = fill_payload(context, payload={})
     for key, value in expected_json.items():
-        assert value==context.response[key],'expected value for {key} is {value},but actual is {context.response[key]}'
+        assert value == context.response[key], f'expected value for {key} is {value}, but actual is {context.response[key]}'
