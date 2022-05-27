@@ -57,8 +57,10 @@ def step_impl(context):
 def step_impl(context):
     """This step intends to verify that the checklist item was updated."""
     _, response = checklist_manager.get_checkitem(context.checklist['id'], context.checkitem['id'])
-    assert response['name'] == context.payload['name'], f"Expected name '{context.payload['name']}' but got '{response['name']}'"
-    assert response['state'] == context.payload['state'], f"Expected name '{context.payload['state']}' but got '{response['state']}'"
+    assert response['name'] == context.payload['name'], \
+        f"Expected name '{context.payload['name']}' but got '{response['name']}'"
+    assert response['state'] == context.payload['state'], \
+        f"Expected name '{context.payload['state']}' but got '{response['state']}'"
 
 
 @then('the checklist item is deleted')
