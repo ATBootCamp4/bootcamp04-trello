@@ -25,17 +25,16 @@ Feature: Trello API Attachments
             | url      | <URL>   |
             | name     | <Name>  |
             | setCover | <Cover> |
-        Then the attachment is<bool> created on the card
+        Then the attachment is created on the card
         And I receive a response with the "attachment" schema
         And the status code is "<Code>"
 
     Examples:
-        | URL                                            | Name          | Cover | bool | Code | comment                             |
-        | word                                           | not_a_url     | false |      | 200  | API completes it as "http://word"   |
-        | https://www.svgrepo.com/show/354463/trello.svg | Trello logo   | false |      | 200  | normal image attachment             |
-        |                                                | empty_url     | false | n't  | 400  | API creates nothing and returns 400 |
-        | fpt.aaa.bbb.ccc                                | invalid       | false |      | 200  | API adds "http://" and returns 200  |
-        | https://source.unsplash.com/user/c_v_r         | cover         | true  |      | 200  | cover image attachment              |
+        | URL                                            | Name          | Cover | Code | comment                             |
+        | word                                           | not_a_url     | false | 200  | API completes it as "http://word"   |
+        | https://www.svgrepo.com/show/354463/trello.svg | Trello logo   | false | 200  | normal image attachment             |
+        | fpt.aaa.bbb.ccc                                | invalid       | false | 200  | API adds "http://" and returns 200  |
+        | https://source.unsplash.com/user/c_v_r         | cover         | true  | 200  | cover image attachment              |
     
     Scenario: DELETE an attachment from a card
         Given I created a new card

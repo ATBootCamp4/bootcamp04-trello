@@ -64,8 +64,7 @@ class BoardsManager(RESTBaseManager):
 
     def copy_board(self, name, id_board):
         """ Create a new Board based on an existing Board
-
-        :param name:      str   Name for the new Board        
+        :param name:      str   Name for the new Board
         :param id_board:  str   Id of the source board from which the same information will be copied
         :return: Tuple that contains the status code and the response.
         """

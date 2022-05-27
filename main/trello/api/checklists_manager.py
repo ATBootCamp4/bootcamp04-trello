@@ -1,5 +1,6 @@
 from main.trello.api.rest_base_manager import RESTBaseManager
 
+
 class ChecklistsManager(RESTBaseManager):
 
     def __init__(self, method=None):
@@ -47,7 +48,7 @@ class ChecklistsManager(RESTBaseManager):
         :param name:    str   Name of the checklist
         :return:        Tuple that contains the status code and the response."""
 
-        endpoint = f'checklists'
+        endpoint = 'checklists'
         payload = {
             "idCard": card_id,
             "name": name,
@@ -55,7 +56,7 @@ class ChecklistsManager(RESTBaseManager):
         }
         if id_source:
             payload["idSource"] = id_source
-        
+
         status_code, response = self.method.post_request(endpoint, payload=payload)
 
         return status_code, response
@@ -73,7 +74,7 @@ class ChecklistsManager(RESTBaseManager):
             payload["name"] = name
         if pos:
             payload["pos"] = pos
-        
+
         status_code, response = self.method.put_request(endpoint, payload=payload)
 
         return status_code, response
@@ -144,7 +145,7 @@ class ChecklistsManager(RESTBaseManager):
             payload["pos"] = pos
         if state:
             payload["state"] = state
-        
+
         status_code, response = self.method.put_request(endpoint, payload=payload)
 
         return status_code, response
