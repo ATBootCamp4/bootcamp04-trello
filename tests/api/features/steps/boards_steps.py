@@ -60,10 +60,7 @@ def step_impl(context):
 @step ('verify the board does not exist')
 def step_impl(context): 
     """ 
-    recives a name of a board and compares it with the board in the context, if they are the same, it uses the board manager 
-    to delete the board
-
-    :param name:   String  string with the name of the board that will be deleted 
+    it gets the board id that sholud had been deleted and store the status code in the context 
     """
 
     context.status_code, _ = context.request_manager.do_request("GET", f'/boards/{context.response["id"]}')
