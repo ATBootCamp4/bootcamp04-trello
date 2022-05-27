@@ -14,9 +14,6 @@
                     "type": "array",
                     "items": {}
                 },
-                "checkItemStates": {
-                    "type": "null"
-                },
                 "id": {
                     "type": "string"
                 },
@@ -128,7 +125,6 @@
             "required": [
                 "badges",
                 "cardRole",
-                "checkItemStates",
                 "closed",
                 "cover",
                 "dateLastActivity",
