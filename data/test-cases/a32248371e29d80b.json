@@ -1,12 +1,12 @@
 {
-  "uid" : "5a97f3dc3866621f",
-  "name" : "DELETE a checklist",
-  "fullName" : "Trello API Checklists: DELETE a checklist",
-  "historyId" : "5884e141989378bf524cd7f7a9d554c3",
+  "uid" : "a32248371e29d80b",
+  "name" : "Update a checklist",
+  "fullName" : "Trello API Checklists: Update a checklist",
+  "historyId" : "991a86e7f7a3047221c92beb4d7084c3",
   "time" : {
-    "start" : 1653682152054,
-    "stop" : 1653682152456,
-    "duration" : 402
+    "start" : 1653682290132,
+    "stop" : 1653682290520,
+    "duration" : 388
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682152055,
-        "stop" : 1653682152201,
-        "duration" : 146
+        "start" : 1653682290133,
+        "stop" : 1653682290285,
+        "duration" : 152
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,9 +36,9 @@
     }, {
       "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682152201,
-        "stop" : 1653682152299,
-        "duration" : 98
+        "start" : 1653682290285,
+        "stop" : 1653682290385,
+        "duration" : 100
       },
       "status" : "passed",
       "steps" : [ ],
@@ -49,26 +49,32 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"DELETE\" request to \"/checklists/{checklist}\"",
+      "name" : "When I send a \"PUT\" request to \"/checklists/{checklist}\"",
       "time" : {
-        "start" : 1653682152300,
-        "stop" : 1653682152398,
-        "duration" : 98
+        "start" : 1653682290385,
+        "stop" : 1653682290472,
+        "duration" : 87
       },
       "status" : "passed",
       "steps" : [ ],
-      "attachments" : [ ],
+      "attachments" : [ {
+        "uid" : "a867cf7d1de708c",
+        "name" : ".table",
+        "source" : "a867cf7d1de708c.csv",
+        "type" : "text/csv",
+        "size" : 37
+      } ],
       "parameters" : [ ],
       "stepsCount" : 0,
-      "attachmentsCount" : 0,
+      "attachmentsCount" : 1,
       "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "hasContent" : true
     }, {
-      "name" : "Then the checklist is deleted",
+      "name" : "Then the checklist is updated",
       "time" : {
-        "start" : 1653682152398,
-        "stop" : 1653682152454,
-        "duration" : 56
+        "start" : 1653682290472,
+        "stop" : 1653682290519,
+        "duration" : 47
       },
       "status" : "passed",
       "steps" : [ ],
@@ -81,9 +87,9 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653682152455,
-        "stop" : 1653682152455,
-        "duration" : 0
+        "start" : 1653682290519,
+        "stop" : 1653682290520,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -97,7 +103,7 @@
     "attachments" : [ ],
     "parameters" : [ ],
     "stepsCount" : 5,
-    "attachmentsCount" : 0,
+    "attachmentsCount" : 1,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -128,6 +134,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "5a97f3dc3866621f.json",
+  "source" : "a32248371e29d80b.json",
   "parameterValues" : [ ]
 }

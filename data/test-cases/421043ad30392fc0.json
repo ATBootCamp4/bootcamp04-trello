@@ -1,12 +1,12 @@
 {
-  "uid" : "4c2a3d1805215a27",
-  "name" : "POST an attachment to a card from an url -- @1.2 ",
-  "fullName" : "Trello API Attachments: POST an attachment to a card from an url",
-  "historyId" : "62e2af6becb648b76d18b96733e192a0",
+  "uid" : "421043ad30392fc0",
+  "name" : "Update a checklist item with invalid state",
+  "fullName" : "Trello API Checklists: Update a checklist item with invalid state",
+  "historyId" : "848ab349dd3f86f32a182639ad536cb0",
   "time" : {
-    "start" : 1653682145970,
-    "stop" : 1653682146657,
-    "duration" : 687
+    "start" : 1653682293497,
+    "stop" : 1653682293941,
+    "duration" : 444
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682145971,
-        "stop" : 1653682146101,
-        "duration" : 130
+        "start" : 1653682293498,
+        "stop" : 1653682293647,
+        "duration" : 149
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,20 +34,50 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"POST\" request to \"/cards/{card}/attachments\"",
+      "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682146101,
-        "stop" : 1653682146604,
-        "duration" : 503
+        "start" : 1653682293647,
+        "stop" : 1653682293771,
+        "duration" : 124
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I created a completed item on the checklist",
+      "time" : {
+        "start" : 1653682293771,
+        "stop" : 1653682293890,
+        "duration" : 119
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"PUT\" request to \"/cards/{card}/checkItem/{checkitem}\"",
+      "time" : {
+        "start" : 1653682293890,
+        "stop" : 1653682293940,
+        "duration" : 50
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "c7e2a607fb67b74c",
+        "uid" : "1e809a9cfa7580ca",
         "name" : ".table",
-        "source" : "c7e2a607fb67b74c.csv",
+        "source" : "1e809a9cfa7580ca.csv",
         "type" : "text/csv",
-        "size" : 92
+        "size" : 46
       } ],
       "parameters" : [ ],
       "stepsCount" : 0,
@@ -55,11 +85,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : true
     }, {
-      "name" : "Then the attachment is created on the card",
+      "name" : "Then the response contains an error message",
       "time" : {
-        "start" : 1653682146604,
-        "stop" : 1653682146653,
-        "duration" : 49
+        "start" : 1653682293940,
+        "stop" : 1653682293940,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
@@ -70,25 +100,10 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And I receive a response with the \"attachment\" schema",
+      "name" : "And the status code is \"400\"",
       "time" : {
-        "start" : 1653682146654,
-        "stop" : 1653682146656,
-        "duration" : 2
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "And the status code is \"200\"",
-      "time" : {
-        "start" : 1653682146656,
-        "stop" : 1653682146656,
+        "start" : 1653682293940,
+        "stop" : 1653682293940,
         "duration" : 0
       },
       "status" : "passed",
@@ -102,7 +117,7 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 5,
+    "stepsCount" : 6,
     "attachmentsCount" : 1,
     "shouldDisplayMessage" : false,
     "hasContent" : true
@@ -112,8 +127,11 @@
     "name" : "severity",
     "value" : "normal"
   }, {
+    "name" : "tag",
+    "value" : "negative"
+  }, {
     "name" : "feature",
-    "value" : "Trello API Attachments"
+    "value" : "Trello API Checklists"
   }, {
     "name" : "framework",
     "value" : "behave"
@@ -124,22 +142,7 @@
     "name" : "resultFormat",
     "value" : "allure2"
   } ],
-  "parameters" : [ {
-    "name" : "Code",
-    "value" : "200"
-  }, {
-    "name" : "Cover",
-    "value" : "false"
-  }, {
-    "name" : "Name",
-    "value" : "Trello logo"
-  }, {
-    "name" : "URL",
-    "value" : "https://www.svgrepo.com/show/354463/trello.svg"
-  }, {
-    "name" : "comment",
-    "value" : "normal image attachment"
-  } ],
+  "parameters" : [ ],
   "links" : [ ],
   "hidden" : false,
   "retry" : false,
@@ -147,8 +150,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ ]
+    "tags" : [ "negative" ]
   },
-  "source" : "4c2a3d1805215a27.json",
-  "parameterValues" : [ "200", "false", "Trello logo", "https://www.svgrepo.com/show/354463/trello.svg", "normal image attachment" ]
+  "source" : "421043ad30392fc0.json",
+  "parameterValues" : [ ]
 }

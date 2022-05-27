@@ -1,12 +1,12 @@
 {
-  "uid" : "3ce4dc8b1ec0ea25",
-  "name" : "Updating information of a Board",
-  "fullName" : "Trello Boards API: Updating information of a Board",
-  "historyId" : "bd22119c429e9460c24bddbf547a0eea",
+  "uid" : "8da84d75da0ae4fc",
+  "name" : "POST a new checklist with an invalid pos to a card",
+  "fullName" : "Trello API Checklists: POST a new checklist with an invalid pos to a card",
+  "historyId" : "ed8db0be347ffaa9a6d85926e1440baa",
   "time" : {
-    "start" : 1653682149568,
-    "stop" : 1653682149707,
-    "duration" : 139
+    "start" : 1653682289959,
+    "stop" : 1653682290131,
+    "duration" : 172
   },
   "status" : "passed",
   "flaky" : false,
@@ -19,20 +19,35 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "When I send a \"PUT\" request to \"/boards/{board}\"",
+      "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682149569,
-        "stop" : 1653682149705,
-        "duration" : 136
+        "start" : 1653682289960,
+        "stop" : 1653682290106,
+        "duration" : 146
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"POST\" request to \"/checklists\"",
+      "time" : {
+        "start" : 1653682290106,
+        "stop" : 1653682290130,
+        "duration" : 24
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "7e57b77cb7493ffd",
+        "uid" : "df932cbf01d0a904",
         "name" : ".table",
-        "source" : "7e57b77cb7493ffd.csv",
+        "source" : "df932cbf01d0a904.csv",
         "type" : "text/csv",
-        "size" : 54
+        "size" : 46
       } ],
       "parameters" : [ ],
       "stepsCount" : 0,
@@ -40,10 +55,10 @@
       "shouldDisplayMessage" : false,
       "hasContent" : true
     }, {
-      "name" : "Then the status code is \"200\"",
+      "name" : "Then the response contains an error message",
       "time" : {
-        "start" : 1653682149706,
-        "stop" : 1653682149706,
+        "start" : 1653682290131,
+        "stop" : 1653682290131,
         "duration" : 0
       },
       "status" : "passed",
@@ -55,31 +70,25 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And verify the new object contains the following info",
+      "name" : "And the status code is \"400\"",
       "time" : {
-        "start" : 1653682149706,
-        "stop" : 1653682149707,
-        "duration" : 1
+        "start" : 1653682290131,
+        "stop" : 1653682290131,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "44f23d385a0eb54",
-        "name" : ".table",
-        "source" : "44f23d385a0eb54.csv",
-        "type" : "text/csv",
-        "size" : 54
-      } ],
+      "attachments" : [ ],
       "parameters" : [ ],
       "stepsCount" : 0,
-      "attachmentsCount" : 1,
+      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : true
+      "hasContent" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 3,
-    "attachmentsCount" : 2,
+    "stepsCount" : 4,
+    "attachmentsCount" : 1,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -88,8 +97,11 @@
     "name" : "severity",
     "value" : "normal"
   }, {
+    "name" : "tag",
+    "value" : "negative"
+  }, {
     "name" : "feature",
-    "value" : "Trello Boards API"
+    "value" : "Trello API Checklists"
   }, {
     "name" : "framework",
     "value" : "behave"
@@ -108,8 +120,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ ]
+    "tags" : [ "negative" ]
   },
-  "source" : "3ce4dc8b1ec0ea25.json",
+  "source" : "8da84d75da0ae4fc.json",
   "parameterValues" : [ ]
 }

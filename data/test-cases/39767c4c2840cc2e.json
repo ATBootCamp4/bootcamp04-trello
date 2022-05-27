@@ -1,12 +1,12 @@
 {
-  "uid" : "31ea2385bd9524f2",
+  "uid" : "39767c4c2840cc2e",
   "name" : "POST a new checklist item to a checklist",
   "fullName" : "Trello API Checklists: POST a new checklist item to a checklist",
   "historyId" : "86ec8c5d0db8145f5927cf0409f94e36",
   "time" : {
-    "start" : 1653682153311,
-    "stop" : 1653682153726,
-    "duration" : 415
+    "start" : 1653682292060,
+    "stop" : 1653682292506,
+    "duration" : 446
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682153312,
-        "stop" : 1653682153466,
-        "duration" : 154
+        "start" : 1653682292060,
+        "stop" : 1653682292235,
+        "duration" : 175
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,9 +36,9 @@
     }, {
       "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682153467,
-        "stop" : 1653682153568,
-        "duration" : 101
+        "start" : 1653682292235,
+        "stop" : 1653682292368,
+        "duration" : 133
       },
       "status" : "passed",
       "steps" : [ ],
@@ -51,16 +51,16 @@
     }, {
       "name" : "When I send a \"POST\" request to \"/checklists/{checklist}/checkItems\"",
       "time" : {
-        "start" : 1653682153568,
-        "stop" : 1653682153669,
-        "duration" : 101
+        "start" : 1653682292368,
+        "stop" : 1653682292456,
+        "duration" : 88
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "cfb22673558ed781",
+        "uid" : "338cd3bb825ef756",
         "name" : ".table",
-        "source" : "cfb22673558ed781.csv",
+        "source" : "338cd3bb825ef756.csv",
         "type" : "text/csv",
         "size" : 42
       } ],
@@ -72,9 +72,9 @@
     }, {
       "name" : "Then the checklist item is created on the checklist",
       "time" : {
-        "start" : 1653682153669,
-        "stop" : 1653682153724,
-        "duration" : 55
+        "start" : 1653682292457,
+        "stop" : 1653682292505,
+        "duration" : 48
       },
       "status" : "passed",
       "steps" : [ ],
@@ -87,8 +87,8 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653682153725,
-        "stop" : 1653682153725,
+        "start" : 1653682292506,
+        "stop" : 1653682292506,
         "duration" : 0
       },
       "status" : "passed",
@@ -112,6 +112,9 @@
     "name" : "severity",
     "value" : "normal"
   }, {
+    "name" : "tag",
+    "value" : "smoke"
+  }, {
     "name" : "feature",
     "value" : "Trello API Checklists"
   }, {
@@ -132,8 +135,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ ]
+    "tags" : [ "smoke" ]
   },
-  "source" : "31ea2385bd9524f2.json",
+  "source" : "39767c4c2840cc2e.json",
   "parameterValues" : [ ]
 }

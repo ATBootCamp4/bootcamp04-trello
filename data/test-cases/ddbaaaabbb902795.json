@@ -1,12 +1,12 @@
 {
-  "uid" : "2502c710d9e8bffe",
-  "name" : "Update a checklist item",
-  "fullName" : "Trello API Checklists: Update a checklist item",
-  "historyId" : "e95913cdc25cc471e748ad39728b5d68",
+  "uid" : "ddbaaaabbb902795",
+  "name" : "DELETE a checklist item",
+  "fullName" : "Trello API Checklists: DELETE a checklist item",
+  "historyId" : "ccb3bbbf6c27ddb76261d72cdf37d952",
   "time" : {
-    "start" : 1653682154128,
-    "stop" : 1653682154679,
-    "duration" : 551
+    "start" : 1653682293941,
+    "stop" : 1653682294496,
+    "duration" : 555
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653682154129,
-        "stop" : 1653682154280,
-        "duration" : 151
+        "start" : 1653682293943,
+        "stop" : 1653682294089,
+        "duration" : 146
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,9 +36,9 @@
     }, {
       "name" : "And I created a checklist on the card",
       "time" : {
-        "start" : 1653682154281,
-        "stop" : 1653682154387,
-        "duration" : 106
+        "start" : 1653682294089,
+        "stop" : 1653682294216,
+        "duration" : 127
       },
       "status" : "passed",
       "steps" : [ ],
@@ -51,9 +51,9 @@
     }, {
       "name" : "And I created a completed item on the checklist",
       "time" : {
-        "start" : 1653682154387,
-        "stop" : 1653682154482,
-        "duration" : 95
+        "start" : 1653682294217,
+        "stop" : 1653682294328,
+        "duration" : 111
       },
       "status" : "passed",
       "steps" : [ ],
@@ -64,32 +64,26 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"PUT\" request to \"/cards/{card}/checkItem/{checkitem}\"",
+      "name" : "When I send a \"DELETE\" request to \"/checklists/{checklist}/checkItems/{checkitem}\"",
       "time" : {
-        "start" : 1653682154482,
-        "stop" : 1653682154622,
-        "duration" : 140
+        "start" : 1653682294328,
+        "stop" : 1653682294451,
+        "duration" : 123
       },
       "status" : "passed",
       "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "604982e3b0392478",
-        "name" : ".table",
-        "source" : "604982e3b0392478.csv",
-        "type" : "text/csv",
-        "size" : 47
-      } ],
+      "attachments" : [ ],
       "parameters" : [ ],
       "stepsCount" : 0,
-      "attachmentsCount" : 1,
+      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : true
+      "hasContent" : false
     }, {
-      "name" : "Then the checklist item is updated",
+      "name" : "Then the checklist item is deleted",
       "time" : {
-        "start" : 1653682154622,
-        "stop" : 1653682154678,
-        "duration" : 56
+        "start" : 1653682294451,
+        "stop" : 1653682294496,
+        "duration" : 45
       },
       "status" : "passed",
       "steps" : [ ],
@@ -102,8 +96,8 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653682154678,
-        "stop" : 1653682154678,
+        "start" : 1653682294496,
+        "stop" : 1653682294496,
         "duration" : 0
       },
       "status" : "passed",
@@ -118,7 +112,7 @@
     "attachments" : [ ],
     "parameters" : [ ],
     "stepsCount" : 6,
-    "attachmentsCount" : 1,
+    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -126,6 +120,9 @@
   "labels" : [ {
     "name" : "severity",
     "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "smoke"
   }, {
     "name" : "feature",
     "value" : "Trello API Checklists"
@@ -147,8 +144,8 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
-    "tags" : [ ]
+    "tags" : [ "smoke" ]
   },
-  "source" : "2502c710d9e8bffe.json",
+  "source" : "ddbaaaabbb902795.json",
   "parameterValues" : [ ]
 }

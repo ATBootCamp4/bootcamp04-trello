@@ -1,12 +1,12 @@
 {
-  "uid" : "373528ce76cdd783",
-  "name" : "Get members of board",
-  "fullName" : "Trello Boards API: Get members of board",
-  "historyId" : "7be7f2afdaa3e2992665923834c3249b",
+  "uid" : "9348c77d7fc23a78",
+  "name" : "Updating information of a Board",
+  "fullName" : "Trello Boards API: Updating information of a Board",
+  "historyId" : "bd22119c429e9460c24bddbf547a0eea",
   "time" : {
-    "start" : 1653682149508,
-    "stop" : 1653682149566,
-    "duration" : 58
+    "start" : 1653682287422,
+    "stop" : 1653682287524,
+    "duration" : 102
   },
   "status" : "passed",
   "flaky" : false,
@@ -19,25 +19,31 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "When I send a \"GET\" request to \"/boards/{board}/members\"",
+      "name" : "When I send a \"PUT\" request to \"/boards/{board}\"",
       "time" : {
-        "start" : 1653682149509,
-        "stop" : 1653682149565,
-        "duration" : 56
+        "start" : 1653682287422,
+        "stop" : 1653682287523,
+        "duration" : 101
       },
       "status" : "passed",
       "steps" : [ ],
-      "attachments" : [ ],
+      "attachments" : [ {
+        "uid" : "2f4035581e357e20",
+        "name" : ".table",
+        "source" : "2f4035581e357e20.csv",
+        "type" : "text/csv",
+        "size" : 54
+      } ],
       "parameters" : [ ],
       "stepsCount" : 0,
-      "attachmentsCount" : 0,
+      "attachmentsCount" : 1,
       "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "hasContent" : true
     }, {
       "name" : "Then the status code is \"200\"",
       "time" : {
-        "start" : 1653682149566,
-        "stop" : 1653682149566,
+        "start" : 1653682287523,
+        "stop" : 1653682287523,
         "duration" : 0
       },
       "status" : "passed",
@@ -49,25 +55,31 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And verify there is at least 1 member",
+      "name" : "And verify the new object contains the following info",
       "time" : {
-        "start" : 1653682149566,
-        "stop" : 1653682149566,
+        "start" : 1653682287524,
+        "stop" : 1653682287524,
         "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
-      "attachments" : [ ],
+      "attachments" : [ {
+        "uid" : "a62d6ba8b8645130",
+        "name" : ".table",
+        "source" : "a62d6ba8b8645130.csv",
+        "type" : "text/csv",
+        "size" : 54
+      } ],
       "parameters" : [ ],
       "stepsCount" : 0,
-      "attachmentsCount" : 0,
+      "attachmentsCount" : 1,
       "shouldDisplayMessage" : false,
-      "hasContent" : false
+      "hasContent" : true
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "stepsCount" : 3,
-    "attachmentsCount" : 0,
+    "attachmentsCount" : 2,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -98,6 +110,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "373528ce76cdd783.json",
+  "source" : "9348c77d7fc23a78.json",
   "parameterValues" : [ ]
 }
