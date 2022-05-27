@@ -1,47 +1,5 @@
 {
   "uid" : "4b4757e66a1912dae1a509f688f20b0f",
   "name" : "categories",
-  "children" : [ {
-    "name" : "Test defects",
-    "children" : [ {
-      "name" : "TypeError: string indices must be integers\n",
-      "children" : [ {
-        "name" : "Create labels in  card with invalid names and colors -- @1.1 Values",
-        "uid" : "1643c88a1f5f5aab",
-        "parentUid" : "8c470da2f070c706f3749492538e3382",
-        "status" : "broken",
-        "time" : {
-          "start" : 1653688654550,
-          "stop" : 1653688654860,
-          "duration" : 310
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ "ble", "ERROR", "invalid value for color", "aaa", "400" ]
-      }, {
-        "name" : "Create labels in  card with invalid names and colors -- @1.2 Values",
-        "uid" : "8e503d173264e597",
-        "parentUid" : "8c470da2f070c706f3749492538e3382",
-        "status" : "broken",
-        "time" : {
-          "start" : 1653688654861,
-          "stop" : 1653688655394,
-          "duration" : 533
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ "magenta", "ERROR", "invalid value for color", "~", "400" ]
-      } ],
-      "uid" : "8c470da2f070c706f3749492538e3382"
-    } ],
-    "uid" : "bdbf199525818fae7a8651db9eafe741"
-  } ]
+  "children" : [ ]
 }
