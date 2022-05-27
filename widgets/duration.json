@@ -1,1 +1,231 @@
-[ ]
+[ {
+  "uid" : "cf3272d148689fcf",
+  "name" : "GET all checklist items on a checklist",
+  "time" : {
+    "start" : 1653682152899,
+    "stop" : 1653682153310,
+    "duration" : 411
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b919cf8dada1b49f",
+  "name" : "DELETE a checklist item",
+  "time" : {
+    "start" : 1653682154680,
+    "stop" : 1653682155242,
+    "duration" : 562
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "235242c86ef3136",
+  "name" : "POST a new checklist to a card",
+  "time" : {
+    "start" : 1653682151339,
+    "stop" : 1653682151653,
+    "duration" : 314
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "578d456c8713738a",
+  "name" : "Update a checklist",
+  "time" : {
+    "start" : 1653682151655,
+    "stop" : 1653682152053,
+    "duration" : 398
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f6d65af840474736",
+  "name" : "DELETE an attachment from a card",
+  "time" : {
+    "start" : 1653682148117,
+    "stop" : 1653682149452,
+    "duration" : 1335
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "b2a8fe156eb5a6ab",
+  "name" : "CREATE and DELETE a board -- @1.1 ",
+  "time" : {
+    "start" : 1653682149708,
+    "stop" : 1653682150202,
+    "duration" : 494
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "5a97f3dc3866621f",
+  "name" : "DELETE a checklist",
+  "time" : {
+    "start" : 1653682152054,
+    "stop" : 1653682152456,
+    "duration" : 402
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4c2a3d1805215a27",
+  "name" : "POST an attachment to a card from an url -- @1.2 ",
+  "time" : {
+    "start" : 1653682145970,
+    "stop" : 1653682146657,
+    "duration" : 687
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "264a2bbfa0291359",
+  "name" : "GET an attachment from a card",
+  "time" : {
+    "start" : 1653682144509,
+    "stop" : 1653682145618,
+    "duration" : 1109
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "d63f37337f66cf04",
+  "name" : "POST an attachment to a card from an url -- @1.1 ",
+  "time" : {
+    "start" : 1653682145619,
+    "stop" : 1653682145968,
+    "duration" : 349
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "31ea2385bd9524f2",
+  "name" : "POST a new checklist item to a checklist",
+  "time" : {
+    "start" : 1653682153311,
+    "stop" : 1653682153726,
+    "duration" : 415
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "fa084a6498e5732a",
+  "name" : "GET all attachments from a card",
+  "time" : {
+    "start" : 1653682143461,
+    "stop" : 1653682144507,
+    "duration" : 1046
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "2502c710d9e8bffe",
+  "name" : "Update a checklist item",
+  "time" : {
+    "start" : 1653682154128,
+    "stop" : 1653682154679,
+    "duration" : 551
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "4ee8c817d5b8afdc",
+  "name" : "GET a checklist by id",
+  "time" : {
+    "start" : 1653682151032,
+    "stop" : 1653682151337,
+    "duration" : 305
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "f71aceeec955bd95",
+  "name" : "GET all checklists on a card",
+  "time" : {
+    "start" : 1653682150699,
+    "stop" : 1653682151030,
+    "duration" : 331
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "6a25e9880237a31b",
+  "name" : "POST an attachment to a card from an url -- @1.4 ",
+  "time" : {
+    "start" : 1653682147022,
+    "stop" : 1653682148116,
+    "duration" : 1094
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "373528ce76cdd783",
+  "name" : "Get members of board",
+  "time" : {
+    "start" : 1653682149508,
+    "stop" : 1653682149566,
+    "duration" : 58
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "79ff7c3044760717",
+  "name" : "GET a checklist item by its id",
+  "time" : {
+    "start" : 1653682153728,
+    "stop" : 1653682154126,
+    "duration" : 398
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "10f50838224edd18",
+  "name" : "CREATE and DELETE a board -- @1.2 ",
+  "time" : {
+    "start" : 1653682150203,
+    "stop" : 1653682150697,
+    "duration" : 494
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1b0e172b3ad64bb0",
+  "name" : "Get all information of board",
+  "time" : {
+    "start" : 1653682149455,
+    "stop" : 1653682149507,
+    "duration" : 52
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3ce4dc8b1ec0ea25",
+  "name" : "Updating information of a Board",
+  "time" : {
+    "start" : 1653682149568,
+    "stop" : 1653682149707,
+    "duration" : 139
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "3a13f39d7a1cff50",
+  "name" : "GET all completed checklist items on a card",
+  "time" : {
+    "start" : 1653682152457,
+    "stop" : 1653682152898,
+    "duration" : 441
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "1dd0748b0d17e5d9",
+  "name" : "POST an attachment to a card from an url -- @1.3 ",
+  "time" : {
+    "start" : 1653682146658,
+    "stop" : 1653682147021,
+    "duration" : 363
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
