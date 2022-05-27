@@ -44,7 +44,7 @@ Feature: Trello API Checklists
             | name   | name         |
             | pos    | right        |
             | idCard | {id}:card    |
-        Then the response contains an error message
+        Then the response contains the message "invalid"
         And the status code is "400"
 
     Scenario: Update a checklist
@@ -65,7 +65,7 @@ Feature: Trello API Checklists
             | Key    | Value        | 
             | name   | Checklist 1  |
             | pos    | right        |
-        Then the response contains an error message
+        Then the response contains the message "invalid"
         And the status code is "400"
 
     @smoke
@@ -135,7 +135,7 @@ Feature: Trello API Checklists
             | name  | updated    |
             | state | something  |
             | pos   | top        |
-        Then the response contains an error message
+        Then the response contains the message "invalid"
         And the status code is "400"
 
     @smoke

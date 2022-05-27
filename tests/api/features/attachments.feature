@@ -24,7 +24,7 @@ Feature: Trello API Attachments
         Given I created a new card
         And I created an attachment on the card
         When I send a "GET" request to "/cards/{card}/attachments/X"
-        Then the response contains an error message
+        Then the response contains the message "invalid"
         And the status code is "400"
 
     Scenario Outline: POST an attachment to a card from an url
@@ -52,7 +52,7 @@ Feature: Trello API Attachments
             | url      | https://panasonickitchen.com/robots.txt   |
             | name     | Text                                      |
             | setCover | true                                      |
-        Then the response contains an error message
+        Then the response contains the message "failed"
         And the status code is "400"
 
 

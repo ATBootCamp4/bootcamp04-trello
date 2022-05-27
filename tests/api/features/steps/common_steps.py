@@ -39,13 +39,13 @@ def step_impl(context, status_code):
     assert context.status_code == status_code, f'it was expected {status_code} but it was received {context.status_code} '
 
 
-@then('the response contains an error message')
-def step_impl(context):
+@then('the response contains the message "{error}"')
+def step_impl(context, error):
     """This step will validate that the response contains an error message."""
     if type(context.response) is dict:
-        assert 'error' in context.response, 'No error message was found'
+        assert error in context.response, 'No error message was found'
     else:
-        assert any([context.response.lower().find(word) > -1 for word in ['invalid', 'failed']]), 'No error message was found'
+        assert error in context.response.lower(), 'No error message was found'
 
 
 @then('I receive a response with the "{schema_name}" schema')
