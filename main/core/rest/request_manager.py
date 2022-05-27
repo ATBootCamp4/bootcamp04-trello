@@ -39,7 +39,7 @@ class RequestManager(metaclass=Singleton):
         else:
             response = self.session.request(method, endpoint_url, params=kwargs)
 
-        if not response.ok:
+        if isinstance(response, str):
             return response.status_code, response.text
 
         return response.status_code, response.json()
