@@ -1,0 +1,155 @@
+{
+  "uid" : "1643c88a1f5f5aab",
+  "name" : "Create labels in  card with invalid names and colors -- @1.1 Values",
+  "fullName" : "Trello labels API: Create labels in  card with invalid names and colors",
+  "historyId" : "d9e32c1a908afebd3559e755ef30ecc5",
+  "time" : {
+    "start" : 1653688654550,
+    "stop" : 1653688654860,
+    "duration" : 310
+  },
+  "status" : "broken",
+  "statusMessage" : "TypeError: string indices must be integers\n",
+  "statusTrace" : "  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"tests/api/features/steps/common_steps.py\", line 43, in step_impl\n    assert value == context.response[key], f'expected value for {key} is {value}, but actual is {context.response[key]}'\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "TypeError: string indices must be integers\n",
+    "statusTrace" : "  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"tests/api/features/steps/common_steps.py\", line 43, in step_impl\n    assert value == context.response[key], f'expected value for {key} is {value}, but actual is {context.response[key]}'\n",
+    "steps" : [ {
+      "name" : "Given I created a new card",
+      "time" : {
+        "start" : 1653688654550,
+        "stop" : 1653688654756,
+        "duration" : 206
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"POST\" request to \"/cards/{card}/labels\"",
+      "time" : {
+        "start" : 1653688654756,
+        "stop" : 1653688654858,
+        "duration" : 102
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "a24acfa066c52c7f",
+        "name" : ".table",
+        "source" : "a24acfa066c52c7f.csv",
+        "type" : "text/csv",
+        "size" : 28
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And the status code is \"400\"",
+      "time" : {
+        "start" : 1653688654858,
+        "stop" : 1653688654859,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I check the data is",
+      "time" : {
+        "start" : 1653688654859,
+        "stop" : 1653688654860,
+        "duration" : 1
+      },
+      "status" : "broken",
+      "statusMessage" : "TypeError: string indices must be integers\n",
+      "statusTrace" : "  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"tests/api/features/steps/common_steps.py\", line 43, in step_impl\n    assert value == context.response[key], f'expected value for {key} is {value}, but actual is {context.response[key]}'\n",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "c90c1bbb87c34340",
+        "name" : ".table",
+        "source" : "c90c1bbb87c34340.csv",
+        "type" : "text/csv",
+        "size" : 53
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Trello labels API"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "Color",
+    "value" : "ble"
+  }, {
+    "name" : "Error",
+    "value" : "ERROR"
+  }, {
+    "name" : "Message",
+    "value" : "invalid value for color"
+  }, {
+    "name" : "Name",
+    "value" : "aaa"
+  }, {
+    "name" : "http_response",
+    "value" : "400"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "1643c88a1f5f5aab.json",
+  "parameterValues" : [ "ble", "ERROR", "invalid value for color", "aaa", "400" ]
+}
