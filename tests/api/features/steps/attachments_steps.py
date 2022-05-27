@@ -17,11 +17,5 @@ def step_impl(context):
 def step_impl(context):
     """This step intends to verify that the attachment was created on the card."""
     status_code, response = attachments_manager.get_attachment(context.card['id'], context.response['id'])
-    assert status_code == 200, 'Attachment was not created'
-    assert response['name'] == context.payload['name'], 'Attachment was not created on the card'
-
-
-@then("the attachment isn't created on the card")
-def step_impl(context):
-    """This step intends to verify that the attachment was not created on the card."""
-    assert not context.response.get('id'), 'Attachment was created'
+    assert status_code == 200, 'Attachment was not created on the card'
+    assert response['name'] == context.payload['name'], f"Expected attachment's name to be {context.payload['name']} but it was {response['name']}"

@@ -36,7 +36,16 @@ def step_impl(context, item, attribute):
 @step('the status code is "{status_code:d}"')
 def step_impl(context, status_code):
     """This step will validate that the status code is the one that was passed in."""
-    assert context.status_code == status_code, 'Status code does not match'
+    assert context.status_code == status_code, f'it was expected {status_code} but it was received {context.status_code} '
+
+
+@then('the response contains an error message')
+def step_impl(context):
+    """This step will validate that the response contains an error message."""
+    if type(context.response) is dict:
+        assert 'error' in context.response, 'No error message was found'
+    else:
+        assert any([context.response.lower().find(word) > -1 for word in ['invalid', 'failed']]), 'No error message was found'
 
 
 @then('I receive a response with the "{schema_name}" schema')
