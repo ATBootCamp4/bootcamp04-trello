@@ -1,12 +1,12 @@
 {
-  "uid" : "99618bbf9303f37c",
-  "name" : "Updating information of a Board",
-  "fullName" : "Trello Boards API: Updating information of a Board",
-  "historyId" : "bd22119c429e9460c24bddbf547a0eea",
+  "uid" : "44cd7a5425578803",
+  "name" : "Get members of board",
+  "fullName" : "Trello Boards API: Get members of board",
+  "historyId" : "7be7f2afdaa3e2992665923834c3249b",
   "time" : {
-    "start" : 1653663894237,
-    "stop" : 1653663894452,
-    "duration" : 215
+    "start" : 1653670380826,
+    "stop" : 1653670380883,
+    "duration" : 57
   },
   "status" : "passed",
   "flaky" : false,
@@ -19,31 +19,25 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "When I send a \"PUT\" request to \"/boards/{board}\"",
+      "name" : "When I send a \"GET\" request to \"/boards/{board}/members\"",
       "time" : {
-        "start" : 1653663894238,
-        "stop" : 1653663894450,
-        "duration" : 212
+        "start" : 1653670380827,
+        "stop" : 1653670380882,
+        "duration" : 55
       },
       "status" : "passed",
       "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "a663d40e00acc833",
-        "name" : ".table",
-        "source" : "a663d40e00acc833.csv",
-        "type" : "text/csv",
-        "size" : 54
-      } ],
+      "attachments" : [ ],
       "parameters" : [ ],
       "stepsCount" : 0,
-      "attachmentsCount" : 1,
+      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : true
+      "hasContent" : false
     }, {
       "name" : "Then the status code is \"200\"",
       "time" : {
-        "start" : 1653663894451,
-        "stop" : 1653663894451,
+        "start" : 1653670380883,
+        "stop" : 1653670380883,
         "duration" : 0
       },
       "status" : "passed",
@@ -55,31 +49,25 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And verify the new object contains the following info",
+      "name" : "And verify there is at least 1 member",
       "time" : {
-        "start" : 1653663894451,
-        "stop" : 1653663894452,
-        "duration" : 1
+        "start" : 1653670380883,
+        "stop" : 1653670380883,
+        "duration" : 0
       },
       "status" : "passed",
       "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "12ecfd9110e86a9",
-        "name" : ".table",
-        "source" : "12ecfd9110e86a9.csv",
-        "type" : "text/csv",
-        "size" : 54
-      } ],
+      "attachments" : [ ],
       "parameters" : [ ],
       "stepsCount" : 0,
-      "attachmentsCount" : 1,
+      "attachmentsCount" : 0,
       "shouldDisplayMessage" : false,
-      "hasContent" : true
+      "hasContent" : false
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
     "stepsCount" : 3,
-    "attachmentsCount" : 2,
+    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -110,6 +98,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "99618bbf9303f37c.json",
+  "source" : "44cd7a5425578803.json",
   "parameterValues" : [ ]
 }

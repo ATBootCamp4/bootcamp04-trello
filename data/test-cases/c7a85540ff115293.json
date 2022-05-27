@@ -1,12 +1,12 @@
 {
-  "uid" : "bb9f586979e385c",
-  "name" : "GET all checklists on a card",
-  "fullName" : "Trello API Checklists: GET all checklists on a card",
-  "historyId" : "42e62922856871f02fd22768cf4b3d8e",
+  "uid" : "c7a85540ff115293",
+  "name" : "CREATE and DELETE a board -- @1.2 ",
+  "fullName" : "Trello Boards API: CREATE and DELETE a board",
+  "historyId" : "bc9ea5c3639e1d092e5cff011bce44a3",
   "time" : {
-    "start" : 1653663895855,
-    "stop" : 1653663896402,
-    "duration" : 547
+    "start" : 1653670381580,
+    "stop" : 1653670382156,
+    "duration" : 576
   },
   "status" : "passed",
   "flaky" : false,
@@ -19,11 +19,11 @@
   "testStage" : {
     "status" : "passed",
     "steps" : [ {
-      "name" : "Given I created a new card",
+      "name" : "Given the user creates a board with \"name\" to be \"jose\"",
       "time" : {
-        "start" : 1653663895856,
-        "stop" : 1653663896096,
-        "duration" : 240
+        "start" : 1653670381581,
+        "stop" : 1653670381791,
+        "duration" : 210
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,41 +34,41 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And I created a checklist on the card",
+      "name" : "Then the status code is \"200\"",
       "time" : {
-        "start" : 1653663896096,
-        "stop" : 1653663896272,
-        "duration" : 176
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "When I send a \"GET\" request to \"/cards/{card}/checklists\"",
-      "time" : {
-        "start" : 1653663896272,
-        "stop" : 1653663896402,
-        "duration" : 130
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 0,
-      "shouldDisplayMessage" : false,
-      "hasContent" : false
-    }, {
-      "name" : "Then I receive a list with at least \"1\" \"checklist\"",
-      "time" : {
-        "start" : 1653663896402,
-        "stop" : 1653663896402,
+        "start" : 1653670381791,
+        "stop" : 1653670381791,
         "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I receive a response with the \"board\" schema",
+      "time" : {
+        "start" : 1653670381792,
+        "stop" : 1653670381796,
+        "duration" : 4
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then the user deletes the board \"jose\"",
+      "time" : {
+        "start" : 1653670381796,
+        "stop" : 1653670382156,
+        "duration" : 360
       },
       "status" : "passed",
       "steps" : [ ],
@@ -81,8 +81,8 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653663896402,
-        "stop" : 1653663896402,
+        "start" : 1653670382156,
+        "stop" : 1653670382156,
         "duration" : 0
       },
       "status" : "passed",
@@ -107,7 +107,7 @@
     "value" : "normal"
   }, {
     "name" : "feature",
-    "value" : "Trello API Checklists"
+    "value" : "Trello Boards API"
   }, {
     "name" : "framework",
     "value" : "behave"
@@ -118,7 +118,13 @@
     "name" : "resultFormat",
     "value" : "allure2"
   } ],
-  "parameters" : [ ],
+  "parameters" : [ {
+    "name" : "field",
+    "value" : "name"
+  }, {
+    "name" : "value",
+    "value" : "jose"
+  } ],
   "links" : [ ],
   "hidden" : false,
   "retry" : false,
@@ -128,6 +134,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "bb9f586979e385c.json",
-  "parameterValues" : [ ]
+  "source" : "c7a85540ff115293.json",
+  "parameterValues" : [ "name", "jose" ]
 }

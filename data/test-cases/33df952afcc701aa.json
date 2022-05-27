@@ -1,12 +1,12 @@
 {
-  "uid" : "1fc6b5ec86121ff2",
-  "name" : "POST an attachment to a card from an url -- @1.1 ",
-  "fullName" : "Trello API Attachments: POST an attachment to a card from an url",
-  "historyId" : "04264a0d30769c725de2dd380f57673d",
+  "uid" : "33df952afcc701aa",
+  "name" : "GET all attachments from a card",
+  "fullName" : "Trello API Attachments: GET all attachments from a card",
+  "historyId" : "00ab6cb21b6d9e35c2561066d6de3a92",
   "time" : {
-    "start" : 1653663888372,
-    "stop" : 1653663888944,
-    "duration" : 572
+    "start" : 1653670373562,
+    "stop" : 1653670374726,
+    "duration" : 1164
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653663888372,
-        "stop" : 1653663888598,
-        "duration" : 226
+        "start" : 1653670373563,
+        "stop" : 1653670373739,
+        "duration" : 176
       },
       "status" : "passed",
       "steps" : [ ],
@@ -34,32 +34,11 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "When I send a \"POST\" request to \"/cards/{card}/attachments\"",
+      "name" : "And I created an attachment on the card",
       "time" : {
-        "start" : 1653663888598,
-        "stop" : 1653663888821,
-        "duration" : 223
-      },
-      "status" : "passed",
-      "steps" : [ ],
-      "attachments" : [ {
-        "uid" : "1f0d9ab86a9f38b3",
-        "name" : ".table",
-        "source" : "1f0d9ab86a9f38b3.csv",
-        "type" : "text/csv",
-        "size" : 48
-      } ],
-      "parameters" : [ ],
-      "stepsCount" : 0,
-      "attachmentsCount" : 1,
-      "shouldDisplayMessage" : false,
-      "hasContent" : true
-    }, {
-      "name" : "Then the attachment is created on the card",
-      "time" : {
-        "start" : 1653663888821,
-        "stop" : 1653663888941,
-        "duration" : 120
+        "start" : 1653670373739,
+        "stop" : 1653670374663,
+        "duration" : 924
       },
       "status" : "passed",
       "steps" : [ ],
@@ -70,11 +49,41 @@
       "shouldDisplayMessage" : false,
       "hasContent" : false
     }, {
-      "name" : "And I receive a response with the \"attachment\" schema",
+      "name" : "When I send a \"GET\" request to \"/cards/{card}/attachments\"",
       "time" : {
-        "start" : 1653663888941,
-        "stop" : 1653663888943,
-        "duration" : 2
+        "start" : 1653670374664,
+        "stop" : 1653670374721,
+        "duration" : 57
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "Then I receive a list with at least \"1\" \"attachment\"",
+      "time" : {
+        "start" : 1653670374721,
+        "stop" : 1653670374721,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I receive a response with the \"get_attachments\" schema",
+      "time" : {
+        "start" : 1653670374722,
+        "stop" : 1653670374725,
+        "duration" : 3
       },
       "status" : "passed",
       "steps" : [ ],
@@ -87,9 +96,9 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653663888943,
-        "stop" : 1653663888943,
-        "duration" : 0
+        "start" : 1653670374725,
+        "stop" : 1653670374726,
+        "duration" : 1
       },
       "status" : "passed",
       "steps" : [ ],
@@ -102,8 +111,8 @@
     } ],
     "attachments" : [ ],
     "parameters" : [ ],
-    "stepsCount" : 5,
-    "attachmentsCount" : 1,
+    "stepsCount" : 6,
+    "attachmentsCount" : 0,
     "shouldDisplayMessage" : false,
     "hasContent" : true
   },
@@ -124,22 +133,7 @@
     "name" : "resultFormat",
     "value" : "allure2"
   } ],
-  "parameters" : [ {
-    "name" : "Code",
-    "value" : "200"
-  }, {
-    "name" : "Cover",
-    "value" : "false"
-  }, {
-    "name" : "Name",
-    "value" : "not_a_url"
-  }, {
-    "name" : "URL",
-    "value" : "word"
-  }, {
-    "name" : "comment",
-    "value" : "API completes it as \"http://word\""
-  } ],
+  "parameters" : [ ],
   "links" : [ ],
   "hidden" : false,
   "retry" : false,
@@ -149,6 +143,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "1fc6b5ec86121ff2.json",
-  "parameterValues" : [ "200", "false", "not_a_url", "word", "API completes it as \"http://word\"" ]
+  "source" : "33df952afcc701aa.json",
+  "parameterValues" : [ ]
 }

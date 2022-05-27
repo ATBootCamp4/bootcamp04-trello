@@ -1,12 +1,12 @@
 {
-  "uid" : "ebf165097e7a0852",
+  "uid" : "d413a2924aa0a2b1",
   "name" : "POST a new checklist to a card",
   "fullName" : "Trello API Checklists: POST a new checklist to a card",
   "historyId" : "11c3bc398529bcadd5cfcf6d8d26c9f6",
   "time" : {
-    "start" : 1653663896975,
-    "stop" : 1653663897546,
-    "duration" : 571
+    "start" : 1653670382937,
+    "stop" : 1653670383316,
+    "duration" : 379
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653663896975,
-        "stop" : 1653663897215,
-        "duration" : 240
+        "start" : 1653670382938,
+        "stop" : 1653670383083,
+        "duration" : 145
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,16 +36,16 @@
     }, {
       "name" : "When I send a \"POST\" request to \"/checklists\"",
       "time" : {
-        "start" : 1653663897215,
-        "stop" : 1653663897407,
-        "duration" : 192
+        "start" : 1653670383083,
+        "stop" : 1653670383255,
+        "duration" : 172
       },
       "status" : "passed",
       "steps" : [ ],
       "attachments" : [ {
-        "uid" : "1aa8fa1048b0ad69",
+        "uid" : "385ac6b539571f95",
         "name" : ".table",
-        "source" : "1aa8fa1048b0ad69.csv",
+        "source" : "385ac6b539571f95.csv",
         "type" : "text/csv",
         "size" : 54
       } ],
@@ -57,9 +57,9 @@
     }, {
       "name" : "Then the checklist is created on the card",
       "time" : {
-        "start" : 1653663897407,
-        "stop" : 1653663897545,
-        "duration" : 138
+        "start" : 1653670383256,
+        "stop" : 1653670383315,
+        "duration" : 59
       },
       "status" : "passed",
       "steps" : [ ],
@@ -72,8 +72,8 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653663897546,
-        "stop" : 1653663897546,
+        "start" : 1653670383315,
+        "stop" : 1653670383315,
         "duration" : 0
       },
       "status" : "passed",
@@ -119,6 +119,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "ebf165097e7a0852.json",
+  "source" : "d413a2924aa0a2b1.json",
   "parameterValues" : [ ]
 }

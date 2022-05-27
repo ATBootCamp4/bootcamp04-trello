@@ -1,12 +1,12 @@
 {
-  "uid" : "2a197c8f98d9ab3b",
+  "uid" : "7f270f13633899ea",
   "name" : "DELETE an attachment from a card",
   "fullName" : "Trello API Attachments: DELETE an attachment from a card",
   "historyId" : "89216f9becc81f2d1fd00f39139e398e",
   "time" : {
-    "start" : 1653663891730,
-    "stop" : 1653663893983,
-    "duration" : 2253
+    "start" : 1653670378845,
+    "stop" : 1653670380757,
+    "duration" : 1912
   },
   "status" : "passed",
   "flaky" : false,
@@ -21,9 +21,9 @@
     "steps" : [ {
       "name" : "Given I created a new card",
       "time" : {
-        "start" : 1653663891731,
-        "stop" : 1653663891962,
-        "duration" : 231
+        "start" : 1653670378845,
+        "stop" : 1653670379011,
+        "duration" : 166
       },
       "status" : "passed",
       "steps" : [ ],
@@ -36,9 +36,9 @@
     }, {
       "name" : "And I created an attachment on the card",
       "time" : {
-        "start" : 1653663891963,
-        "stop" : 1653663893581,
-        "duration" : 1618
+        "start" : 1653670379011,
+        "stop" : 1653670380522,
+        "duration" : 1511
       },
       "status" : "passed",
       "steps" : [ ],
@@ -51,9 +51,9 @@
     }, {
       "name" : "When I send a \"DELETE\" request to \"/cards/{card}/attachments/{attachment}\"",
       "time" : {
-        "start" : 1653663893581,
-        "stop" : 1653663893981,
-        "duration" : 400
+        "start" : 1653670380522,
+        "stop" : 1653670380755,
+        "duration" : 233
       },
       "status" : "passed",
       "steps" : [ ],
@@ -66,8 +66,8 @@
     }, {
       "name" : "Then I receive a response with the \"delete\" schema",
       "time" : {
-        "start" : 1653663893982,
-        "stop" : 1653663893983,
+        "start" : 1653670380755,
+        "stop" : 1653670380756,
         "duration" : 1
       },
       "status" : "passed",
@@ -81,8 +81,8 @@
     }, {
       "name" : "And the status code is \"200\"",
       "time" : {
-        "start" : 1653663893983,
-        "stop" : 1653663893983,
+        "start" : 1653670380757,
+        "stop" : 1653670380757,
         "duration" : 0
       },
       "status" : "passed",
@@ -128,6 +128,6 @@
     "categories" : [ ],
     "tags" : [ ]
   },
-  "source" : "2a197c8f98d9ab3b.json",
+  "source" : "7f270f13633899ea.json",
   "parameterValues" : [ ]
 }
