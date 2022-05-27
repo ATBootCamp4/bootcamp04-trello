@@ -17,7 +17,7 @@ class AttachmentsManager(RESTBaseManager):
 
         return status_code, response
 
-    def get_attachment(self, card_id ,attachment_id):
+    def get_attachment(self, card_id, attachment_id):
         """ Get a specific attachment from a specific card,
         :param card_id:       str    ID of the card
         :param attachment_id: str    ID of the attachment
@@ -38,7 +38,7 @@ class AttachmentsManager(RESTBaseManager):
 
         endpoint = f'cards/{card_id}/attachments'
         payload = {
-            "url": url, 
+            "url": url,
             "name": name,
             "setCover": set_cover
         }
@@ -53,11 +53,11 @@ class AttachmentsManager(RESTBaseManager):
         :param set_cover:     bool   If True, the attachment will be set as the cover of the card
         :param path:          str    Path of the file
         :return:              Tuple  that contains the status code and the response."""
-        
+
         endpoint = f'{DEFAULT_API_URL}/{API_VERSION}/cards/{card_id}/attachments'
 
         post_files = {
-        "file": open(path, "rb"),
+            "file": open(path, "rb"),
         }
         payload = {
             "name": name,
