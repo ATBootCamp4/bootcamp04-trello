@@ -1,5 +1,6 @@
 from main.trello.api.checklists_manager import ChecklistsManager
 
+
 class TestChecklists():
 
     @classmethod
@@ -36,7 +37,8 @@ class TestChecklists():
 
         c_id = "628134e46a25c3826ba7e345"
 
-        status_code, response = self.checklists_manager.get_checklist(c_id, check_items='all', checkitem_fields='name,pos,state', fields='all')
+        status_code, response = self.checklists_manager.get_checklist(
+            c_id, check_items='all', checkitem_fields='name,pos,state', fields='all')
         # 1. Verify the status code
         assert status_code == 200, f"Expected status code 200, but received: {status_code}"
         # 2. Verify it is the correct checklist

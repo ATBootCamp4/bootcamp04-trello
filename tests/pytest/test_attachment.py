@@ -1,5 +1,6 @@
 from main.trello.api.attachments_manager import AttachmentsManager
 
+
 class TestAttachments():
 
     @classmethod
@@ -25,7 +26,7 @@ class TestAttachments():
         # 4. Verify the attachment can be deleted
         status_code, _ = self.attachments_manager.delete_attachment(card_id, attachment_id)
         assert status_code == 200, f"Expected status code 200, but received: {status_code}"
-        
+
     def test_create_attachment_from_file(self):
 
         name = "File attachment from PyTest"
