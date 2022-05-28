@@ -69,7 +69,6 @@ Scenario Outline: Create labels in specific card with different names and colors
             | name   |  a_borrar    |
             | color  | sky          |
         And the status code is "200"
-        Then the item id is saved before deletion
         When I send a "DELETE" request to "/labels/{response}"
         And the status code is "200"
         Then I send a "GET" request to "/labels/{deleted_item}"
