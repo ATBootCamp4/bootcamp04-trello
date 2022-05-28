@@ -69,24 +69,22 @@ Scenario Outline: Create labels in specific card with different names and colors
             | name   |  a_borrar    |
             | color  | sky          |
         And the status code is "200"
-        Then the item id is saved before deletion
         When I send a "DELETE" request to "/labels/{response}"
         And the status code is "200"
-        Then after deleted if I "GET" the label the message is "The requested resource was not found." and "404" status code
+        Then I send a "GET" request to "/labels/{deleted_item}"
+        And the status code is "404"
 
 # #SCENARIO VI
-Scenario Outline: Create labels in  card with invalid names and colors
-      Given I created a new card
-      When I send a "POST" request to "/cards/{card}/labels"
+    Scenario Outline: Create labels in  card with invalid names and colors
+        Given I created a new card
+        When I send a "POST" request to "/cards/{card}/labels"
             | Key    | Value        | 
             | name   | <Name>       |
             | color  | <Color>      |
-      And the status code is "<http_response>"
-          Then I check the data is
-            | Key    | Value        | 
-            | message| <Message>    |
-            | error  | <Error>      |
+        And the status code is "<http_response>"
+        Then the response contains the message "error"
+
         Examples: Values
-        |Name   |Color     |http_response   |Error      |Message                |
-        |  aaa  |  ble     |  400           |  ERROR    |invalid value for color|
-        |  ~    |  magenta |  400           |  ERROR    |invalid value for color|
+        |Name   |Color     |http_response   |
+        |  aaa  |  ble     |  400           |
+        |  ~    |  magenta |  400           |
