@@ -75,18 +75,14 @@ Scenario Outline: Create labels in specific card with different names and colors
         Then I send a "GET" request to "/labels/{response}"
 
 # #SCENARIO VI
-Scenario Outline: Create labels in  card with invalid names and colors
-      Given I created a new card
-      When I send a "POST" request to "/cards/{card}/labels"
-            | Key    | Value        | 
-            | name   | <Name>       |
-            | color  | <Color>      |
-      And the status code is "<http_response>"
-          Then I check the data is
-            | Key    | Value        | 
-            | message| <Message>    |
-            | error  | <Error>      |
-        Examples: Values
-        |Name   |Color     |http_response   |Error      |Message                |
-        |  aaa  |  ble     |  400           |  ERROR    |invalid value for color|
-        |  ~    |  magenta |  400           |  ERROR    |invalid value for color|
+    Given I created a new card
+    When I send a "POST" request to "/cards/{card}/labels"
+        | Key    | Value        |
+        | name   | <Name>       |
+        | color  | <Color>      |
+    And the status code is "<http_response>"
+    Then the response contains the message "error"
+    Examples: Values
+    |Name   |Color     |http_response   |
+    |  aaa  |  ble     |  400           |
+    |  ~    |  magenta |  400           |
