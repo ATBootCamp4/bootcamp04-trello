@@ -72,7 +72,8 @@ Scenario Outline: Create labels in specific card with different names and colors
         Then the item id is saved before deletion
         When I send a "DELETE" request to "/labels/{response}"
         And the status code is "200"
-        Then I send a "GET" request to "/labels/{response}"
+        Then I send a "GET" request to "/labels/{deleted_item}"
+        And the status code is "404"
 
 # #SCENARIO VI
     Given I created a new card
