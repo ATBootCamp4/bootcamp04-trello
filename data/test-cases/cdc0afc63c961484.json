@@ -1,0 +1,137 @@
+{
+  "uid" : "cdc0afc63c961484",
+  "name" : "POST a non-image attachment as cover to a card",
+  "fullName" : "Trello API Attachments: POST a non-image attachment as cover to a card",
+  "historyId" : "ec75de4c0a4cd70d2f08f01b493e96b0",
+  "time" : {
+    "start" : 1653698547410,
+    "stop" : 1653698547798,
+    "duration" : 388
+  },
+  "status" : "broken",
+  "statusMessage" : "AttributeError: 'Response' object has no attribute 'tex'\n",
+  "statusTrace" : "  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"tests/api/features/steps/common_steps.py\", line 19, in step_impl\n    context.status_code, context.response = context.request_manager.do_request(method, endpoint, context.payload)\n  File \"/Users/runner/work/bootcamp04-trello/bootcamp04-trello/main/core/rest/request_manager.py\", line 51, in do_request\n    return response.status_code, response.tex\n",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "broken",
+    "statusMessage" : "AttributeError: 'Response' object has no attribute 'tex'\n",
+    "statusTrace" : "  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"tests/api/features/steps/common_steps.py\", line 19, in step_impl\n    context.status_code, context.response = context.request_manager.do_request(method, endpoint, context.payload)\n  File \"/Users/runner/work/bootcamp04-trello/bootcamp04-trello/main/core/rest/request_manager.py\", line 51, in do_request\n    return response.status_code, response.tex\n",
+    "steps" : [ {
+      "name" : "Given I created a new card",
+      "time" : {
+        "start" : 1653698547411,
+        "stop" : 1653698547552,
+        "duration" : 141
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"POST\" request to \"/cards/{card}/attachments\"",
+      "time" : {
+        "start" : 1653698547552,
+        "stop" : 1653698547797,
+        "duration" : 245
+      },
+      "status" : "broken",
+      "statusMessage" : "AttributeError: 'Response' object has no attribute 'tex'\n",
+      "statusTrace" : "  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/model.py\", line 1329, in run\n    match.run(runner.context)\n  File \"/Users/runner/hostedtoolcache/Python/3.10.4/x64/lib/python3.10/site-packages/behave/matchers.py\", line 98, in run\n    self.func(context, *args, **kwargs)\n  File \"tests/api/features/steps/common_steps.py\", line 19, in step_impl\n    context.status_code, context.response = context.request_manager.do_request(method, endpoint, context.payload)\n  File \"/Users/runner/work/bootcamp04-trello/bootcamp04-trello/main/core/rest/request_manager.py\", line 51, in do_request\n    return response.status_code, response.tex\n",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "76abbf1c57776628",
+        "name" : ".table",
+        "source" : "76abbf1c57776628.csv",
+        "type" : "text/csv",
+        "size" : 77
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : true,
+      "hasContent" : true
+    }, {
+      "name" : "Then the response contains the message \"failed\"",
+      "time" : {
+        "start" : 1653698547798,
+        "stop" : 1653698547798,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the status code is \"400\"",
+      "time" : {
+        "start" : 1653698547798,
+        "stop" : 1653698547798,
+        "duration" : 0
+      },
+      "status" : "skipped",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 4,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "negative"
+  }, {
+    "name" : "feature",
+    "value" : "Trello API Attachments"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ "negative" ]
+  },
+  "source" : "cdc0afc63c961484.json",
+  "parameterValues" : [ ]
+}
