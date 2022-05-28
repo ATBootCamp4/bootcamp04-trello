@@ -75,14 +75,16 @@ Scenario Outline: Create labels in specific card with different names and colors
         And the status code is "404"
 
 # #SCENARIO VI
-    Given I created a new card
-    When I send a "POST" request to "/cards/{card}/labels"
-        | Key    | Value        |
-        | name   | <Name>       |
-        | color  | <Color>      |
-    And the status code is "<http_response>"
-    Then the response contains the message "error"
-    Examples: Values
-    |Name   |Color     |http_response   |
-    |  aaa  |  ble     |  400           |
-    |  ~    |  magenta |  400           |
+    Scenario Outline: Create labels in  card with invalid names and colors
+        Given I created a new card
+        When I send a "POST" request to "/cards/{card}/labels"
+            | Key    | Value        | 
+            | name   | <Name>       |
+            | color  | <Color>      |
+        And the status code is "<http_response>"
+        Then the response contains the message "error"
+
+        Examples: Values
+        |Name   |Color     |http_response   |
+        |  aaa  |  ble     |  400           |
+        |  ~    |  magenta |  400           |
