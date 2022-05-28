@@ -7,9 +7,12 @@ Classes:
 """
 import requests
 import json
-
+from main.utils.logger import Logger
 from main.utils.common_globals import HEADERS, DEFAULT_API_URL, API_VERSION
 from main.utils.meta_classes import Singleton
+from main.utils.string_utils import build_api_log_message
+
+LOGGER = Logger(__name__)
 
 
 class RequestManager(metaclass=Singleton):
@@ -35,11 +38,14 @@ class RequestManager(metaclass=Singleton):
         endpoint_url = f"{self.base_url}/{endpoint}"
 
         if method in ['POST', 'PUT']:
+            LOGGER.info(build_api_log_message(method, endpoint_url, payload))
             response = self.session.request(method, endpoint_url, data=json.dumps(payload), params=kwargs)
         else:
+            LOGGER.info(build_api_log_message(method, endpoint_url))
             response = self.session.request(method, endpoint_url, params=kwargs)
 
-        if isinstance(response, str):
+        LOGGER.info(build_api_log_message(method, endpoint_url, response=response))
+        if not response.ok:
             return response.status_code, response.text
 
         return response.status_code, response.json()
