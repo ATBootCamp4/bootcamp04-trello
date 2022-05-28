@@ -7,13 +7,13 @@
       "name" : "AttributeError: 'Response' object has no attribute 'tex'\n",
       "children" : [ {
         "name" : "GET an non existing attachment from a card",
-        "uid" : "99e8b8304c1e3e6d",
+        "uid" : "4e15fe584e4389e5",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698543807,
-          "stop" : 1653698545036,
-          "duration" : 1229
+          "start" : 1653703113935,
+          "stop" : 1653703115171,
+          "duration" : 1236
         },
         "flaky" : false,
         "newFailed" : false,
@@ -24,13 +24,13 @@
         "parameters" : [ ]
       }, {
         "name" : "POST a non-image attachment as cover to a card",
-        "uid" : "cdc0afc63c961484",
+        "uid" : "d5cec8561043550c",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698547410,
-          "stop" : 1653698547798,
-          "duration" : 388
+          "start" : 1653703117988,
+          "stop" : 1653703118425,
+          "duration" : 437
         },
         "flaky" : false,
         "newFailed" : false,
@@ -41,13 +41,13 @@
         "parameters" : [ ]
       }, {
         "name" : "CREATE and DELETE a board -- @1.1 ",
-        "uid" : "12dfcf40a6abab20",
+        "uid" : "1f1ec6f08a1d2bb4",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698549285,
-          "stop" : 1653698549836,
-          "duration" : 551
+          "start" : 1653703120295,
+          "stop" : 1653703121012,
+          "duration" : 717
         },
         "flaky" : false,
         "newFailed" : false,
@@ -58,13 +58,13 @@
         "parameters" : [ "name", "kiara" ]
       }, {
         "name" : "CREATE and DELETE a board -- @1.2 ",
-        "uid" : "864808d863d21471",
+        "uid" : "bf256a9a3b349ac",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698549836,
-          "stop" : 1653698550334,
-          "duration" : 498
+          "start" : 1653703121013,
+          "stop" : 1653703121756,
+          "duration" : 743
         },
         "flaky" : false,
         "newFailed" : false,
@@ -75,13 +75,13 @@
         "parameters" : [ "name", "jose" ]
       }, {
         "name" : "CREATE and DELETE a board -- @1.3 ",
-        "uid" : "5c50d5353a7e66b1",
+        "uid" : "c5e2fba1ca82b3e7",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698550334,
-          "stop" : 1653698550887,
-          "duration" : 553
+          "start" : 1653703121757,
+          "stop" : 1653703122458,
+          "duration" : 701
         },
         "flaky" : false,
         "newFailed" : false,
@@ -92,13 +92,13 @@
         "parameters" : [ "name", "Nicolas" ]
       }, {
         "name" : "CREATE and DELETE a board -- @1.4 ",
-        "uid" : "6a6ff4dfbbaa7c64",
+        "uid" : "8d81cda5fdc13498",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698550888,
-          "stop" : 1653698551394,
-          "duration" : 506
+          "start" : 1653703122458,
+          "stop" : 1653703123172,
+          "duration" : 714
         },
         "flaky" : false,
         "newFailed" : false,
@@ -109,13 +109,13 @@
         "parameters" : [ "name", "keila" ]
       }, {
         "name" : "CREATE and DELETE a board -- @1.5 ",
-        "uid" : "66d520df0b24a80e",
+        "uid" : "b240d16f6b6f1437",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698551395,
-          "stop" : 1653698551934,
-          "duration" : 539
+          "start" : 1653703123172,
+          "stop" : 1653703123886,
+          "duration" : 714
         },
         "flaky" : false,
         "newFailed" : false,
@@ -126,13 +126,13 @@
         "parameters" : [ "name", "Vallejo" ]
       }, {
         "name" : "CREATE and DELETE a board -- @1.6 ",
-        "uid" : "ca5ed331ed9c1cd1",
+        "uid" : "62d28eeed201ea45",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698551935,
-          "stop" : 1653698552411,
-          "duration" : 476
+          "start" : 1653703123887,
+          "stop" : 1653703124607,
+          "duration" : 720
         },
         "flaky" : false,
         "newFailed" : false,
@@ -143,13 +143,13 @@
         "parameters" : [ "name", "pabon" ]
       }, {
         "name" : "Get members of board negative",
-        "uid" : "c4b68ce08dbbcc89",
+        "uid" : "eac3a33a66e591c8",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698552471,
-          "stop" : 1653698552515,
-          "duration" : 44
+          "start" : 1653703124741,
+          "stop" : 1653703124853,
+          "duration" : 112
         },
         "flaky" : false,
         "newFailed" : false,
@@ -160,13 +160,13 @@
         "parameters" : [ ]
       }, {
         "name" : "Get a board negative -- @1.1 ",
-        "uid" : "e4c31ccab7ebfbdb",
+        "uid" : "9a5be655fa90d691",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698552516,
-          "stop" : 1653698552563,
-          "duration" : 47
+          "start" : 1653703124854,
+          "stop" : 1653703124961,
+          "duration" : 107
         },
         "flaky" : false,
         "newFailed" : false,
@@ -177,13 +177,13 @@
         "parameters" : [ "/boards/6290f7ea8abc4849607f0a52", "404" ]
       }, {
         "name" : "Get a board negative -- @1.2 ",
-        "uid" : "6b46ef37dc54a833",
+        "uid" : "f09355f26ee0ae5",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698552564,
-          "stop" : 1653698552609,
-          "duration" : 45
+          "start" : 1653703124962,
+          "stop" : 1653703125071,
+          "duration" : 109
         },
         "flaky" : false,
         "newFailed" : false,
@@ -194,13 +194,13 @@
         "parameters" : [ "/boards/6290f7ea8abc484", "400" ]
       }, {
         "name" : "Get a board negative -- @1.3 ",
-        "uid" : "114b3eb50b0d80ba",
+        "uid" : "31e9020892d5a217",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698552610,
-          "stop" : 1653698552664,
-          "duration" : 54
+          "start" : 1653703125072,
+          "stop" : 1653703125176,
+          "duration" : 104
         },
         "flaky" : false,
         "newFailed" : false,
@@ -211,13 +211,13 @@
         "parameters" : [ "/boards/628bb6a0f8621c367f942e6b", "404" ]
       }, {
         "name" : "Get a board negative -- @1.4 ",
-        "uid" : "f3da07da265b2e10",
+        "uid" : "6ac78c728079897b",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698552664,
-          "stop" : 1653698552706,
-          "duration" : 42
+          "start" : 1653703125176,
+          "stop" : 1653703125281,
+          "duration" : 105
         },
         "flaky" : false,
         "newFailed" : false,
@@ -228,13 +228,13 @@
         "parameters" : [ "/boards/6290f7ea8abc4H4", "400" ]
       }, {
         "name" : "Get a board negative -- @1.5 ",
-        "uid" : "62fc3a00b9b5ae70",
+        "uid" : "2de499d76b2b5767",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698552706,
-          "stop" : 1653698552747,
-          "duration" : 41
+          "start" : 1653703125282,
+          "stop" : 1653703125391,
+          "duration" : 109
         },
         "flaky" : false,
         "newFailed" : false,
@@ -245,13 +245,13 @@
         "parameters" : [ "/boards/6290f7ea8abc4H4", "400" ]
       }, {
         "name" : "Delete a Card",
-        "uid" : "d3e7c76b5a14defb",
+        "uid" : "c68e895aaad0e398",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698553670,
-          "stop" : 1653698554009,
-          "duration" : 339
+          "start" : 1653703126748,
+          "stop" : 1653703127277,
+          "duration" : 529
         },
         "flaky" : false,
         "newFailed" : false,
@@ -262,13 +262,13 @@
         "parameters" : [ ]
       }, {
         "name" : "GET a checklist by unexisting id",
-        "uid" : "aad10c17be3872a0",
+        "uid" : "5151d045e9f9bb70",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698555721,
-          "stop" : 1653698556019,
-          "duration" : 298
+          "start" : 1653703130685,
+          "stop" : 1653703131196,
+          "duration" : 511
         },
         "flaky" : false,
         "newFailed" : false,
@@ -279,13 +279,13 @@
         "parameters" : [ ]
       }, {
         "name" : "DELETE a checklist",
-        "uid" : "e347fa90d19d4adb",
+        "uid" : "6759c1fa4f6dafdf",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698557276,
-          "stop" : 1653698557737,
-          "duration" : 461
+          "start" : 1653703133314,
+          "stop" : 1653703134020,
+          "duration" : 706
         },
         "flaky" : false,
         "newFailed" : false,
@@ -296,13 +296,13 @@
         "parameters" : [ ]
       }, {
         "name" : "Update a checklist item with invalid state",
-        "uid" : "a63e5417e1c26147",
+        "uid" : "e0702d1a892217aa",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698560205,
-          "stop" : 1653698560687,
-          "duration" : 482
+          "start" : 1653703137729,
+          "stop" : 1653703138418,
+          "duration" : 689
         },
         "flaky" : false,
         "newFailed" : false,
@@ -313,30 +313,13 @@
         "parameters" : [ ]
       }, {
         "name" : "DELETE a checklist item",
-        "uid" : "ea07ee721ad1a7ff",
+        "uid" : "5be954fa7aee3245",
         "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
         "status" : "broken",
         "time" : {
-          "start" : 1653698560688,
-          "stop" : 1653698561262,
-          "duration" : 574
-        },
-        "flaky" : false,
-        "newFailed" : false,
-        "newPassed" : false,
-        "newBroken" : false,
-        "retriesCount" : 0,
-        "retriesStatusChange" : false,
-        "parameters" : [ ]
-      }, {
-        "name" : "DELETE label from board",
-        "uid" : "cbdbf78f0bacefba",
-        "parentUid" : "2c828a12c607cd7c5f84c09c6639c64a",
-        "status" : "broken",
-        "time" : {
-          "start" : 1653698562731,
-          "stop" : 1653698562978,
-          "duration" : 247
+          "start" : 1653703138419,
+          "stop" : 1653703139291,
+          "duration" : 872
         },
         "flaky" : false,
         "newFailed" : false,
@@ -351,13 +334,13 @@
       "name" : "AttributeError: 'Context' object has no attribute 'response'\n",
       "children" : [ {
         "name" : "DELETE an attachment from a card",
-        "uid" : "512bac875d72fc92",
+        "uid" : "6e0f5d6384a5d137",
         "parentUid" : "0a395bc4741ca163de3e6a2a8e6bedd1",
         "status" : "broken",
         "time" : {
-          "start" : 1653698547799,
-          "stop" : 1653698549032,
-          "duration" : 1233
+          "start" : 1653703118426,
+          "stop" : 1653703119873,
+          "duration" : 1447
         },
         "flaky" : false,
         "newFailed" : false,
@@ -368,6 +351,27 @@
         "parameters" : [ ]
       } ],
       "uid" : "0a395bc4741ca163de3e6a2a8e6bedd1"
+    }, {
+      "name" : "\nYou can implement step definitions for undefined steps with these snippets:\n\n@then(u'the item id is saved before deletion')\ndef step_impl(context):\n    raise NotImplementedError(u'STEP: Then the item id is saved before deletion')\n\n",
+      "children" : [ {
+        "name" : "DELETE label from board",
+        "uid" : "a9cb141a1ec9de95",
+        "parentUid" : "f602d1df6e3fe6a1fe92327801ac46bf",
+        "status" : "broken",
+        "time" : {
+          "start" : 1653703141770,
+          "stop" : 1653703141915,
+          "duration" : 145
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "newPassed" : false,
+        "newBroken" : false,
+        "retriesCount" : 0,
+        "retriesStatusChange" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f602d1df6e3fe6a1fe92327801ac46bf"
     } ],
     "uid" : "bdbf199525818fae7a8651db9eafe741"
   }, {
@@ -376,13 +380,13 @@
       "name" : "AssertionError: No error message was found\n",
       "children" : [ {
         "name" : "POST a new checklist with an invalid pos to a card",
-        "uid" : "ef0e1dfeba645e54",
+        "uid" : "f859dc3adc93239",
         "parentUid" : "c0efd28e5113387d9df3e273dad2be00",
         "status" : "failed",
         "time" : {
-          "start" : 1653698556359,
-          "stop" : 1653698556550,
-          "duration" : 191
+          "start" : 1653703131817,
+          "stop" : 1653703132130,
+          "duration" : 313
         },
         "flaky" : false,
         "newFailed" : false,
@@ -393,13 +397,13 @@
         "parameters" : [ ]
       }, {
         "name" : "Update a checklist with invalid position",
-        "uid" : "e6db447d354cb4e1",
+        "uid" : "f6e4f439b49a2c16",
         "parentUid" : "c0efd28e5113387d9df3e273dad2be00",
         "status" : "failed",
         "time" : {
-          "start" : 1653698556959,
-          "stop" : 1653698557275,
-          "duration" : 316
+          "start" : 1653703132797,
+          "stop" : 1653703133313,
+          "duration" : 516
         },
         "flaky" : false,
         "newFailed" : false,
