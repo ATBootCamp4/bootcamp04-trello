@@ -3,6 +3,7 @@ from main.utils.behave_helpers import replace_ids, fill_payload, validate_schema
 from main.utils.json_model import JsonModel
 import re
 
+
 @step('I send a "{method}" request to "{endpoint}"')
 def step_impl(context, method, endpoint):
     """This step will send a request to the Trello API, using the manager that's
