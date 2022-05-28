@@ -10,8 +10,13 @@ def step_impl(context, method, endpoint):
     The response and status code will be stored in the context."""
     endpoint = replace_ids(context, endpoint)
     context.payload = fill_payload(context, payload={})
-    context.status_code, context.response = context.request_manager.do_request(
-        method, endpoint, context.payload)
+
+    if method == "DELETE":
+        context.status_code, context.error_response = \
+        context.request_manager.do_request(method, endpoint, context.payload)      
+    
+    else:
+        context.status_code, context.response = context.request_manager.do_request(method, endpoint, context.payload)
 
 
 @then('I receive a list with at least "{quantity:d}" "{item}"')
@@ -86,3 +91,10 @@ def step_impl(context, item_url):
     endpoint = replace_ids(context, item_url)
     status_code, _ = context.request_manager.do_request("GET", endpoint)
     assert status_code == 200, f"Status code 200 was expected but {status_code} was found"
+
+
+@step('I check the data is')
+def step_impl(context):
+    expected_json = fill_payload(context, payload={})
+    for key, value in expected_json.items():
+        assert value == context.response[key], f'expected value for {key} is {value}, but actual is {context.response[key]}'

@@ -72,7 +72,7 @@ Scenario Outline: Create labels in specific card with different names and colors
         Then the item id is saved before deletion
         When I send a "DELETE" request to "/labels/{response}"
         And the status code is "200"
-        Then after deleted if I "GET" the label the message is "The requested resource was not found." and "404" status code
+        Then I send a "GET" request to "/labels/{response}"
 
 # #SCENARIO VI
 Scenario Outline: Create labels in  card with invalid names and colors

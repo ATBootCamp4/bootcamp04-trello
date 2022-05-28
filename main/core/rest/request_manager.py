@@ -45,10 +45,10 @@ class RequestManager(metaclass=Singleton):
             response = self.session.request(method, endpoint_url, params=kwargs)
 
         LOGGER.info(build_api_log_message(method, endpoint_url, response=response))
-        if not response.ok:
-            return response.status_code, response.text
-
-        return response.status_code, response.json()
+        try:
+            return response.status_code, response.json()
+        except json.JSONDecodeError:
+            return response.status_code, response.tex
 
     def get_request(self, endpoint, **kwargs):
         """Method to send GET requests to the specified endpoint
