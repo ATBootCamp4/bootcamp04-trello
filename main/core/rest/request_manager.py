@@ -45,7 +45,7 @@ class RequestManager(metaclass=Singleton):
             response = self.session.request(method, endpoint_url, params=kwargs)
 
         LOGGER.info(build_api_log_message(method, endpoint_url, response=response))
-if not response.ok:
+        if not response.ok:
             return response.status_code, response.text
         return response.status_code, response.json()
 
