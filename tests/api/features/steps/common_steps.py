@@ -86,3 +86,14 @@ def step_impl(context, item_url):
     endpoint = replace_ids(context, item_url)
     status_code, _ = context.request_manager.do_request("GET", endpoint)
     assert status_code == 200, f"Status code 200 was expected but {status_code} was found"
+
+
+@step('I check the data is')
+def step_impl(context):
+    expected_json = fill_payload(context, payload={})
+    for key, value in expected_json.items():
+        actual_value = str(context.response[key])
+        if key == 'closed':
+            actual_value = actual_value.lower()
+        assert str(value) == actual_value, \
+            f'expected value for {key} is {value}, but actual is {actual_value}'
