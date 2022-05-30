@@ -3,6 +3,7 @@ Feature: Trello API Lists
     I want "Lists" API endpoints
     In order to manipulate lists
 
+    @smoke
     Scenario: GET all lists in a board
         Given A board is created
         And I created a list on the board with name "list 22"
