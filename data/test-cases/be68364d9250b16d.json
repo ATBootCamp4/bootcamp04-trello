@@ -1,0 +1,145 @@
+{
+  "uid" : "be68364d9250b16d",
+  "name" : "Modify information of a Card",
+  "fullName" : "Trello Card API: Modify information of a Card",
+  "historyId" : "8fbe802cbd65baf5d0951c49295fa614",
+  "time" : {
+    "start" : 1653925843104,
+    "stop" : 1653925843458,
+    "duration" : 354
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I created a new card",
+      "time" : {
+        "start" : 1653925843104,
+        "stop" : 1653925843265,
+        "duration" : 161
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"PUT\" request to \"cards/{card}\"",
+      "time" : {
+        "start" : 1653925843265,
+        "stop" : 1653925843451,
+        "duration" : 186
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "ac8a6f56eddc20b6",
+        "name" : ".table",
+        "source" : "ac8a6f56eddc20b6.csv",
+        "type" : "text/csv",
+        "size" : 50
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Then the status code is \"200\"",
+      "time" : {
+        "start" : 1653925843451,
+        "stop" : 1653925843451,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And The item is updated",
+      "time" : {
+        "start" : 1653925843451,
+        "stop" : 1653925843452,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "52eaef624cf3322f",
+        "name" : ".table",
+        "source" : "52eaef624cf3322f.csv",
+        "type" : "text/csv",
+        "size" : 50
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "And I receive a response with the \"cards\" schema",
+      "time" : {
+        "start" : 1653925843452,
+        "stop" : 1653925843458,
+        "duration" : 6
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 5,
+    "attachmentsCount" : 2,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "feature",
+    "value" : "Trello Card API"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "be68364d9250b16d.json",
+  "parameterValues" : [ ]
+}
