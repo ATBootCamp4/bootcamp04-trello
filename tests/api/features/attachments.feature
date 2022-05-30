@@ -61,6 +61,6 @@ Feature: Trello API Attachments
         Given I created a new card
         And I created an attachment on the card
         When I send a "DELETE" request to "/cards/{card}/attachments/{attachment}"
-        Then I receive a response with the "delete" schema
+        Then the attachment is deleted
         And the status code is "200"
     

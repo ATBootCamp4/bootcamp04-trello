@@ -20,3 +20,11 @@ def step_impl(context):
     assert status_code == 200, 'Attachment was not created on the card'
     assert response['name'] == context.payload['name'], \
         f"Expected attachment's name to be {context.payload['name']} but it was {response['name']}"
+
+
+@then('the attachment is deleted')
+def step_impl(context):
+    """This step intends to verify that the attachment was deleted."""
+    status_code, response = attachments_manager.get_attachment(context.card['id'], context.attachment['id'])
+    assert status_code >= 400, f"Expected status code >= 400, got {status_code}"
+    assert 'invalid attachment' in response.lower(), f"Expected error message 'not found' but received: \n '{response}'"
