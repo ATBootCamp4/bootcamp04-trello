@@ -18,6 +18,7 @@ Feature: Trello API Lists
         Then I receive a response with the "list" "id"
         And the status code is "200"
 
+    @smoke
     Scenario: POST a new list to a board
         Given A board is created
         When I send a "POST" request to "/lists"
