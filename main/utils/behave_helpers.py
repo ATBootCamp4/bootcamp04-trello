@@ -4,12 +4,20 @@ from jsonschema import validate
 from main.utils.common_globals import DEFAULT_SCHEMA_PATH
 
 
+def find_ids(endpoint: str, regex=r'\{(.*?)\}') -> list:
+    """Finds all ids in the endpoint and returns them as a list of strings
+    usage in gherkin: '{name_of_the_context_variable}'
+    example: 'cards/{card}/checklists/{checklist}'
+    """
+    return re.findall(regex, endpoint)
+
+
 def replace_ids(context, endpoint: str) -> str:
     """Finds all ids in the endpoint and replaces them with the corresponding id from the context
     usage in gherkin: '{name_of_the_context_variable}'
     example: 'cards/{card}/checklists/{checklist}'
     """
-    replacements = re.findall(r'\{(.*?)\}', endpoint)
+    replacements = find_ids(endpoint)
     for replacement in replacements:
         endpoint = endpoint.replace("{" + replacement + "}", getattr(context, replacement)['id'])
     return endpoint
@@ -25,9 +33,9 @@ def fill_payload(context, payload: dict) -> dict:
     if context.table:
         for row in context.table:
             key, value = row['Key'], row['Value']
-            to_replace = re.search(r'\{(.*?)\}', value)
+            to_replace = find_ids(value)
             if to_replace:
-                value = getattr(context, value.split(':')[1])[to_replace.group(1)]
+                value = getattr(context, value.split(':')[1])[to_replace[0]]
             payload[key] = value
     return payload
 

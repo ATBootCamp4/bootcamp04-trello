@@ -1,7 +1,6 @@
 from behave import then, step
-from main.utils.behave_helpers import replace_ids, fill_payload, validate_schema
+from main.utils.behave_helpers import replace_ids, fill_payload, validate_schema, find_ids
 from main.utils.json_model import JsonModel
-import re
 
 
 @step('I send a "{method}" request to "{endpoint}"')
@@ -10,7 +9,7 @@ def step_impl(context, method, endpoint):
     currently in the context, and the method and endpoint that are passed in.
     The response and status code will be stored in the context."""
     if method == 'DELETE':
-        context.deleted_item = getattr(context, re.findall(r'\{(.*?)\}', endpoint)[0])
+        context.deleted_item = getattr(context, find_ids(endpoint)[-1])
     endpoint = replace_ids(context, endpoint)
     context.payload = fill_payload(context, payload={})
     context.status_code, context.response = context.request_manager.do_request(method, endpoint, context.payload)
