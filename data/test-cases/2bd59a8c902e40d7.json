@@ -1,0 +1,157 @@
+{
+  "uid" : "2bd59a8c902e40d7",
+  "name" : "Update a checklist item with invalid state",
+  "fullName" : "Trello API Checklists: Update a checklist item with invalid state",
+  "historyId" : "848ab349dd3f86f32a182639ad536cb0",
+  "time" : {
+    "start" : 1653922007720,
+    "stop" : 1653922008146,
+    "duration" : 426
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "newBroken" : false,
+  "newPassed" : false,
+  "retriesCount" : 0,
+  "retriesStatusChange" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "Given I created a new card",
+      "time" : {
+        "start" : 1653922007721,
+        "stop" : 1653922007868,
+        "duration" : 147
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I created a checklist on the card",
+      "time" : {
+        "start" : 1653922007868,
+        "stop" : 1653922007983,
+        "duration" : 115
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And I created a completed item on the checklist",
+      "time" : {
+        "start" : 1653922007983,
+        "stop" : 1653922008097,
+        "duration" : 114
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "When I send a \"PUT\" request to \"/cards/{card}/checkItem/{checkitem}\"",
+      "time" : {
+        "start" : 1653922008097,
+        "stop" : 1653922008145,
+        "duration" : 48
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "2a933f659a510231",
+        "name" : ".table",
+        "source" : "2a933f659a510231.csv",
+        "type" : "text/csv",
+        "size" : 46
+      } ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "hasContent" : true
+    }, {
+      "name" : "Then the response contains the message \"invalid\"",
+      "time" : {
+        "start" : 1653922008145,
+        "stop" : 1653922008145,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    }, {
+      "name" : "And the status code is \"400\"",
+      "time" : {
+        "start" : 1653922008146,
+        "stop" : 1653922008146,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "hasContent" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "stepsCount" : 6,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "tag",
+    "value" : "negative"
+  }, {
+    "name" : "feature",
+    "value" : "Trello API Checklists"
+  }, {
+    "name" : "framework",
+    "value" : "behave"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "negative" ]
+  },
+  "source" : "2bd59a8c902e40d7.json",
+  "parameterValues" : [ ]
+}
