@@ -7,12 +7,16 @@ Feature: Trello Boards API
         When I send a "GET" request to "/boards/{board}"
         Then the status code is "200"
         And I receive a response with the "board" schema
+        
+        
     @smoke 
     Scenario: Get members of board 
         Given A board is created
         When I send a "GET" request to "/boards/{board}/members"
         Then the status code is "200"
         And I receive a list with at least "1" "member"
+        
+        
     @smoke
     Scenario: Updating information of a Board
         Given A board is created
@@ -45,6 +49,7 @@ Feature: Trello Boards API
         | name  | Vallejo   |
         | name  | pabon     |
 
+
     @negative
     Scenario: Updating information of a Board negative
         Given A board is created
@@ -60,6 +65,7 @@ Feature: Trello Boards API
         Given A board is created
         When I send a "GET" request to "/boards/{board}/dgzdgz"
         Then the status code is "404"
+
 
     @negative
     Scenario Outline: Get a board negative
