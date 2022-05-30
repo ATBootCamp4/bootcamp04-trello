@@ -93,4 +93,8 @@ def step_impl(context, item_url):
 def step_impl(context):
     expected_json = fill_payload(context, payload={})
     for key, value in expected_json.items():
-        assert value == context.response[key], f'expected value for {key} is {value}, but actual is {context.response[key]}'
+        actual_value = str(context.response[key])
+        if key == 'closed':
+            actual_value = actual_value.lower()
+        assert str(value) == actual_value, \
+            f'expected value for {key} is {value}, but actual is {actual_value}'
