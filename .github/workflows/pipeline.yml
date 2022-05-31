@@ -1,6 +1,7 @@
 name: Pull request to master workflow
 
-on: 
+on:
+  workflow_dispatch:
   pull_request:
     branches:
       - master
