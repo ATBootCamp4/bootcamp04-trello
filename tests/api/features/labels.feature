@@ -2,6 +2,7 @@ Feature: Trello labels API
     As a user I want to work with labels in the API
 
 #SCENARIO I
+@smoke
  Scenario: Create and verify label in board
     Given I send a "POST" request to "boards/{board}/labels"
             | Key    | Value        | 
@@ -16,6 +17,7 @@ Feature: Trello labels API
 
     
 #SCENARIO II
+@smoke
  Scenario: Get all labels in a board
      Given I send a "POST" request to "boards/{board}/labels"
             | Key    | Value        | 
@@ -29,6 +31,7 @@ Feature: Trello labels API
 
 
 #SCENARIO III
+@smoke
 Scenario Outline: Create labels in specific card with different names and colors
       Given I created a new card
       When I send a "POST" request to "/cards/{card}/labels"
@@ -46,7 +49,8 @@ Scenario Outline: Create labels in specific card with different names and colors
         |  ,,,  |  yellow  |  200           |
         | 111   |  orange  |  200           |
  
-#SCENARIO IV  
+#SCENARIO IV
+@smoke
    Scenario: Modify data from specific label
     Given I send a "POST" request to "boards/{board}/labels"
             | Key    | Value        | 
@@ -62,7 +66,8 @@ Scenario Outline: Create labels in specific card with different names and colors
             | name   | changed      |
             | color  | blue         |
 
-# # SCENARIO V 
+# # SCENARIO V
+@smoke
     Scenario: DELETE label from board
         Given I send a "POST" request to "boards/{board}/labels"
             | Key    | Value        | 
@@ -75,6 +80,7 @@ Scenario Outline: Create labels in specific card with different names and colors
         And the status code is "404"
 
 # #SCENARIO VI
+@negative
     Scenario Outline: Create labels in  card with invalid names and colors
         Given I created a new card
         When I send a "POST" request to "/cards/{card}/labels"
