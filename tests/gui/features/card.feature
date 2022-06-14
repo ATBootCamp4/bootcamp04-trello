@@ -5,7 +5,7 @@ Feature: Test for Trello cards
         Given the user is logged in
         And the board "Example_board" is selected
 
-
+    @wip
     Scenario: Create a Card on Trello
         When the user clicks on button "create_a_card_button"
         And send input value "Example card" to field "create_card_input"
