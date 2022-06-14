@@ -5,7 +5,7 @@ from webdriver_manager.core.utils import ChromeType
 from selenium import webdriver
 
 
-def before_all(context):
+def before_feature(context, feature):
 
     chrome_service = Service(ChromeDriverManager(
         chrome_type=ChromeType.GOOGLE).install())
@@ -28,6 +28,6 @@ def before_all(context):
         service=chrome_service, options=chrome_options)
 
 
-def after_all(context):
+def after_feature(context, feature):
     context.driver.close()
     context.driver.quit()
