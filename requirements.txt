@@ -3,3 +3,8 @@ pytest
 behave
 jsonschema
 allure-behave
+
+# Linters
+pycodestyle
+flake8
+pylint==2.4.4
