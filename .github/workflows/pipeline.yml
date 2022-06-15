@@ -49,6 +49,7 @@ jobs:
         export TRELLO_APIKEY=${{secrets.TRELLO_APIKEY}}
         export TRELLO_TOKEN=${{secrets.TRELLO_TOKEN}}
         behave -f allure_behave.formatter:AllureFormatter -o output ./tests/api
+        behave -f allure_behave.formatter:AllureFormatter -o output ./tests/gui
     - name: 📊 Step 4 - Collect Allure files and generate allure-report folder
       if: always()
       run: |
