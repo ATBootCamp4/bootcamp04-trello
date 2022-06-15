@@ -10,6 +10,7 @@ from main.core.environment_variable_reader import EnvironmentVariableReader as E
 TIMEOUT = int(ENV().get_variable('DRIVER', 'EXPLICIT_TIMEOUT'))
 IMPLICIT_TIMEOUT = int(ENV().get_variable('DRIVER', 'IMPLICIT_TIMEOUT'))
 
+
 class WebdriverUtils:
     """Class for managing the utilities for webdrivers"""
 
