@@ -33,7 +33,7 @@ def step_impl(context, item, attribute):
 @step('the status code is "{status_code:d}"')
 def step_impl(context, status_code):
     """This step will validate that the status code is the one that was passed in."""
-    assert context.status_code == status_code, f'it was expected {status_code} but it was received {context.status_code} '
+    assert context.status_code == status_code, f'Expected: {status_code}, but was: {context.status_code} '
 
 
 @then('the response contains the message "{error}"')

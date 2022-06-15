@@ -1,5 +1,13 @@
-requests
-pytest
+#BDD
 behave
-jsonschema
 allure-behave
+
+#api
+requests
+jsonschema
+
+#gui
+selenium
+
+# Linters
+flake8

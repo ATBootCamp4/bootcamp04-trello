@@ -25,7 +25,7 @@ jobs:
         pip install flake8
     - name: ❄️ Step 2 - Lint with flake8
       run: |
-        flake8 . --count --ignore=F811 --max-line-length=127 --show-source --statistics
+        flake8 . --count --ignore=F811 --max-line-length=120 --show-source --statistics
    
   build:
     name: Build & Test
@@ -48,8 +48,7 @@ jobs:
       run: |
         export TRELLO_APIKEY=${{secrets.TRELLO_APIKEY}}
         export TRELLO_TOKEN=${{secrets.TRELLO_TOKEN}}
-        behave -f allure_behave.formatter:AllureFormatter -o output ./tests/api/features
-        pytest
+        behave -f allure_behave.formatter:AllureFormatter -o output ./tests/api
     - name: 📊 Step 4 - Collect Allure files and generate allure-report folder
       if: always()
       run: |

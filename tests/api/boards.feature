@@ -1,7 +1,7 @@
 Feature: Trello Boards API
     As a user I want to use Boards API and perform Get,Post And Delete operations
    
-   @smoke
+   @smoke @get_board_info
    Scenario: Get all information of board 
         Given A board is created
         When I send a "GET" request to "/boards/{board}"
