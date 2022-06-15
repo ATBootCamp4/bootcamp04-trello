@@ -10,7 +10,11 @@ def step_impl(context):
     in the context, using a default image and name."""
     dflt_attachment = "https://source.unsplash.com/user/c_v_r"
     dflt_name = "Behave attachment"
-    _, context.attachment = attachments_manager.create_attachment_from_url(dflt_attachment, context.card['id'], dflt_name)
+    _, context.attachment = attachments_manager.create_attachment_from_url(
+        dflt_attachment,
+        context.card['id'],
+        dflt_name
+    )
 
 
 @then('the attachment is created on the card')

@@ -25,8 +25,8 @@ def step_impl(context):
 @step('the user creates a board with "{field}" to be "{value}"')
 def step_impl(context, field, value):
     """
-    Construct a Json with the table of the .features in order to send that as the payload and then creates a board using the
-    payload
+    Construct a Json with the table of the .features in order to send that as
+    the payload and then creates a board using the payload
 
     :param field:   String  string with the name of the field that will be filled when creating the board
     :param value:   String  string with the infomation that would be placed in the field
@@ -42,8 +42,8 @@ def step_impl(context, field, value):
 @step('the user deletes the board "{name}"')
 def step_impl(context, name):
     """
-    recives a name of a board and compares it with the board in the context, if they are the same, it uses the board manager
-    to delete the board
+    recives a name of a board and compares it with the board in the context,
+    if they are the same, it uses the board manager to delete the board
 
     :param name:   String  string with the name of the board that will be deleted
     """

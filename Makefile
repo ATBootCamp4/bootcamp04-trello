@@ -8,9 +8,7 @@ install:
 	pip install -r requirements.txt
 
 check:
-	flake8 features/ main/
-	pylint features/ main/
-	pycodestyle features/ main/
+	flake8 main/ tests/
 
 tag_api:
 	behave -k -t $(T) ./tests/api
