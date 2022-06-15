@@ -1,9 +1,6 @@
 env:
 	python -m venv .venv
 
-start:
-	source .venv/Scripts/activate
-
 install:
 	pip install -r requirements.txt
 
