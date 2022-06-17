@@ -26,7 +26,7 @@ class WebdriverUtils:
 
     def click_button(self, locator):
         WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located(
+            EC.element_to_be_clickable(
                 locator)
         ).click()
 
