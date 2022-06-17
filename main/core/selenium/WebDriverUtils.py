@@ -17,6 +17,23 @@ class WebdriverUtils:
     def __init__(self, driver):
         self.driver = driver
 
+    def get(self, url):
+        self.driver.get(url)
+
+    def send_keys(self, keys, input_locator):
+        WebDriverWait(self.driver, 5).until(EC.presence_of_element_located(
+            input_locator)).send_keys(keys)
+
+    def click_button(self, locator):
+        WebDriverWait(self.driver, 5).until(
+            EC.presence_of_element_located(
+                locator)
+        ).click()
+
+    def is_url(self, url):
+        return WebDriverWait(self.driver, 5).until(
+            EC.url_to_be(url))
+
     def get_title(self):
         """Return the current title of the driver"""
         return self.driver.title

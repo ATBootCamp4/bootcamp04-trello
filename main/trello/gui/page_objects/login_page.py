@@ -2,33 +2,27 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+from main.core.selenium.WebDriverUtils import WebdriverUtils
+
 
 class LoginPage:
 
+    username_input = (By.CSS_SELECTOR, "input#user")
+    password_input = (By.CSS_SELECTOR, "input#password")
+    login_button = (By.CSS_SELECTOR, "input#login")
+    submit_loggin_button = (By.CSS_SELECTOR, "button#login-submit")
+
     def __init__(self, driver):
-        self.driver = driver
-        self.locators = {
-            "username input": (By.CSS_SELECTOR, "input#user"),
-            "password input": (By.CSS_SELECTOR, "input#password"),
-            "login button": (By.CSS_SELECTOR, "input#login"),
-            "submit loggin button": (By.CSS_SELECTOR, "button#login-submit")
-        }
+        self.driver = WebdriverUtils(driver)
+
         self.driver.get('https://trello.com/login')
 
-    def click_button(self, locator):
-        WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located(
-                self.locators[locator])
-        ).click()
+    def login(self, username, password):
+        self.driver.send_keys(username, self.username_input)
+        self.driver.wait_for_invisibility_of_element_located(self.password_input)
+        self.driver.click_button(self.login_button)
+        self.driver.send_keys(password, self.password_input)
+        self.driver.click_button(self.submit_loggin_button)
 
-    def send_keys(self, keys, input_locator):
-        WebDriverWait(self.driver, 5).until(EC.presence_of_element_located(
-            self.locators[input_locator])).send_keys(keys)
-
-    def wait_for_element_to_disapear(self, locator):
-        WebDriverWait(self.driver, 5).until(
-            EC.invisibility_of_element_located(self.locators[locator]))
-
-    def is_url(self, url):
-        return WebDriverWait(self.driver, 5).until(
-            EC.url_to_be(url))
+    def check_if_log_in(self, url):
+        return self.driver.is_url(url)
