@@ -1,4 +1,4 @@
-from behave import then, step, given, when
+from behave import then, given, when
 from main.trello.gui.page_objects.login_page import LoginPage
 
 
