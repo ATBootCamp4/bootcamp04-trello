@@ -1,9 +1,9 @@
-import os
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
 from selenium import webdriver
+from main.utils.common_globals import USER, USERNAME, PASSWORD
 
 
 def before_scenario(context, scenario):
@@ -28,16 +28,19 @@ def before_scenario(context, scenario):
     context.driver = webdriver.Chrome(
         service=chrome_service, options=chrome_options)
 
-    context.username = os.getenv('TRELLO_USERNAME', None)
-    if not context.username:
+    context.username = USERNAME
+    if USERNAME is None:
+        print('Username is None')
         context.username = context.config.userdata['USERNAME']
 
-    context.password = os.getenv('TRELLO_PASSWORD', None)
-    if not context.password:
+    context.password = PASSWORD
+    if PASSWORD is None:
+        print('Password is none')
         context.password = context.config.userdata['PASSWORD']
 
-    context.user = os.getenv('TRELLO_USER', None)
-    if not context.user:
+    context.user = USER
+    if USER is None:
+        print('User is none')
         context.user = context.config.userdata['USER']
 
     context.base_url = context.config.userdata['BASE_URL']
