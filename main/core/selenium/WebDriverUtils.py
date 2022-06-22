@@ -26,13 +26,17 @@ class WebdriverUtils:
 
     def click_button(self, locator):
         WebDriverWait(self.driver, 5).until(
-            EC.presence_of_element_located(
+            EC.element_to_be_clickable(
                 locator)
         ).click()
 
     def is_url(self, url):
         return WebDriverWait(self.driver, 5).until(
             EC.url_to_be(url))
+
+    def get_text(self, locator):
+        return WebDriverWait(self.driver, TIMEOUT).until(EC.presence_of_element_located(locator)
+            ).text
 
     def get_title(self):
         """Return the current title of the driver"""

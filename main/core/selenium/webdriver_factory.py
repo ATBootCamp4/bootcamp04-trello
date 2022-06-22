@@ -3,7 +3,6 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from webdriver_manager.firefox import GeckoDriverManager
-from web_drivers_names import WebDriverNames as name
 
 class WebdriverFactory:
     
@@ -11,11 +10,11 @@ class WebdriverFactory:
     def driver_instance(driver_name):
 
         match driver_name:
-            case name.CHROME:
+            case 'chrome':
                 driver =  webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-            case name.FIREFOX:
+            case 'firefox':
                 driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
-            case name.EDGE:
+            case 'edge':
                 driver = webdriver.Edge(service=Service(EdgeChromiumDriverManager().install()))
         
         return driver

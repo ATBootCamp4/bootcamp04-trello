@@ -1,10 +1,9 @@
 from main.core.selenium.webdriver_factory import WebdriverFactory
-from web_drivers_names import WebDriverNames
 
-def before_feature(context, feature):
-    context.driver = WebdriverFactory.driver_instance(WebDriverNames.EDGE)
+def before_scenario(context, feature):
+    context.driver = WebdriverFactory.driver_instance(context.config.userdata['BROWSER'])
     context.driver.maximize_window()
 
-def after_feature(context, feature):
+def after_scenario(context, feature):
     context.driver.close()
     context.driver.quit()
