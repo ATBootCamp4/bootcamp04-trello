@@ -12,8 +12,6 @@ class LoginPage:
     def __init__(self, driver):
         self.driver = WebdriverUtils(driver)
 
-        self.driver.get('https://trello.com/login')
-
     def login(self, username, password):
         self.driver.send_keys(username, self.username_input)
         self.driver.wait_for_invisibility_of_element_located(self.password_input)

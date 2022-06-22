@@ -5,7 +5,7 @@ from webdriver_manager.core.utils import ChromeType
 from selenium import webdriver
 
 
-def before_feature(context, feature):
+def before_scenario(context, scenario):
 
     chrome_service = Service(ChromeDriverManager(
         chrome_type=ChromeType.GOOGLE).install())
@@ -30,8 +30,9 @@ def before_feature(context, feature):
     context.username = context.config.userdata['USERNAME']
     context.password = context.config.userdata['PASSWORD']
     context.user = context.config.userdata['USER']
+    context.base_url = context.config.userdata['BASE_URL']
 
 
-def after_feature(context, feature):
+def after_scenario(context, scenario):
     context.driver.close()
     context.driver.quit()
