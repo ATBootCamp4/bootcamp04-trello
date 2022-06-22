@@ -10,7 +10,8 @@ class HomePage:
 
     submit_create_board_button = (By.CSS_SELECTOR, "button[data-test-id='create-board-submit-button']")
 
-    board_title_locator_string0 = "//div[not(@class) and not(@id)][h3]//div[contains(@class,'boards-page-board-section')]"
+    board_title_locator_string0 = "//div[not(@class) and not(@id)][h3]" + \
+        "//div[contains(@class,'boards-page-board-section')]"
 
     board_title_locator_string1 = "//ul[contains(@class,'boards-page-board-section-list')]"
     board_title_locator_string2 = "//li[contains(@class,'boards-page-board-section-list-item')]" + \
