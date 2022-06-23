@@ -2,7 +2,7 @@ Feature: Trello UI Boards
     As a User I want to be able to make CRUD and other operations with boards
 
     Background: The user is logged in
-        Given the user goes to "/login"
+        Given the user goes to "login" page
         And the user logs in
 
     Scenario: Create a board
