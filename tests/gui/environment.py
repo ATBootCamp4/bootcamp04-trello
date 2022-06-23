@@ -3,6 +3,7 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from webdriver_manager.core.utils import ChromeType
 from selenium import webdriver
+from main.trello.gui.page_objects.PageObjectFactory import PageObjectFactory
 from main.utils.common_globals import USER, USERNAME, PASSWORD
 
 
@@ -27,6 +28,8 @@ def before_scenario(context, scenario):
 
     context.driver = webdriver.Chrome(
         service=chrome_service, options=chrome_options)
+
+    context.page_factory = PageObjectFactory()
 
     context.username = USERNAME
     if USERNAME is None:
