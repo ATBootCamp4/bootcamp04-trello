@@ -1,8 +1,3 @@
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from webdriver_manager.core.utils import ChromeType
-from selenium import webdriver
 from main.trello.gui.page_objects.PageObjectFactory import PageObjectFactory
 from main.utils.common_globals import USER, USERNAME, PASSWORD
 from main.core.selenium.webdriver_factory import WebdriverFactory
