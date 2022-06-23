@@ -6,6 +6,9 @@ import os
 # retrieve Trello API key and Token from environments variables
 APIKEY = os.getenv("TRELLO_APIKEY", None)
 TOKEN = os.getenv("TRELLO_TOKEN", None)
+USERNAME = os.getenv("TRELLO_USERNAME", None)
+PASSWORD = os.getenv("TRELLO_PASSWORD", None)
+USER = os.getenv("TRELLO_USER", None)
 # Default Headers information
 HEADERS = {'Accept': 'application/json',
            'Content-Type': 'application/json',

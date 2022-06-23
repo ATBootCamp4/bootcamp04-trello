@@ -5,7 +5,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import TimeoutException
 from selenium.common.exceptions import StaleElementReferenceException
 from main.core.environment_variable_reader import EnvironmentVariableReader as ENV
-
+from selenium.webdriver.common.keys import Keys
 
 TIMEOUT = int(ENV().get_variable('DRIVER', 'EXPLICIT_TIMEOUT'))
 IMPLICIT_TIMEOUT = int(ENV().get_variable('DRIVER', 'IMPLICIT_TIMEOUT'))
@@ -16,6 +16,26 @@ class WebdriverUtils:
 
     def __init__(self, driver):
         self.driver = driver
+
+    def get(self, url):
+        self.driver.get(url)
+
+    def send_keys(self, keys, input_locator):
+        WebDriverWait(self.driver, TIMEOUT).until(EC.visibility_of_element_located(
+            input_locator)).send_keys(keys)
+
+    def send_enter(self, input_locator):
+        WebDriverWait(self.driver, TIMEOUT).until(EC.visibility_of_element_located(
+            input_locator)).send_keys(Keys.RETURN)
+
+    def click_button(self, locator):
+        WebDriverWait(self.driver, TIMEOUT).until(
+            EC.element_to_be_clickable(locator)
+        ).click()
+
+    def is_url(self, url):
+        return WebDriverWait(self.driver, TIMEOUT).until(
+            EC.url_to_be(url))
 
     def get_title(self):
         """Return the current title of the driver"""
