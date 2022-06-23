@@ -1,6 +1,7 @@
 from main.utils.common_globals import USER, USERNAME, PASSWORD
 from main.core.selenium.webdriver_factory import WebdriverFactory
 
+
 def before_scenario(context, scenario):
     context.driver = WebdriverFactory.driver_instance(context, context.config.userdata['BROWSER'])
     context.driver.maximize_window()
@@ -21,6 +22,7 @@ def before_scenario(context, scenario):
         context.user = context.config.userdata['USER']
 
     context.base_url = context.config.userdata['BASE_URL']
+
 
 def after_scenario(context, scenario):
     context.driver.close()
