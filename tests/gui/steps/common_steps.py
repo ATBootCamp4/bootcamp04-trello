@@ -1,5 +1,4 @@
-from behave import given, step
-from main.trello.gui.page_objects.login_page import LoginPage
+from behave import given
 
 
 @given('the user goes to "{page}"')
@@ -7,7 +6,8 @@ def step_impl(context, page):
     context.driver.get(context.base_url + page)
 
 
-@step('the user logs in')
+@given('the user is logged in')
 def step_impl(context):
-    context.login_page = LoginPage(context.driver)
+    context.driver.get(context.base_url + '/login')
+    context.login_page = context.page_factory.get_page('login')
     context.login_page.login(context.username, context.password)

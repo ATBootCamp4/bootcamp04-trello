@@ -1,3 +1,9 @@
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.core.utils import ChromeType
+from selenium import webdriver
+from main.trello.gui.page_objects.PageObjectFactory import PageObjectFactory
 from main.utils.common_globals import USER, USERNAME, PASSWORD
 from main.core.selenium.webdriver_factory import WebdriverFactory
 
@@ -5,6 +11,8 @@ from main.core.selenium.webdriver_factory import WebdriverFactory
 def before_scenario(context, scenario):
     context.driver = WebdriverFactory.driver_instance(context, context.config.userdata['BROWSER'])
     context.driver.maximize_window()
+
+    context.page_factory = PageObjectFactory(context.driver)
 
     context.username = USERNAME
     if USERNAME is None:
