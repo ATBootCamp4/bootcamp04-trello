@@ -1,14 +1,13 @@
-from behave import given, step
+from behave import given
 
 
-@given('the user goes to "{page}" page')
+@given('the user goes to "{page}"')
 def step_impl(context, page):
-    context.login_page = context.page_factory.get_page(page)(context.driver)
-    if page == "login":
-        context.driver.get(context.base_url + '/login')
+    context.driver.get(context.base_url + page)
 
 
-@step('the user logs in')
+@given('the user is logged in')
 def step_impl(context):
-    context.login_page = context.page_factory.get_page('login')(context.driver)
+    context.driver.get(context.base_url + '/login')
+    context.login_page = context.page_factory.get_page('login')
     context.login_page.login(context.username, context.password)

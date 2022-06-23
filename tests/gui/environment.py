@@ -29,7 +29,7 @@ def before_scenario(context, scenario):
     context.driver = webdriver.Chrome(
         service=chrome_service, options=chrome_options)
 
-    context.page_factory = PageObjectFactory()
+    context.page_factory = PageObjectFactory(context.driver)
 
     context.username = USERNAME
     if USERNAME is None:

@@ -3,6 +3,7 @@ from behave import then, when
 
 @when('the user sends its credentials')
 def step_impl(context):
+    context.login_page = context.page_factory.get_page("login")
     context.login_page.login(context.username, context.password)
 
 

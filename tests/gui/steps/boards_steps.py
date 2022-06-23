@@ -3,7 +3,7 @@ from behave import then, when, step
 
 @when('the user sends the boards name "{board_name}"')
 def step_impl(context, board_name):
-    context.home_page = context.page_factory.get_page("home")(context.driver)
+    context.home_page = context.page_factory.get_page("home")
     context.home_page.create_board(board_name)
     context.board_name = board_name
 
@@ -15,14 +15,14 @@ def step_impl(context):
 
 @when('the user goes to board "{board_name}"')
 def step_impl(context, board_name):
-    context.home_page = context.page_factory.get_page("home")(context.driver)
+    context.home_page = context.page_factory.get_page("home")
     context.home_page.go_to_board(board_name)
     context.board_name = board_name
 
 
 @step('the user sends the new board name "{new_board_name}"')
 def step_impl(context, new_board_name):
-    context.cards_page = context.page_factory.get_page("board")(context.driver)
+    context.cards_page = context.page_factory.get_page("board")
     context.cards_page.update_title(context.board_name, new_board_name)
     context.new_board_name = new_board_name
 
@@ -34,7 +34,7 @@ def step_impl(context):
 
 @step('the user deletes the board')
 def step_impl(context):
-    context.cards_page = context.page_factory.get_page("board")(context.driver)
+    context.cards_page = context.page_factory.get_page("board")
     context.cards_page.delete_board()
 
 

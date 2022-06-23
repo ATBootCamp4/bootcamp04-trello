@@ -5,12 +5,13 @@ from main.trello.gui.page_objects.home_page import HomePage
 
 class PageObjectFactory:
 
-    def __init__(self):
+    def __init__(self, driver):
         self.factory = {
             "login": LoginPage,
             "board": CardsPage,
             "home": HomePage
         }
+        self.driver = driver
 
     def get_page(self, page_name):
-        return self.factory[page_name]
+        return self.factory[page_name](self.driver)
