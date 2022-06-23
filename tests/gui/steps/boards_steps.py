@@ -13,7 +13,7 @@ def step_impl(context):
     assert context.home_page.check_if_board_is_created(context.board_name), "Board was not created"
 
 
-@when('the user goes to board "{board_name}"')
+@step('the user goes to board "{board_name}"')
 def step_impl(context, board_name):
     context.home_page = context.page_factory.get_page("home")
     context.home_page.go_to_board(board_name)
