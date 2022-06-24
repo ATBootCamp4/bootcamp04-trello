@@ -12,7 +12,7 @@ Feature: Trello UI Boards
         When the user goes to board "CreateBoardExample"
         And the user sends the new board name "UpdateBoardExample"
         Then the board is updated
-        
+
     Scenario: Delete board
         When the user goes to board "UpdateBoardExample"
         And the user deletes the board

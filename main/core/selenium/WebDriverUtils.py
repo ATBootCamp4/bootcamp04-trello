@@ -37,6 +37,10 @@ class WebdriverUtils:
         return WebDriverWait(self.driver, TIMEOUT).until(
             EC.url_to_be(url))
 
+    def get_text(self, locator):
+        return WebDriverWait(self.driver, TIMEOUT).until(EC.presence_of_element_located(
+            locator)).text
+
     def get_title(self):
         """Return the current title of the driver"""
         return self.driver.title
