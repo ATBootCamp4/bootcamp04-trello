@@ -1,5 +1,9 @@
 from behave import then, when, step
 
+from main.trello.api.boards_manager import BoardsManager
+
+boards_manager = BoardsManager()
+
 
 @when('the user sends the boards name "{board_name}"')
 def step_impl(context, board_name):
@@ -11,6 +15,7 @@ def step_impl(context, board_name):
 @then('the board is created')
 def step_impl(context):
     assert context.home_page.check_if_board_is_created(context.board_name), "Board was not created"
+    assert boards_manager.check_if_board_exists(context.board_name), "Couldn't find board with given name"
 
 
 @step('the user goes to board "{board_name}"')
@@ -30,6 +35,7 @@ def step_impl(context, new_board_name):
 @then('the board is updated')
 def step_impl(context):
     assert context.cards_page.check_if_board_title_is_updated(context.new_board_name), "Could not update the board name"
+    assert boards_manager.check_if_board_exists(context.new_board_name), "Couldn't update board"
 
 
 @step('the user deletes the board')
@@ -42,3 +48,4 @@ def step_impl(context):
 def step_impl(context):
 
     assert context.home_page.check_if_board_is_deleted(context.board_name), "Could not delete the board"
+    assert not boards_manager.check_if_board_exists(context.board_name), "Board remains in the API"

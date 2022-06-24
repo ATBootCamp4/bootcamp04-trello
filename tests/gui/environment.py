@@ -11,17 +11,14 @@ def before_scenario(context, scenario):
 
     context.username = USERNAME
     if USERNAME is None:
-        print('Username is None')
         context.username = context.config.userdata['USERNAME']
 
     context.password = PASSWORD
     if PASSWORD is None:
-        print('Password is none')
         context.password = context.config.userdata['PASSWORD']
 
     context.user = USER
     if USER is None:
-        print('User is none')
         context.user = context.config.userdata['USER']
 
     context.base_url = context.config.userdata['BASE_URL']
