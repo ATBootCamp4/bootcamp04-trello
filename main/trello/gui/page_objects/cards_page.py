@@ -21,7 +21,8 @@ class CardsPage:
 
     update_board_title_locator = (By.CSS_SELECTOR, "input.board-name-input")
     CREATED_BOARD_LOCATOR_STRING = "//h1[contains(text(),'{board_name}')]"
-    show_menu_button = (By.CSS_SELECTOR, "a.js-show-sidebar")
+    # show_menu_button = (By.CSS_SELECTOR, "a.js-show-sidebar")
+    show_menu_button = (By.XPATH, "//a[contains(.,'Show menu')]")
     more_options_button = (By.CSS_SELECTOR, "a.js-open-more")
     close_board_option_button = (By.CSS_SELECTOR, "a.js-close-board")
     close_board_button = (By.XPATH, "//input[@value='Close']")
