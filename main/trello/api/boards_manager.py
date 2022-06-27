@@ -8,6 +8,7 @@ from main.trello.api.rest_base_manager import RESTBaseManager
 
 # endpoint formats
 BOARDS = 'boards'
+GET_BOARDS = 'members/me/boards'
 
 
 class BoardsManager(RESTBaseManager):
@@ -19,6 +20,22 @@ class BoardsManager(RESTBaseManager):
         :param method: obj  RequestManager object which is used to handle the API requests
         """
         super().__init__(method)
+
+    def check_if_board_exists(self, board_name, **kwargs):
+        """ Check if a board exists by its name
+
+        :param board_name: str   name of the Board
+        :param kwargs:  dict  Data that will be considered as query parameters
+        :return: True or False whether board with given name exists
+        """
+        endpoint = GET_BOARDS
+        status_code, response = self.method.get_request(endpoint, **kwargs)
+
+        for r in response:
+
+            if r['name'] == board_name:
+                return True
+        return False
 
     def get_board(self, id_name, fields='all', **kwargs):
         """ Get a Board data by its ID
