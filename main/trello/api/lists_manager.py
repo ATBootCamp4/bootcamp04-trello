@@ -53,3 +53,14 @@ class ListsManager(RESTBaseManager):
         endpoint = f"boards/{idBoard}/lists"
         status_code, response = self.method.get_request(endpoint)
         return status_code, response
+
+    def does_list_exists(self, list_name, board_id):
+
+        print(list_name + ' : ' + board_id)
+        _, lists = self.get_all_list(board_id)
+        for list in lists:
+            print(list_name + ' == ' + list['name'])
+            if list['name'] == list_name:
+                return True
+
+        return False

@@ -154,3 +154,9 @@ class WebdriverUtils:
             return False
         except TimeoutException:
             return False
+
+    def clear_input(self, locator):
+        self.wait_for_presence_of_element_located(locator).clear()
+
+    def refresh(self):
+        self.driver.refresh()

@@ -31,6 +31,17 @@ class CardsPage:
 
     CREATED_BOARD_LOCATOR_STRING = "//h1[contains(text(),'{board_name}')]"
 
+    add_list_button = (By.CSS_SELECTOR, "a.open-add-list")
+    add_list_input = (By.CSS_SELECTOR, "input.list-name-input")
+    confirm_list_input = (By.XPATH, "//input[@value='Add list']")
+
+    list_title_string_input = "//textarea[contains(@class,'js-list-name-input')][text() = '{list_title}']"
+    list_title_string_h2 = "//div[contains(@class,'list-header')]//h2[text() = '{list_title}']"
+    list_more_options_string = "//div[contains(@class,'list-header')]" +\
+        "//h2[text() = '{list_title}']//following-sibling::div[contains(@class,'list-header-extras')]//a"
+
+    list_close_option = (By.CSS_SELECTOR, 'a.js-close-list')
+
     def __init__(self, driver):
         self.driver = WebdriverUtils(driver)
 
@@ -70,6 +81,7 @@ class CardsPage:
         self.driver.click_button((By.XPATH, title_locator))
         self.driver.send_keys(new_title, self.update_board_title_locator)
         self.driver.send_enter(self.update_board_title_locator)
+        self.driver.refresh()
 
     def check_if_board_title_is_updated(self, board_name):
         board_locator = self.CREATED_BOARD_LOCATOR_STRING.replace('{board_name}', board_name)
@@ -83,3 +95,27 @@ class CardsPage:
         self.driver.click_button(self.close_board_button)
         self.driver.click_button(self.delete_board_button)
         self.driver.click_button(self.confirm_delete_board_button)
+
+    def create_list(self, list_name):
+        self.driver.click_button(self.add_list_button)
+        self.driver.send_keys(list_name, self.add_list_input)
+        self.driver.click_button(self.confirm_list_input)
+        self.driver.refresh()
+
+    def check_if_list_is_created(self, list_name):
+        find_list_name_string = self.list_title_string_h2.replace('{list_title}', list_name)
+        locator = (By.XPATH, find_list_name_string)
+        return self.driver.is_element_found(locator)
+
+    def update_list_title(self, list_name, new_list_name):
+        find_list_title = self.list_title_string_input.replace('{list_title}', list_name)
+        list_title_input = (By.XPATH, find_list_title)
+        self.driver.clear_input(list_title_input)
+        self.driver.send_keys(new_list_name, list_title_input)
+        self.driver.send_enter(list_title_input)
+        self.driver.refresh()
+
+    def delete_list(self, list_name):
+        find_list = self.list_more_options_string.replace('{list_title}', list_name)
+        self.driver.click_button((By.XPATH, find_list))
+        self.driver.click_button(self.list_close_option)
