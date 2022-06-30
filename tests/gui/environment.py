@@ -1,6 +1,8 @@
 from main.trello.gui.page_objects.PageObjectFactory import PageObjectFactory
 from main.utils.common_globals import USER, USERNAME, PASSWORD
 from main.core.selenium.webdriver_factory import WebdriverFactory
+import allure
+import datetime
 from behave.fixture import use_fixture_by_tag, fixture_call_params
 from hooks import create_board, delete_board, create_list, delete_list
 
@@ -50,6 +52,9 @@ def before_scenario(context, scenario):
 
 
 def after_scenario(context, scenario):
+    if scenario.status == 'failed':
+        allure.attach(context.driver.get_screenshot_as_png(), name=f"{context.scenario}{datetime.datetime.now()}",
+                      attachment_type=allure.attachment_type.PNG)
     context.driver.close()
     context.driver.quit()
 
