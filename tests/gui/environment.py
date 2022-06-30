@@ -2,6 +2,7 @@ from main.trello.gui.page_objects.PageObjectFactory import PageObjectFactory
 from main.utils.common_globals import USER, USERNAME, PASSWORD
 from main.core.selenium.webdriver_factory import WebdriverFactory
 import allure
+import datetime
 
 
 def before_scenario(context, scenario):
@@ -24,12 +25,10 @@ def before_scenario(context, scenario):
 
     context.base_url = context.config.userdata['BASE_URL']
 
-def after_step(context, step):
-    if step.status == 'failed':     
-        allure.attach(context.browser.driver.get_screenshot_as_png(),
-                                name='screenshot',
-                                attachment_type=allure.attachment_type.PNG)
 
 def after_scenario(context, scenario):
+    if scenario.status == 'failed':
+        allure.attach(context.driver.get_screenshot_as_png(), name=f"{context.scenario}{datetime.datetime.now()}",
+                      attachment_type=allure.attachment_type.PNG)
     context.driver.close()
     context.driver.quit()
