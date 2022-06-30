@@ -29,13 +29,13 @@ class BoardsManager(RESTBaseManager):
         :return: True or False whether board with given name exists
         """
         endpoint = GET_BOARDS
-        status_code, response = self.method.get_request(endpoint, **kwargs)
+        _, response = self.method.get_request(endpoint, **kwargs)
 
         for r in response:
 
             if r['name'] == board_name:
-                return True
-        return False
+                return r
+        return None
 
     def get_board(self, id_name, fields='all', **kwargs):
         """ Get a Board data by its ID

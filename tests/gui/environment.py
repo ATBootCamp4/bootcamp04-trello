@@ -3,6 +3,31 @@ from main.utils.common_globals import USER, USERNAME, PASSWORD
 from main.core.selenium.webdriver_factory import WebdriverFactory
 import allure
 import datetime
+from behave.fixture import use_fixture_by_tag, fixture_call_params
+from hooks import create_board, delete_board, create_list, delete_list
+
+# from main.core.rest.request_manager import RequestManager
+
+FIXTURE_REGISTRY = {
+    "fixture.before.create.board": fixture_call_params(
+        create_board,
+        endpoint='boards/',
+        board_name='CreateBoardExample'
+    ),
+    "fixture.after.delete.board": fixture_call_params(
+        delete_board,
+        endpoint='boards/'
+    ),
+    "fixture.before.create.list": fixture_call_params(
+        create_list,
+        endpoint="lists/",
+        list_name="ListTest"
+    ),
+    "fixture.after.delete.list": fixture_call_params(
+        delete_list,
+        endpoint="lists/{id}"
+    )
+}
 
 
 def before_scenario(context, scenario):
@@ -32,3 +57,24 @@ def after_scenario(context, scenario):
                       attachment_type=allure.attachment_type.PNG)
     context.driver.close()
     context.driver.quit()
+
+
+def before_tag(context, tag):
+    if tag.startswith('fixture.before.'):
+        use_fixture_by_tag(tag, context, FIXTURE_REGISTRY)
+
+
+def after_tag(context, tag):
+    if tag.startswith('fixture.after.'):
+        use_fixture_by_tag(tag, context, FIXTURE_REGISTRY)
+
+
+""" def before_feature(context, feature):
+    context.request_manager = RequestManager()
+    if feature.name.strip() == 'Trello UI Lists':
+        _, context.board = context.request_manager.post_request('boards/', payload={'name': 'ManageListsBoard'})
+
+
+def after_feature(context, feature):
+    if feature.name.strip() == 'Trello UI Lists':
+        context.request_manager.delete_request('boards/' + context.board['id']) """

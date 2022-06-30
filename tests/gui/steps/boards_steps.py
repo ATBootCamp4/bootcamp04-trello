@@ -12,10 +12,15 @@ def step_impl(context, board_name):
     context.board_name = board_name
 
 
-@then('the board is created')
+@then('the board "{board_name}" is displayed')
+def step_impl(context, board_name):
+    assert context.home_page.check_if_board_is_created(board_name), "Board was not created"
+
+
+@step('the board appears in the API')
 def step_impl(context):
-    assert context.home_page.check_if_board_is_created(context.board_name), "Board was not created"
-    assert boards_manager.check_if_board_exists(context.board_name), "Couldn't find board with given name"
+    context.board = boards_manager.check_if_board_exists(context.board_name)
+    assert context.board is not None, "Couldn't find board with given name in the API"
 
 
 @step('the user goes to board "{board_name}"')
@@ -29,13 +34,12 @@ def step_impl(context, board_name):
 def step_impl(context, new_board_name):
     context.cards_page = context.page_factory.get_page("board")
     context.cards_page.update_title(context.board_name, new_board_name)
-    context.new_board_name = new_board_name
+    context.board_name = new_board_name
 
 
-@then('the board is updated')
-def step_impl(context):
-    assert context.cards_page.check_if_board_title_is_updated(context.new_board_name), "Could not update the board name"
-    assert boards_manager.check_if_board_exists(context.new_board_name), "Couldn't update board"
+@then('the board "{board_name}" is updated with name "{new_board_name}"')
+def step_impl(context, board_name, new_board_name):
+    assert context.cards_page.check_if_board_title_is_updated(context.board_name), "Could not update the board name"
 
 
 @step('the user deletes the board')
@@ -46,6 +50,10 @@ def step_impl(context):
 
 @then('the board should not be displayed')
 def step_impl(context):
-
     assert context.home_page.check_if_board_is_deleted(context.board_name), "Could not delete the board"
-    assert not boards_manager.check_if_board_exists(context.board_name), "Board remains in the API"
+
+
+@step('the board should not appear in the API')
+def step_impl(context):
+    context.board = boards_manager.check_if_board_exists(context.board_name)
+    assert context.board is None, "Board remains in the API"
