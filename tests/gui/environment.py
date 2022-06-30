@@ -2,7 +2,8 @@ from main.trello.gui.page_objects.PageObjectFactory import PageObjectFactory
 from main.utils.common_globals import USER, USERNAME, PASSWORD
 from main.core.selenium.webdriver_factory import WebdriverFactory
 from behave.fixture import use_fixture_by_tag, fixture_call_params
-from hooks import create_board, delete_board
+from hooks import create_board, delete_board, create_list, delete_list
+
 # from main.core.rest.request_manager import RequestManager
 
 FIXTURE_REGISTRY = {
@@ -15,6 +16,15 @@ FIXTURE_REGISTRY = {
         delete_board,
         endpoint='boards/'
     ),
+    "fixture.before.create.list": fixture_call_params(
+        create_list,
+        endpoint="lists/",
+        list_name="ListTest"
+    ),
+    "fixture.after.delete.list": fixture_call_params(
+        delete_list,
+        endpoint="lists/{id}"
+    )
 }
 
 

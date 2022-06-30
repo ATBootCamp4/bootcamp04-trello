@@ -61,6 +61,6 @@ class ListsManager(RESTBaseManager):
         for list in lists:
             print(list_name + ' == ' + list['name'])
             if list['name'] == list_name:
-                return True
-
-        return False
+                return list
+        print('Returning NONE')
+        return None

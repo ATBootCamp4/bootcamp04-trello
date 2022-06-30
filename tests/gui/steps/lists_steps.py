@@ -19,8 +19,9 @@ def step_impl(context):
 
 @step('the list appears in the API')
 def step_impl(context):
-    assert lists_manager.does_list_exists(
-        context.list_name, context.board['id']), "Could not create list, does not appear in API"
+    context.list = lists_manager.does_list_exists(
+        context.list_name, context.board['id'])
+    assert context.list, "Could not create list, does not appear in API"
 
 
 @step('the user updates the list name "{list_name}" to "{new_list_name}"')
@@ -44,5 +45,6 @@ def step_impl(context):
 
 @step('the list should not appear in the API')
 def step_impl(context):
-    assert not lists_manager.does_list_exists(
-        context.list_name, context.board['id']), "Could not delete list, still appearing in API"
+    context.list_deleted = lists_manager.does_list_exists(
+        context.list_name, context.board['id'])
+    assert context.list_deleted is None, "Could not delete list, still appearing in API"

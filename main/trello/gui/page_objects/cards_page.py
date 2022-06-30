@@ -119,3 +119,4 @@ class CardsPage:
         find_list = self.list_more_options_string.replace('{list_title}', list_name)
         self.driver.click_button((By.XPATH, find_list))
         self.driver.click_button(self.list_close_option)
+        self.driver.refresh()

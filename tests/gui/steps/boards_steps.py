@@ -20,7 +20,7 @@ def step_impl(context, board_name):
 @step('the board appears in the API')
 def step_impl(context):
     context.board = boards_manager.check_if_board_exists(context.board_name)
-    assert context.board, "Couldn't find board with given name in the API"
+    assert context.board is not None, "Couldn't find board with given name in the API"
 
 
 @step('the user goes to board "{board_name}"')
@@ -56,4 +56,4 @@ def step_impl(context):
 @step('the board should not appear in the API')
 def step_impl(context):
     context.board = boards_manager.check_if_board_exists(context.board_name)
-    assert not context.board, "Board remains in the API"
+    assert context.board is None, "Board remains in the API"
