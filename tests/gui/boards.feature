@@ -16,4 +16,4 @@ Feature: Trello UI Boards
     Scenario: Delete board
         When the user goes to board "UpdateBoardExample"
         And the user deletes the board
-        Then the board should not be displayed
+        Then the board should not be displaye
