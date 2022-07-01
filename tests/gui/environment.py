@@ -1,4 +1,4 @@
-from main.trello.gui.page_objects.PageObjectFactory import PageObjectFactory
+from main.trello.PageObjectFactory import PageObjectFactory
 from main.utils.common_globals import USER, USERNAME, PASSWORD
 from main.core.selenium.webdriver_factory import WebdriverFactory
 import allure

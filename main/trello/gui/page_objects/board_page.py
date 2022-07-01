@@ -3,7 +3,7 @@ from main.core.selenium.WebDriverUtils import WebdriverUtils
 from selenium.webdriver.common.by import By
 
 
-class CardsPage:
+class BoardPage:
 
     create_a_card_button = (
         "//h2[text()='{name_list}']/ancestor::div[contains(@class,'js-list-content')]//a[contains(.,'Add a card')]")

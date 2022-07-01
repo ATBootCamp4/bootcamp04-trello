@@ -45,6 +45,6 @@ def step_impl(context):
 
 @step('the list should not appear in the API')
 def step_impl(context):
-    context.list_deleted = lists_manager.does_list_exists(
+    context.list = lists_manager.does_list_exists(
         context.list_name, context.board['id'])
-    assert context.list_deleted is None, "Could not delete list, still appearing in API"
+    assert context.list is None, "Could not delete list, still appearing in API"
