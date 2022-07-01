@@ -13,7 +13,7 @@ class ChromeDriver:
         chrome_service = Service(ChromeDriverManager(chrome_type=ChromeType.GOOGLE).install())
         chrome_options = Options()
         options = [
-            "--headless",
+            # "--headless",
             "--disable-gpu",
             "--lang=en-US",
             "--ignore-certificate-errors",
