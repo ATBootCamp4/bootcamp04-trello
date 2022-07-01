@@ -30,4 +30,3 @@ def delete_list(context, endpoint):
     if context.board and context.list:
         put_endpoint = endpoint.replace('{id}', context.list['id'])
         status_code, response = context.request_manager.put_request(put_endpoint, payload={'closed': 'true'})
-        print('Deleting list status code -> ' + str(status_code))

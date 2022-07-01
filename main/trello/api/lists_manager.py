@@ -56,11 +56,10 @@ class ListsManager(RESTBaseManager):
 
     def does_list_exists(self, list_name, board_id):
 
-        print(list_name + ' : ' + board_id)
         _, lists = self.get_all_list(board_id)
         for list in lists:
-            print(list_name + ' == ' + list['name'])
+
             if list['name'] == list_name:
                 return list
-        print('Returning NONE')
+
         return None
