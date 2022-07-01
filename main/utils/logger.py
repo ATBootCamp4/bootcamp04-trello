@@ -35,12 +35,13 @@ class Logger(logging.Logger):
         formatter = logging.Formatter(str_format, datefmt='%d-%m-%y %H:%M:%S')
         self.setup_logger(suite_name, file_name, formatter)
         console_handler.setLevel(log_level)
+
         console_handler.setFormatter(formatter)
         self.handlers.append(console_handler)
         # Format for titles
         self.title_formatter = logging.Formatter(TITLE_FORMAT)
 
-    def setup_logger(self, name, log_file, formatter, level=logging.DEBUG):
+    def setup_logger(self, name, log_file, formatter, level=logging.ERROR):
         """To setup as many loggers as you want"""
 
         handler = logging.FileHandler(log_file)
@@ -77,6 +78,20 @@ class Logger(logging.Logger):
                 prev_formattters.append(handler.formatter)
                 handler.setFormatter(self.title_formatter)
         super().debug(message)
+        for idx, formatter in enumerate(prev_formattters):
+            self.handlers[idx].formatter = formatter
+
+    def error(self, message, is_title=False):
+        """ Helps to log an ERROR message with a Title format.
+        :param message:  str    The message to send
+        :param is_title: bool   Will remove the formatter of the handlers temporary if True. Default is False.
+        """
+        prev_formattters = []
+        if is_title:
+            for handler in self.handlers:
+                prev_formattters.append(handler.formatter)
+                handler.setFormatter(self.title_formatter)
+        super().error(message)
         for idx, formatter in enumerate(prev_formattters):
             self.handlers[idx].formatter = formatter
 

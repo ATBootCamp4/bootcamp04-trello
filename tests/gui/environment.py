@@ -5,8 +5,10 @@ import allure
 import datetime
 from behave.fixture import use_fixture_by_tag, fixture_call_params
 from hooks import create_board, delete_board, create_list, delete_list
-
+from main.utils.logger import Logger
 # from main.core.rest.request_manager import RequestManager
+
+LOGGER = Logger(__name__)
 
 FIXTURE_REGISTRY = {
     "fixture.before.create.board": fixture_call_params(
@@ -50,6 +52,10 @@ def before_scenario(context, scenario):
 
     context.base_url = context.config.userdata['BASE_URL']
 
+    LOGGER.info(f"Starting Scenario: {scenario.name}")
+    if scenario.tags:
+        LOGGER.info(f"Tags: {scenario.tags}")
+
 
 def after_scenario(context, scenario):
     if scenario.status == 'failed':
@@ -57,6 +63,7 @@ def after_scenario(context, scenario):
                       attachment_type=allure.attachment_type.PNG)
     context.driver.close()
     context.driver.quit()
+    LOGGER.info(f"Status: {scenario.status}")
 
 
 def before_tag(context, tag):
@@ -69,12 +76,20 @@ def after_tag(context, tag):
         use_fixture_by_tag(tag, context, FIXTURE_REGISTRY)
 
 
-""" def before_feature(context, feature):
-    context.request_manager = RequestManager()
-    if feature.name.strip() == 'Trello UI Lists':
-        _, context.board = context.request_manager.post_request('boards/', payload={'name': 'ManageListsBoard'})
+def before_feature(context, feature):
+    LOGGER.info(f"Starting Feature: {feature.name}", is_title=True)
+    if feature.background:
+        LOGGER.info(f"Executing Background: {feature.background.name}")
 
 
 def after_feature(context, feature):
-    if feature.name.strip() == 'Trello UI Lists':
-        context.request_manager.delete_request('boards/' + context.board['id']) """
+    LOGGER.info(f"Status for Feature: {feature.name}: {feature.status}", is_title=True)
+
+
+def before_all(context):
+
+    LOGGER.info("Starting GUI Test Suite", is_title=True)
+
+
+def after_all(context):
+    LOGGER.info("GUI Test Suite End", is_title=True)
