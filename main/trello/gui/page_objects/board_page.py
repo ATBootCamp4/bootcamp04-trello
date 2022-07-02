@@ -95,6 +95,7 @@ class BoardPage:
         self.driver.click_button(self.close_board_button)
         self.driver.click_button(self.delete_board_button)
         self.driver.click_button(self.confirm_delete_board_button)
+        self.driver.refresh()
 
     def create_list(self, list_name):
         self.driver.click_button(self.add_list_button)
